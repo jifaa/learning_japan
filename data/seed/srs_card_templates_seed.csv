@@ -1,0 +1,49 @@
+﻿id,card_template_key,display_name_id,content_domain,source_dataset_ref,source_entity_type,front_template,back_template,required_fields,optional_fields,answer_mode,default_deck_key,generation_filter_json,auto_generate_reverse,auto_generate_typing_variant,recommended_for_mvp,source_url,notes
+card_tpl_001,kana_recognition,Kana → Romaji,kana,kana_characters_hiragana_katakana.csv,kana_character,{kana},"{romaji}
+Audio: {audio_path}
+Stroke: {stroke_order_path}","kana,romaji","audio_path,stroke_order_path",self_grade,deck_kana_n5,"{""is_common"": ""true""}",false,true,true,https://apps.ankiweb.net/,"Use this as SRS card generator template, not as rendered card content."
+card_tpl_002,kana_production,Romaji → Kana,kana,kana_characters_hiragana_katakana.csv,kana_character,{romaji},"{kana}
+Audio: {audio_path}
+Stroke: {stroke_order_path}","kana,romaji","audio_path,stroke_order_path",typing_or_self_grade,deck_kana_n5,"{""is_common"": ""true""}",false,true,true,https://apps.ankiweb.net/,"Use this as SRS card generator template, not as rendered card content."
+card_tpl_003,vocab_jp_to_meaning,Vocab JP → Arti,vocabulary,jlpt_n5_vocabulary_seed_with_examples.csv,vocabulary,{expression},"{reading}
+{meaning_id}
+Contoh: {example_sentence_jp}
+{example_sentence_id}
+Audio: {audio_path}","expression,reading,meaning_id","example_sentence_jp,example_sentence_id,audio_path",self_grade,deck_vocab_n5,"{""is_common"": ""true""}",true,false,true,https://apps.ankiweb.net/,"Use this as SRS card generator template, not as rendered card content."
+card_tpl_004,vocab_meaning_to_jp,Arti → Vocab JP,vocabulary,jlpt_n5_vocabulary_seed_with_examples.csv,vocabulary,{meaning_id},"{expression}
+{reading}
+Contoh: {example_sentence_jp}","expression,reading,meaning_id",example_sentence_jp,self_grade,deck_vocab_n5,"{""is_common"": ""true""}",false,true,true,https://apps.ankiweb.net/,"Use this as SRS card generator template, not as rendered card content."
+card_tpl_005,vocab_reading,Kanji/Kata → Reading,vocabulary,jlpt_n5_vocabulary_seed_with_examples.csv,vocabulary,{expression},"{reading}
+{meaning_id}","expression,reading,meaning_id",,typing_or_self_grade,deck_vocab_n5,"{""script_type"": [""kanji"", ""mixed""]}",false,true,true,https://apps.ankiweb.net/,"Use this as SRS card generator template, not as rendered card content."
+card_tpl_006,kanji_meaning,Kanji → Arti,kanji,jlpt_n5_kanji_extended_103.csv,kanji,{kanji},"{meaning_id}
+On: {onyomi_katakana}
+Kun: {kunyomi_hiragana}
+Contoh: {example_word} / {example_reading}
+Mnemonic: {mnemonic_id}","kanji,meaning_id","onyomi_katakana,kunyomi_hiragana,example_word,example_reading,mnemonic_id",self_grade,deck_kanji_n5,"{""set_type"": [""core_80_common_n5"", ""extended_103_old_n5_candidate""]}",true,false,true,https://apps.ankiweb.net/,"Use this as SRS card generator template, not as rendered card content."
+card_tpl_007,kanji_reading,Kanji Word → Reading,kanji,jlpt_n5_kanji_extended_103.csv,kanji,{example_word},"{example_reading}
+{example_meaning_id}
+Kanji: {kanji} = {meaning_id}","example_word,example_reading,example_meaning_id","kanji,meaning_id",typing_or_self_grade,deck_kanji_n5,"{""set_type"": ""core_80_common_n5""}",false,true,true,https://apps.ankiweb.net/,"Use this as SRS card generator template, not as rendered card content."
+card_tpl_008,kanji_radical,Kanji → Radical,kanji,jlpt_n5_kanji_radical_map_seed.csv,kanji_radical,{kanji},"Radical: {canonical_radical}
+Arti radical: {radical_meaning_id}
+Posisi: {radical_position_guess}","kanji,canonical_radical,radical_meaning_id",radical_position_guess,self_grade,deck_kanji_n5,"{""is_core_80"": ""true""}",false,false,false,https://apps.ankiweb.net/,"Use this as SRS card generator template, not as rendered card content."
+card_tpl_009,grammar_point_to_meaning,Grammar → Fungsi,grammar,jlpt_n5_grammar_seed.csv,grammar_point,{grammar_point},"{meaning_id}
+Rumus: {structure_pattern}
+Contoh: {example_jp}
+{example_meaning_id}","grammar_point,meaning_id,structure_pattern","example_jp,example_meaning_id",self_grade,deck_grammar_n5,"{""is_core_n5"": ""true""}",true,false,true,https://apps.ankiweb.net/,"Use this as SRS card generator template, not as rendered card content."
+card_tpl_010,grammar_pattern,Fungsi → Grammar Pattern,grammar,jlpt_n5_grammar_seed.csv,grammar_point,{meaning_id},"{grammar_point}
+Rumus: {structure_pattern}
+Contoh: {example_jp}","grammar_point,meaning_id,structure_pattern",example_jp,self_grade,deck_grammar_n5,"{""is_core_n5"": ""true""}",false,false,true,https://apps.ankiweb.net/,"Use this as SRS card generator template, not as rendered card content."
+card_tpl_011,particle_usage,Particle → Fungsi,particles,jlpt_n5_particles_seed.csv,particle_usage,{particle},"{meaning_id}
+Pola: {pattern}
+Contoh: {example_jp}
+{example_meaning_id}","particle,meaning_id,pattern","example_jp,example_meaning_id",self_grade,deck_particles_n5,"{""is_core_n5"": ""true""}",true,true,true,https://apps.ankiweb.net/,"Use this as SRS card generator template, not as rendered card content."
+card_tpl_012,counter_reading,Counter Form → Reading,numbers_counters,japanese_counter_forms_n5_seed.csv,counter_form,{form_kanji},"{reading_kana}
+{meaning_id}
+Catatan: {notes}","form_kanji,reading_kana,meaning_id",notes,typing_or_self_grade,deck_counters_n5,"{""recommended_for_quiz"": ""true""}",false,true,true,https://apps.ankiweb.net/,"Use this as SRS card generator template, not as rendered card content."
+card_tpl_013,date_reading,Date/Time → Reading,numbers_counters,japanese_calendar_time_n5_seed.csv,calendar_time,{kanji},"{reading_kana}
+{meaning_id}","kanji,reading_kana,meaning_id",,typing_or_self_grade,deck_counters_n5,"{""recommended_for_quiz"": ""true""}",false,true,true,https://apps.ankiweb.net/,"Use this as SRS card generator template, not as rendered card content."
+card_tpl_014,sentence_jp_to_meaning,Sentence JP → Arti,sentence,jlpt_n5_example_sentences_seed.csv,sentence,{sentence_jp},"{sentence_romaji}
+{meaning_id}","sentence_jp,meaning_id",sentence_romaji,self_grade,deck_sentences_n5,"{""recommended_for_flashcard"": ""true""}",true,false,false,https://apps.ankiweb.net/,"Use this as SRS card generator template, not as rendered card content."
+card_tpl_015,listening_audio_to_meaning,Audio → Arti,listening,jlpt_n5_example_sentences_seed.csv|listening_scripts_n5_seed.csv,audio_sentence,[audio:{audio_path}],"{sentence_jp}
+{sentence_romaji}
+{meaning_id}","audio_path,sentence_jp,meaning_id",sentence_romaji,self_grade,deck_listening_n5,"{""recommended_for_quiz"": ""true""}",false,false,false,https://apps.ankiweb.net/,"Use this as SRS card generator template, not as rendered card content."

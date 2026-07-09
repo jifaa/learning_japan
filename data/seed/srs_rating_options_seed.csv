@@ -1,0 +1,5 @@
+﻿id,rating_key,rating_value,display_order,label_id,label_en,meaning_id,meaning_en,is_pass,default_keyboard_shortcut,default_button_color_key,recommended_for_mvp,source_url,notes
+srs_rating_1,again,1,1,Ulang,Again,Lupa / salah total. Kartu harus segera muncul lagi.,Forgotten or incorrect; card should return soon.,false,1,danger,true,https://docs.ankiweb.net/deck-options.html,Failure rating. Do not treat as Hard.
+srs_rating_2,hard,2,2,Sulit,Hard,"Ingat, tapi berat / ragu-ragu.","Recalled, but with difficulty or hesitation.",true,2,warning,true,https://github.com/open-spaced-repetition/fsrs4anki/blob/main/docs/tutorial.md,Passing rating. Important: do not press Hard when actually forgotten.
+srs_rating_3,good,3,3,Oke,Good,Ingat dengan cukup lancar.,Recalled correctly with normal effort.,true,3,success,true,https://docs.ankiweb.net/deck-options.html,Main successful rating.
+srs_rating_4,easy,4,4,Gampang,Easy,Ingat sangat mudah.,Recalled very easily.,true,4,primary,true,https://docs.ankiweb.net/deck-options.html,Successful rating that gives longer interval.

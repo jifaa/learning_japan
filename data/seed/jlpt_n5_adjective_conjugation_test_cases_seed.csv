@@ -1,0 +1,188 @@
+﻿id,jlpt_level,adjective,reading,romaji,adjective_group,form_key,expected,expected_reading,expected_romaji,meaning_id,rule_hint,is_core_n5,recommended_for_unit_test,notes
+act_n5_001,N5,高い,たかい,takai,i_adjective,i_plain_nonpast_affirmative,高い,たかい,takai,Tinggi; mahal.,i_plain_nonpast_affirmative,true,true,Generated i-adjective test case.
+act_n5_002,N5,高い,たかい,takai,i_adjective,i_polite_nonpast_affirmative,高いです,たかいです,takai desu,Tinggi; mahal.,i_polite_nonpast_affirmative,true,true,Generated i-adjective test case.
+act_n5_003,N5,高い,たかい,takai,i_adjective,i_plain_nonpast_negative,高くない,たかくない,takakunai,Tinggi; mahal.,i_plain_nonpast_negative,true,true,Generated i-adjective test case.
+act_n5_004,N5,高い,たかい,takai,i_adjective,i_polite_nonpast_negative_nai_desu,高くないです,たかくないです,takakunai desu,Tinggi; mahal.,i_polite_nonpast_negative_nai_desu,true,true,Generated i-adjective test case.
+act_n5_005,N5,高い,たかい,takai,i_adjective,i_plain_past_affirmative,高かった,たかかった,takakatta,Tinggi; mahal.,i_plain_past_affirmative,true,true,Generated i-adjective test case.
+act_n5_006,N5,高い,たかい,takai,i_adjective,i_polite_past_affirmative,高かったです,たかかったです,takakatta desu,Tinggi; mahal.,i_polite_past_affirmative,true,true,Generated i-adjective test case.
+act_n5_007,N5,高い,たかい,takai,i_adjective,i_plain_past_negative,高くなかった,たかくなかった,takakunakatta,Tinggi; mahal.,i_plain_past_negative,true,true,Generated i-adjective test case.
+act_n5_008,N5,高い,たかい,takai,i_adjective,i_polite_past_negative_nakatta_desu,高くなかったです,たかくなかったです,takakunakatta desu,Tinggi; mahal.,i_polite_past_negative_nakatta_desu,true,true,Generated i-adjective test case.
+act_n5_009,N5,高い,たかい,takai,i_adjective,i_connective_kute,高くて,たかくて,takakute,Tinggi; mahal.,i_connective_kute,true,true,Generated i-adjective test case.
+act_n5_010,N5,高い,たかい,takai,i_adjective,i_adverbial_ku,高く,たかく,takaku,Tinggi; mahal.,i_adverbial_ku,true,true,Generated i-adjective test case.
+act_n5_011,N5,高い,たかい,takai,i_adjective,i_before_noun,高い本,たかいほん,takai hon,Tinggi; mahal.,i_before_noun,true,true,Generated i-adjective test case.
+act_n5_012,N5,新しい,あたらしい,atarashii,i_adjective,i_plain_nonpast_affirmative,新しい,あたらしい,atarashii,Baru.,i_plain_nonpast_affirmative,true,true,Generated i-adjective test case.
+act_n5_013,N5,新しい,あたらしい,atarashii,i_adjective,i_polite_nonpast_affirmative,新しいです,あたらしいです,atarashii desu,Baru.,i_polite_nonpast_affirmative,true,true,Generated i-adjective test case.
+act_n5_014,N5,新しい,あたらしい,atarashii,i_adjective,i_plain_nonpast_negative,新しくない,あたらしくない,atarashikunai,Baru.,i_plain_nonpast_negative,true,true,Generated i-adjective test case.
+act_n5_015,N5,新しい,あたらしい,atarashii,i_adjective,i_polite_nonpast_negative_nai_desu,新しくないです,あたらしくないです,atarashikunai desu,Baru.,i_polite_nonpast_negative_nai_desu,true,true,Generated i-adjective test case.
+act_n5_016,N5,新しい,あたらしい,atarashii,i_adjective,i_plain_past_affirmative,新しかった,あたらしかった,atarashikatta,Baru.,i_plain_past_affirmative,true,true,Generated i-adjective test case.
+act_n5_017,N5,新しい,あたらしい,atarashii,i_adjective,i_polite_past_affirmative,新しかったです,あたらしかったです,atarashikatta desu,Baru.,i_polite_past_affirmative,true,true,Generated i-adjective test case.
+act_n5_018,N5,新しい,あたらしい,atarashii,i_adjective,i_plain_past_negative,新しくなかった,あたらしくなかった,atarashikunakatta,Baru.,i_plain_past_negative,true,true,Generated i-adjective test case.
+act_n5_019,N5,新しい,あたらしい,atarashii,i_adjective,i_polite_past_negative_nakatta_desu,新しくなかったです,あたらしくなかったです,atarashikunakatta desu,Baru.,i_polite_past_negative_nakatta_desu,true,true,Generated i-adjective test case.
+act_n5_020,N5,新しい,あたらしい,atarashii,i_adjective,i_connective_kute,新しくて,あたらしくて,atarashikute,Baru.,i_connective_kute,true,true,Generated i-adjective test case.
+act_n5_021,N5,新しい,あたらしい,atarashii,i_adjective,i_adverbial_ku,新しく,あたらしく,atarashiku,Baru.,i_adverbial_ku,true,true,Generated i-adjective test case.
+act_n5_022,N5,新しい,あたらしい,atarashii,i_adjective,i_before_noun,新しい本,あたらしいほん,atarashii hon,Baru.,i_before_noun,true,true,Generated i-adjective test case.
+act_n5_023,N5,暑い,あつい,atsui,i_adjective,i_plain_nonpast_affirmative,暑い,あつい,atsui,Panas cuaca.,i_plain_nonpast_affirmative,true,true,Generated i-adjective test case.
+act_n5_024,N5,暑い,あつい,atsui,i_adjective,i_polite_nonpast_affirmative,暑いです,あついです,atsui desu,Panas cuaca.,i_polite_nonpast_affirmative,true,true,Generated i-adjective test case.
+act_n5_025,N5,暑い,あつい,atsui,i_adjective,i_plain_nonpast_negative,暑くない,あつくない,atsukunai,Panas cuaca.,i_plain_nonpast_negative,true,true,Generated i-adjective test case.
+act_n5_026,N5,暑い,あつい,atsui,i_adjective,i_polite_nonpast_negative_nai_desu,暑くないです,あつくないです,atsukunai desu,Panas cuaca.,i_polite_nonpast_negative_nai_desu,true,true,Generated i-adjective test case.
+act_n5_027,N5,暑い,あつい,atsui,i_adjective,i_plain_past_affirmative,暑かった,あつかった,atsukatta,Panas cuaca.,i_plain_past_affirmative,true,true,Generated i-adjective test case.
+act_n5_028,N5,暑い,あつい,atsui,i_adjective,i_polite_past_affirmative,暑かったです,あつかったです,atsukatta desu,Panas cuaca.,i_polite_past_affirmative,true,true,Generated i-adjective test case.
+act_n5_029,N5,暑い,あつい,atsui,i_adjective,i_plain_past_negative,暑くなかった,あつくなかった,atsukunakatta,Panas cuaca.,i_plain_past_negative,true,true,Generated i-adjective test case.
+act_n5_030,N5,暑い,あつい,atsui,i_adjective,i_polite_past_negative_nakatta_desu,暑くなかったです,あつくなかったです,atsukunakatta desu,Panas cuaca.,i_polite_past_negative_nakatta_desu,true,true,Generated i-adjective test case.
+act_n5_031,N5,暑い,あつい,atsui,i_adjective,i_connective_kute,暑くて,あつくて,atsukute,Panas cuaca.,i_connective_kute,true,true,Generated i-adjective test case.
+act_n5_032,N5,暑い,あつい,atsui,i_adjective,i_adverbial_ku,暑く,あつく,atsuku,Panas cuaca.,i_adverbial_ku,true,true,Generated i-adjective test case.
+act_n5_033,N5,暑い,あつい,atsui,i_adjective,i_before_noun,暑い本,あついほん,atsui hon,Panas cuaca.,i_before_noun,true,true,Generated i-adjective test case.
+act_n5_034,N5,おもしろい,おもしろい,omoshiroi,i_adjective,i_plain_nonpast_affirmative,おもしろい,おもしろい,omoshiroi,Menarik; lucu.,i_plain_nonpast_affirmative,true,true,Generated i-adjective test case.
+act_n5_035,N5,おもしろい,おもしろい,omoshiroi,i_adjective,i_polite_nonpast_affirmative,おもしろいです,おもしろいです,omoshiroi desu,Menarik; lucu.,i_polite_nonpast_affirmative,true,true,Generated i-adjective test case.
+act_n5_036,N5,おもしろい,おもしろい,omoshiroi,i_adjective,i_plain_nonpast_negative,おもしろくない,おもしろくない,omoshirokunai,Menarik; lucu.,i_plain_nonpast_negative,true,true,Generated i-adjective test case.
+act_n5_037,N5,おもしろい,おもしろい,omoshiroi,i_adjective,i_polite_nonpast_negative_nai_desu,おもしろくないです,おもしろくないです,omoshirokunai desu,Menarik; lucu.,i_polite_nonpast_negative_nai_desu,true,true,Generated i-adjective test case.
+act_n5_038,N5,おもしろい,おもしろい,omoshiroi,i_adjective,i_plain_past_affirmative,おもしろかった,おもしろかった,omoshirokatta,Menarik; lucu.,i_plain_past_affirmative,true,true,Generated i-adjective test case.
+act_n5_039,N5,おもしろい,おもしろい,omoshiroi,i_adjective,i_polite_past_affirmative,おもしろかったです,おもしろかったです,omoshirokatta desu,Menarik; lucu.,i_polite_past_affirmative,true,true,Generated i-adjective test case.
+act_n5_040,N5,おもしろい,おもしろい,omoshiroi,i_adjective,i_plain_past_negative,おもしろくなかった,おもしろくなかった,omoshirokunakatta,Menarik; lucu.,i_plain_past_negative,true,true,Generated i-adjective test case.
+act_n5_041,N5,おもしろい,おもしろい,omoshiroi,i_adjective,i_polite_past_negative_nakatta_desu,おもしろくなかったです,おもしろくなかったです,omoshirokunakatta desu,Menarik; lucu.,i_polite_past_negative_nakatta_desu,true,true,Generated i-adjective test case.
+act_n5_042,N5,おもしろい,おもしろい,omoshiroi,i_adjective,i_connective_kute,おもしろくて,おもしろくて,omoshirokute,Menarik; lucu.,i_connective_kute,true,true,Generated i-adjective test case.
+act_n5_043,N5,おもしろい,おもしろい,omoshiroi,i_adjective,i_adverbial_ku,おもしろく,おもしろく,omoshiroku,Menarik; lucu.,i_adverbial_ku,true,true,Generated i-adjective test case.
+act_n5_044,N5,おもしろい,おもしろい,omoshiroi,i_adjective,i_before_noun,おもしろい本,おもしろいほん,omoshiroi hon,Menarik; lucu.,i_before_noun,true,true,Generated i-adjective test case.
+act_n5_045,N5,かわいい,かわいい,kawaii,i_adjective,i_plain_nonpast_affirmative,かわいい,かわいい,kawaii,Imut.,i_plain_nonpast_affirmative,true,true,Generated i-adjective test case.
+act_n5_046,N5,かわいい,かわいい,kawaii,i_adjective,i_polite_nonpast_affirmative,かわいいです,かわいいです,kawaii desu,Imut.,i_polite_nonpast_affirmative,true,true,Generated i-adjective test case.
+act_n5_047,N5,かわいい,かわいい,kawaii,i_adjective,i_plain_nonpast_negative,かわいくない,かわいくない,kawaikunai,Imut.,i_plain_nonpast_negative,true,true,Generated i-adjective test case.
+act_n5_048,N5,かわいい,かわいい,kawaii,i_adjective,i_polite_nonpast_negative_nai_desu,かわいくないです,かわいくないです,kawaikunai desu,Imut.,i_polite_nonpast_negative_nai_desu,true,true,Generated i-adjective test case.
+act_n5_049,N5,かわいい,かわいい,kawaii,i_adjective,i_plain_past_affirmative,かわいかった,かわいかった,kawaikatta,Imut.,i_plain_past_affirmative,true,true,Generated i-adjective test case.
+act_n5_050,N5,かわいい,かわいい,kawaii,i_adjective,i_polite_past_affirmative,かわいかったです,かわいかったです,kawaikatta desu,Imut.,i_polite_past_affirmative,true,true,Generated i-adjective test case.
+act_n5_051,N5,かわいい,かわいい,kawaii,i_adjective,i_plain_past_negative,かわいくなかった,かわいくなかった,kawaikunakatta,Imut.,i_plain_past_negative,true,true,Generated i-adjective test case.
+act_n5_052,N5,かわいい,かわいい,kawaii,i_adjective,i_polite_past_negative_nakatta_desu,かわいくなかったです,かわいくなかったです,kawaikunakatta desu,Imut.,i_polite_past_negative_nakatta_desu,true,true,Generated i-adjective test case.
+act_n5_053,N5,かわいい,かわいい,kawaii,i_adjective,i_connective_kute,かわいくて,かわいくて,kawaikute,Imut.,i_connective_kute,true,true,Generated i-adjective test case.
+act_n5_054,N5,かわいい,かわいい,kawaii,i_adjective,i_adverbial_ku,かわいく,かわいく,kawaiku,Imut.,i_adverbial_ku,true,true,Generated i-adjective test case.
+act_n5_055,N5,かわいい,かわいい,kawaii,i_adjective,i_before_noun,かわいい本,かわいいほん,kawaii hon,Imut.,i_before_noun,true,true,Generated i-adjective test case.
+act_n5_056,N5,欲しい,ほしい,hoshii,i_adjective,i_plain_nonpast_affirmative,欲しい,ほしい,hoshii,Ingin; menginginkan.,i_plain_nonpast_affirmative,true,true,Generated i-adjective test case.
+act_n5_057,N5,欲しい,ほしい,hoshii,i_adjective,i_polite_nonpast_affirmative,欲しいです,ほしいです,hoshii desu,Ingin; menginginkan.,i_polite_nonpast_affirmative,true,true,Generated i-adjective test case.
+act_n5_058,N5,欲しい,ほしい,hoshii,i_adjective,i_plain_nonpast_negative,欲しくない,ほしくない,hoshikunai,Ingin; menginginkan.,i_plain_nonpast_negative,true,true,Generated i-adjective test case.
+act_n5_059,N5,欲しい,ほしい,hoshii,i_adjective,i_polite_nonpast_negative_nai_desu,欲しくないです,ほしくないです,hoshikunai desu,Ingin; menginginkan.,i_polite_nonpast_negative_nai_desu,true,true,Generated i-adjective test case.
+act_n5_060,N5,欲しい,ほしい,hoshii,i_adjective,i_plain_past_affirmative,欲しかった,ほしかった,hoshikatta,Ingin; menginginkan.,i_plain_past_affirmative,true,true,Generated i-adjective test case.
+act_n5_061,N5,欲しい,ほしい,hoshii,i_adjective,i_polite_past_affirmative,欲しかったです,ほしかったです,hoshikatta desu,Ingin; menginginkan.,i_polite_past_affirmative,true,true,Generated i-adjective test case.
+act_n5_062,N5,欲しい,ほしい,hoshii,i_adjective,i_plain_past_negative,欲しくなかった,ほしくなかった,hoshikunakatta,Ingin; menginginkan.,i_plain_past_negative,true,true,Generated i-adjective test case.
+act_n5_063,N5,欲しい,ほしい,hoshii,i_adjective,i_polite_past_negative_nakatta_desu,欲しくなかったです,ほしくなかったです,hoshikunakatta desu,Ingin; menginginkan.,i_polite_past_negative_nakatta_desu,true,true,Generated i-adjective test case.
+act_n5_064,N5,欲しい,ほしい,hoshii,i_adjective,i_connective_kute,欲しくて,ほしくて,hoshikute,Ingin; menginginkan.,i_connective_kute,true,true,Generated i-adjective test case.
+act_n5_065,N5,欲しい,ほしい,hoshii,i_adjective,i_adverbial_ku,欲しく,ほしく,hoshiku,Ingin; menginginkan.,i_adverbial_ku,true,true,Generated i-adjective test case.
+act_n5_066,N5,欲しい,ほしい,hoshii,i_adjective,i_before_noun,欲しい本,ほしいほん,hoshii hon,Ingin; menginginkan.,i_before_noun,true,true,Generated i-adjective test case.
+act_n5_067,N5,いい,いい,ii,i_adjective,i_plain_nonpast_affirmative,いい,いい,ii,Baik; bagus.,いい exception,true,true,いい uses よ stem in conjugated forms.
+act_n5_068,N5,いい,いい,ii,i_adjective,i_polite_nonpast_affirmative,いいです,いいです,ii desu,Baik; bagus.,いい exception,true,true,いい uses よ stem in conjugated forms.
+act_n5_069,N5,いい,いい,ii,i_adjective,i_plain_nonpast_negative,よくない,よくない,yokunai,Baik; bagus.,いい exception,true,true,いい uses よ stem in conjugated forms.
+act_n5_070,N5,いい,いい,ii,i_adjective,i_polite_nonpast_negative_nai_desu,よくないです,よくないです,yokunai desu,Baik; bagus.,いい exception,true,true,いい uses よ stem in conjugated forms.
+act_n5_071,N5,いい,いい,ii,i_adjective,i_polite_nonpast_negative_arimasen,よくありません,よくありません,yoku arimasen,Baik; bagus.,いい exception,true,true,いい uses よ stem in conjugated forms.
+act_n5_072,N5,いい,いい,ii,i_adjective,i_plain_past_affirmative,よかった,よかった,yokatta,Baik; bagus.,いい exception,true,true,いい uses よ stem in conjugated forms.
+act_n5_073,N5,いい,いい,ii,i_adjective,i_polite_past_affirmative,よかったです,よかったです,yokatta desu,Baik; bagus.,いい exception,true,true,いい uses よ stem in conjugated forms.
+act_n5_074,N5,いい,いい,ii,i_adjective,i_plain_past_negative,よくなかった,よくなかった,yokunakatta,Baik; bagus.,いい exception,true,true,いい uses よ stem in conjugated forms.
+act_n5_075,N5,いい,いい,ii,i_adjective,i_polite_past_negative_nakatta_desu,よくなかったです,よくなかったです,yokunakatta desu,Baik; bagus.,いい exception,true,true,いい uses よ stem in conjugated forms.
+act_n5_076,N5,いい,いい,ii,i_adjective,i_connective_kute,よくて,よくて,yokute,Baik; bagus.,いい exception,true,true,いい uses よ stem in conjugated forms.
+act_n5_077,N5,いい,いい,ii,i_adjective,i_adverbial_ku,よく,よく,yoku,Baik; bagus.,いい exception,true,true,いい uses よ stem in conjugated forms.
+act_n5_078,N5,いい,いい,ii,i_adjective,i_before_noun,いい人,いいひと,ii hito,Baik; bagus.,いい exception,true,true,いい uses よ stem in conjugated forms.
+act_n5_079,N5,便利,べんり,benri,na_adjective,na_plain_nonpast_affirmative_da,便利だ,べんりだ,benri da,Praktis; nyaman.,na_plain_nonpast_affirmative_da,true,true,Generated na-adjective test case.
+act_n5_080,N5,便利,べんり,benri,na_adjective,na_polite_nonpast_affirmative_desu,便利です,べんりです,benri desu,Praktis; nyaman.,na_polite_nonpast_affirmative_desu,true,true,Generated na-adjective test case.
+act_n5_081,N5,便利,べんり,benri,na_adjective,na_before_noun_na,便利な人,べんりなひと,benri na hito,Praktis; nyaman.,na_before_noun_na,true,true,Generated na-adjective test case.
+act_n5_082,N5,便利,べんり,benri,na_adjective,na_plain_nonpast_negative_dewa_nai,便利ではない,べんりではない,benri dewa nai,Praktis; nyaman.,na_plain_nonpast_negative_dewa_nai,true,true,Generated na-adjective test case.
+act_n5_083,N5,便利,べんり,benri,na_adjective,na_plain_nonpast_negative_ja_nai,便利じゃない,べんりじゃない,benri ja nai,Praktis; nyaman.,na_plain_nonpast_negative_ja_nai,true,true,Generated na-adjective test case.
+act_n5_084,N5,便利,べんり,benri,na_adjective,na_polite_nonpast_negative_dewa_arimasen,便利ではありません,べんりではありません,benri dewa arimasen,Praktis; nyaman.,na_polite_nonpast_negative_dewa_arimasen,true,true,Generated na-adjective test case.
+act_n5_085,N5,便利,べんり,benri,na_adjective,na_polite_nonpast_negative_ja_arimasen,便利じゃありません,べんりじゃありません,benri ja arimasen,Praktis; nyaman.,na_polite_nonpast_negative_ja_arimasen,true,true,Generated na-adjective test case.
+act_n5_086,N5,便利,べんり,benri,na_adjective,na_plain_past_affirmative_datta,便利だった,べんりだった,benri datta,Praktis; nyaman.,na_plain_past_affirmative_datta,true,true,Generated na-adjective test case.
+act_n5_087,N5,便利,べんり,benri,na_adjective,na_polite_past_affirmative_deshita,便利でした,べんりでした,benri deshita,Praktis; nyaman.,na_polite_past_affirmative_deshita,true,true,Generated na-adjective test case.
+act_n5_088,N5,便利,べんり,benri,na_adjective,na_plain_past_negative_dewa_nakatta,便利ではなかった,べんりではなかった,benri dewa nakatta,Praktis; nyaman.,na_plain_past_negative_dewa_nakatta,true,true,Generated na-adjective test case.
+act_n5_089,N5,便利,べんり,benri,na_adjective,na_plain_past_negative_ja_nakatta,便利じゃなかった,べんりじゃなかった,benri ja nakatta,Praktis; nyaman.,na_plain_past_negative_ja_nakatta,true,true,Generated na-adjective test case.
+act_n5_090,N5,便利,べんり,benri,na_adjective,na_polite_past_negative_dewa_arimasen_deshita,便利ではありませんでした,べんりではありませんでした,benri dewa arimasen deshita,Praktis; nyaman.,na_polite_past_negative_dewa_arimasen_deshita,true,true,Generated na-adjective test case.
+act_n5_091,N5,便利,べんり,benri,na_adjective,na_polite_past_negative_ja_arimasen_deshita,便利じゃありませんでした,べんりじゃありませんでした,benri ja arimasen deshita,Praktis; nyaman.,na_polite_past_negative_ja_arimasen_deshita,true,true,Generated na-adjective test case.
+act_n5_092,N5,便利,べんり,benri,na_adjective,na_connective_de,便利で,べんりで,benri de,Praktis; nyaman.,na_connective_de,true,true,Generated na-adjective test case.
+act_n5_093,N5,便利,べんり,benri,na_adjective,na_adverbial_ni,便利に,べんりに,benri ni,Praktis; nyaman.,na_adverbial_ni,true,true,Generated na-adjective test case.
+act_n5_094,N5,静か,しずか,shizuka,na_adjective,na_plain_nonpast_affirmative_da,静かだ,しずかだ,shizuka da,Tenang.,na_plain_nonpast_affirmative_da,true,true,Generated na-adjective test case.
+act_n5_095,N5,静か,しずか,shizuka,na_adjective,na_polite_nonpast_affirmative_desu,静かです,しずかです,shizuka desu,Tenang.,na_polite_nonpast_affirmative_desu,true,true,Generated na-adjective test case.
+act_n5_096,N5,静か,しずか,shizuka,na_adjective,na_before_noun_na,静かな人,しずかなひと,shizuka na hito,Tenang.,na_before_noun_na,true,true,Generated na-adjective test case.
+act_n5_097,N5,静か,しずか,shizuka,na_adjective,na_plain_nonpast_negative_dewa_nai,静かではない,しずかではない,shizuka dewa nai,Tenang.,na_plain_nonpast_negative_dewa_nai,true,true,Generated na-adjective test case.
+act_n5_098,N5,静か,しずか,shizuka,na_adjective,na_plain_nonpast_negative_ja_nai,静かじゃない,しずかじゃない,shizuka ja nai,Tenang.,na_plain_nonpast_negative_ja_nai,true,true,Generated na-adjective test case.
+act_n5_099,N5,静か,しずか,shizuka,na_adjective,na_polite_nonpast_negative_dewa_arimasen,静かではありません,しずかではありません,shizuka dewa arimasen,Tenang.,na_polite_nonpast_negative_dewa_arimasen,true,true,Generated na-adjective test case.
+act_n5_100,N5,静か,しずか,shizuka,na_adjective,na_polite_nonpast_negative_ja_arimasen,静かじゃありません,しずかじゃありません,shizuka ja arimasen,Tenang.,na_polite_nonpast_negative_ja_arimasen,true,true,Generated na-adjective test case.
+act_n5_101,N5,静か,しずか,shizuka,na_adjective,na_plain_past_affirmative_datta,静かだった,しずかだった,shizuka datta,Tenang.,na_plain_past_affirmative_datta,true,true,Generated na-adjective test case.
+act_n5_102,N5,静か,しずか,shizuka,na_adjective,na_polite_past_affirmative_deshita,静かでした,しずかでした,shizuka deshita,Tenang.,na_polite_past_affirmative_deshita,true,true,Generated na-adjective test case.
+act_n5_103,N5,静か,しずか,shizuka,na_adjective,na_plain_past_negative_dewa_nakatta,静かではなかった,しずかではなかった,shizuka dewa nakatta,Tenang.,na_plain_past_negative_dewa_nakatta,true,true,Generated na-adjective test case.
+act_n5_104,N5,静か,しずか,shizuka,na_adjective,na_plain_past_negative_ja_nakatta,静かじゃなかった,しずかじゃなかった,shizuka ja nakatta,Tenang.,na_plain_past_negative_ja_nakatta,true,true,Generated na-adjective test case.
+act_n5_105,N5,静か,しずか,shizuka,na_adjective,na_polite_past_negative_dewa_arimasen_deshita,静かではありませんでした,しずかではありませんでした,shizuka dewa arimasen deshita,Tenang.,na_polite_past_negative_dewa_arimasen_deshita,true,true,Generated na-adjective test case.
+act_n5_106,N5,静か,しずか,shizuka,na_adjective,na_polite_past_negative_ja_arimasen_deshita,静かじゃありませんでした,しずかじゃありませんでした,shizuka ja arimasen deshita,Tenang.,na_polite_past_negative_ja_arimasen_deshita,true,true,Generated na-adjective test case.
+act_n5_107,N5,静か,しずか,shizuka,na_adjective,na_connective_de,静かで,しずかで,shizuka de,Tenang.,na_connective_de,true,true,Generated na-adjective test case.
+act_n5_108,N5,静か,しずか,shizuka,na_adjective,na_adverbial_ni,静かに,しずかに,shizuka ni,Tenang.,na_adverbial_ni,true,true,Generated na-adjective test case.
+act_n5_109,N5,元気,げんき,genki,na_adjective,na_plain_nonpast_affirmative_da,元気だ,げんきだ,genki da,Sehat; bersemangat.,na_plain_nonpast_affirmative_da,true,true,Generated na-adjective test case.
+act_n5_110,N5,元気,げんき,genki,na_adjective,na_polite_nonpast_affirmative_desu,元気です,げんきです,genki desu,Sehat; bersemangat.,na_polite_nonpast_affirmative_desu,true,true,Generated na-adjective test case.
+act_n5_111,N5,元気,げんき,genki,na_adjective,na_before_noun_na,元気な人,げんきなひと,genki na hito,Sehat; bersemangat.,na_before_noun_na,true,true,Generated na-adjective test case.
+act_n5_112,N5,元気,げんき,genki,na_adjective,na_plain_nonpast_negative_dewa_nai,元気ではない,げんきではない,genki dewa nai,Sehat; bersemangat.,na_plain_nonpast_negative_dewa_nai,true,true,Generated na-adjective test case.
+act_n5_113,N5,元気,げんき,genki,na_adjective,na_plain_nonpast_negative_ja_nai,元気じゃない,げんきじゃない,genki ja nai,Sehat; bersemangat.,na_plain_nonpast_negative_ja_nai,true,true,Generated na-adjective test case.
+act_n5_114,N5,元気,げんき,genki,na_adjective,na_polite_nonpast_negative_dewa_arimasen,元気ではありません,げんきではありません,genki dewa arimasen,Sehat; bersemangat.,na_polite_nonpast_negative_dewa_arimasen,true,true,Generated na-adjective test case.
+act_n5_115,N5,元気,げんき,genki,na_adjective,na_polite_nonpast_negative_ja_arimasen,元気じゃありません,げんきじゃありません,genki ja arimasen,Sehat; bersemangat.,na_polite_nonpast_negative_ja_arimasen,true,true,Generated na-adjective test case.
+act_n5_116,N5,元気,げんき,genki,na_adjective,na_plain_past_affirmative_datta,元気だった,げんきだった,genki datta,Sehat; bersemangat.,na_plain_past_affirmative_datta,true,true,Generated na-adjective test case.
+act_n5_117,N5,元気,げんき,genki,na_adjective,na_polite_past_affirmative_deshita,元気でした,げんきでした,genki deshita,Sehat; bersemangat.,na_polite_past_affirmative_deshita,true,true,Generated na-adjective test case.
+act_n5_118,N5,元気,げんき,genki,na_adjective,na_plain_past_negative_dewa_nakatta,元気ではなかった,げんきではなかった,genki dewa nakatta,Sehat; bersemangat.,na_plain_past_negative_dewa_nakatta,true,true,Generated na-adjective test case.
+act_n5_119,N5,元気,げんき,genki,na_adjective,na_plain_past_negative_ja_nakatta,元気じゃなかった,げんきじゃなかった,genki ja nakatta,Sehat; bersemangat.,na_plain_past_negative_ja_nakatta,true,true,Generated na-adjective test case.
+act_n5_120,N5,元気,げんき,genki,na_adjective,na_polite_past_negative_dewa_arimasen_deshita,元気ではありませんでした,げんきではありませんでした,genki dewa arimasen deshita,Sehat; bersemangat.,na_polite_past_negative_dewa_arimasen_deshita,true,true,Generated na-adjective test case.
+act_n5_121,N5,元気,げんき,genki,na_adjective,na_polite_past_negative_ja_arimasen_deshita,元気じゃありませんでした,げんきじゃありませんでした,genki ja arimasen deshita,Sehat; bersemangat.,na_polite_past_negative_ja_arimasen_deshita,true,true,Generated na-adjective test case.
+act_n5_122,N5,元気,げんき,genki,na_adjective,na_connective_de,元気で,げんきで,genki de,Sehat; bersemangat.,na_connective_de,true,true,Generated na-adjective test case.
+act_n5_123,N5,元気,げんき,genki,na_adjective,na_adverbial_ni,元気に,げんきに,genki ni,Sehat; bersemangat.,na_adverbial_ni,true,true,Generated na-adjective test case.
+act_n5_124,N5,好き,すき,suki,na_adjective,na_plain_nonpast_affirmative_da,好きだ,すきだ,suki da,Suka.,na_plain_nonpast_affirmative_da,true,true,Generated na-adjective test case.
+act_n5_125,N5,好き,すき,suki,na_adjective,na_polite_nonpast_affirmative_desu,好きです,すきです,suki desu,Suka.,na_polite_nonpast_affirmative_desu,true,true,Generated na-adjective test case.
+act_n5_126,N5,好き,すき,suki,na_adjective,na_before_noun_na,好きな人,すきなひと,suki na hito,Suka.,na_before_noun_na,true,true,Generated na-adjective test case.
+act_n5_127,N5,好き,すき,suki,na_adjective,na_plain_nonpast_negative_dewa_nai,好きではない,すきではない,suki dewa nai,Suka.,na_plain_nonpast_negative_dewa_nai,true,true,Generated na-adjective test case.
+act_n5_128,N5,好き,すき,suki,na_adjective,na_plain_nonpast_negative_ja_nai,好きじゃない,すきじゃない,suki ja nai,Suka.,na_plain_nonpast_negative_ja_nai,true,true,Generated na-adjective test case.
+act_n5_129,N5,好き,すき,suki,na_adjective,na_polite_nonpast_negative_dewa_arimasen,好きではありません,すきではありません,suki dewa arimasen,Suka.,na_polite_nonpast_negative_dewa_arimasen,true,true,Generated na-adjective test case.
+act_n5_130,N5,好き,すき,suki,na_adjective,na_polite_nonpast_negative_ja_arimasen,好きじゃありません,すきじゃありません,suki ja arimasen,Suka.,na_polite_nonpast_negative_ja_arimasen,true,true,Generated na-adjective test case.
+act_n5_131,N5,好き,すき,suki,na_adjective,na_plain_past_affirmative_datta,好きだった,すきだった,suki datta,Suka.,na_plain_past_affirmative_datta,true,true,Generated na-adjective test case.
+act_n5_132,N5,好き,すき,suki,na_adjective,na_polite_past_affirmative_deshita,好きでした,すきでした,suki deshita,Suka.,na_polite_past_affirmative_deshita,true,true,Generated na-adjective test case.
+act_n5_133,N5,好き,すき,suki,na_adjective,na_plain_past_negative_dewa_nakatta,好きではなかった,すきではなかった,suki dewa nakatta,Suka.,na_plain_past_negative_dewa_nakatta,true,true,Generated na-adjective test case.
+act_n5_134,N5,好き,すき,suki,na_adjective,na_plain_past_negative_ja_nakatta,好きじゃなかった,すきじゃなかった,suki ja nakatta,Suka.,na_plain_past_negative_ja_nakatta,true,true,Generated na-adjective test case.
+act_n5_135,N5,好き,すき,suki,na_adjective,na_polite_past_negative_dewa_arimasen_deshita,好きではありませんでした,すきではありませんでした,suki dewa arimasen deshita,Suka.,na_polite_past_negative_dewa_arimasen_deshita,true,true,Generated na-adjective test case.
+act_n5_136,N5,好き,すき,suki,na_adjective,na_polite_past_negative_ja_arimasen_deshita,好きじゃありませんでした,すきじゃありませんでした,suki ja arimasen deshita,Suka.,na_polite_past_negative_ja_arimasen_deshita,true,true,Generated na-adjective test case.
+act_n5_137,N5,好き,すき,suki,na_adjective,na_connective_de,好きで,すきで,suki de,Suka.,na_connective_de,true,true,Generated na-adjective test case.
+act_n5_138,N5,好き,すき,suki,na_adjective,na_adverbial_ni,好きに,すきに,suki ni,Suka.,na_adverbial_ni,true,true,Generated na-adjective test case.
+act_n5_139,N5,きれい,きれい,kirei,na_adjective,na_plain_nonpast_affirmative_da,きれいだ,きれいだ,kirei da,Indah; bersih.,na_plain_nonpast_affirmative_da,true,true,Generated na-adjective test case.
+act_n5_140,N5,きれい,きれい,kirei,na_adjective,na_polite_nonpast_affirmative_desu,きれいです,きれいです,kirei desu,Indah; bersih.,na_polite_nonpast_affirmative_desu,true,true,Generated na-adjective test case.
+act_n5_141,N5,きれい,きれい,kirei,na_adjective,na_before_noun_na,きれいな人,きれいなひと,kirei na hito,Indah; bersih.,na_before_noun_na,true,true,Generated na-adjective test case.
+act_n5_142,N5,きれい,きれい,kirei,na_adjective,na_plain_nonpast_negative_dewa_nai,きれいではない,きれいではない,kirei dewa nai,Indah; bersih.,na_plain_nonpast_negative_dewa_nai,true,true,Generated na-adjective test case.
+act_n5_143,N5,きれい,きれい,kirei,na_adjective,na_plain_nonpast_negative_ja_nai,きれいじゃない,きれいじゃない,kirei ja nai,Indah; bersih.,na_plain_nonpast_negative_ja_nai,true,true,Generated na-adjective test case.
+act_n5_144,N5,きれい,きれい,kirei,na_adjective,na_polite_nonpast_negative_dewa_arimasen,きれいではありません,きれいではありません,kirei dewa arimasen,Indah; bersih.,na_polite_nonpast_negative_dewa_arimasen,true,true,Generated na-adjective test case.
+act_n5_145,N5,きれい,きれい,kirei,na_adjective,na_polite_nonpast_negative_ja_arimasen,きれいじゃありません,きれいじゃありません,kirei ja arimasen,Indah; bersih.,na_polite_nonpast_negative_ja_arimasen,true,true,Generated na-adjective test case.
+act_n5_146,N5,きれい,きれい,kirei,na_adjective,na_plain_past_affirmative_datta,きれいだった,きれいだった,kirei datta,Indah; bersih.,na_plain_past_affirmative_datta,true,true,Generated na-adjective test case.
+act_n5_147,N5,きれい,きれい,kirei,na_adjective,na_polite_past_affirmative_deshita,きれいでした,きれいでした,kirei deshita,Indah; bersih.,na_polite_past_affirmative_deshita,true,true,Generated na-adjective test case.
+act_n5_148,N5,きれい,きれい,kirei,na_adjective,na_plain_past_negative_dewa_nakatta,きれいではなかった,きれいではなかった,kirei dewa nakatta,Indah; bersih.,na_plain_past_negative_dewa_nakatta,true,true,Generated na-adjective test case.
+act_n5_149,N5,きれい,きれい,kirei,na_adjective,na_plain_past_negative_ja_nakatta,きれいじゃなかった,きれいじゃなかった,kirei ja nakatta,Indah; bersih.,na_plain_past_negative_ja_nakatta,true,true,Generated na-adjective test case.
+act_n5_150,N5,きれい,きれい,kirei,na_adjective,na_polite_past_negative_dewa_arimasen_deshita,きれいではありませんでした,きれいではありませんでした,kirei dewa arimasen deshita,Indah; bersih.,na_polite_past_negative_dewa_arimasen_deshita,true,true,Generated na-adjective test case.
+act_n5_151,N5,きれい,きれい,kirei,na_adjective,na_polite_past_negative_ja_arimasen_deshita,きれいじゃありませんでした,きれいじゃありませんでした,kirei ja arimasen deshita,Indah; bersih.,na_polite_past_negative_ja_arimasen_deshita,true,true,Generated na-adjective test case.
+act_n5_152,N5,きれい,きれい,kirei,na_adjective,na_connective_de,きれいで,きれいで,kirei de,Indah; bersih.,na_connective_de,true,true,Generated na-adjective test case.
+act_n5_153,N5,きれい,きれい,kirei,na_adjective,na_adverbial_ni,きれいに,きれいに,kirei ni,Indah; bersih.,na_adverbial_ni,true,true,Generated na-adjective test case.
+act_n5_154,N5,有名,ゆうめい,yuumei,na_adjective,na_plain_nonpast_affirmative_da,有名だ,ゆうめいだ,yuumei da,Terkenal.,na_plain_nonpast_affirmative_da,true,true,Generated na-adjective test case.
+act_n5_155,N5,有名,ゆうめい,yuumei,na_adjective,na_polite_nonpast_affirmative_desu,有名です,ゆうめいです,yuumei desu,Terkenal.,na_polite_nonpast_affirmative_desu,true,true,Generated na-adjective test case.
+act_n5_156,N5,有名,ゆうめい,yuumei,na_adjective,na_before_noun_na,有名な人,ゆうめいなひと,yuumei na hito,Terkenal.,na_before_noun_na,true,true,Generated na-adjective test case.
+act_n5_157,N5,有名,ゆうめい,yuumei,na_adjective,na_plain_nonpast_negative_dewa_nai,有名ではない,ゆうめいではない,yuumei dewa nai,Terkenal.,na_plain_nonpast_negative_dewa_nai,true,true,Generated na-adjective test case.
+act_n5_158,N5,有名,ゆうめい,yuumei,na_adjective,na_plain_nonpast_negative_ja_nai,有名じゃない,ゆうめいじゃない,yuumei ja nai,Terkenal.,na_plain_nonpast_negative_ja_nai,true,true,Generated na-adjective test case.
+act_n5_159,N5,有名,ゆうめい,yuumei,na_adjective,na_polite_nonpast_negative_dewa_arimasen,有名ではありません,ゆうめいではありません,yuumei dewa arimasen,Terkenal.,na_polite_nonpast_negative_dewa_arimasen,true,true,Generated na-adjective test case.
+act_n5_160,N5,有名,ゆうめい,yuumei,na_adjective,na_polite_nonpast_negative_ja_arimasen,有名じゃありません,ゆうめいじゃありません,yuumei ja arimasen,Terkenal.,na_polite_nonpast_negative_ja_arimasen,true,true,Generated na-adjective test case.
+act_n5_161,N5,有名,ゆうめい,yuumei,na_adjective,na_plain_past_affirmative_datta,有名だった,ゆうめいだった,yuumei datta,Terkenal.,na_plain_past_affirmative_datta,true,true,Generated na-adjective test case.
+act_n5_162,N5,有名,ゆうめい,yuumei,na_adjective,na_polite_past_affirmative_deshita,有名でした,ゆうめいでした,yuumei deshita,Terkenal.,na_polite_past_affirmative_deshita,true,true,Generated na-adjective test case.
+act_n5_163,N5,有名,ゆうめい,yuumei,na_adjective,na_plain_past_negative_dewa_nakatta,有名ではなかった,ゆうめいではなかった,yuumei dewa nakatta,Terkenal.,na_plain_past_negative_dewa_nakatta,true,true,Generated na-adjective test case.
+act_n5_164,N5,有名,ゆうめい,yuumei,na_adjective,na_plain_past_negative_ja_nakatta,有名じゃなかった,ゆうめいじゃなかった,yuumei ja nakatta,Terkenal.,na_plain_past_negative_ja_nakatta,true,true,Generated na-adjective test case.
+act_n5_165,N5,有名,ゆうめい,yuumei,na_adjective,na_polite_past_negative_dewa_arimasen_deshita,有名ではありませんでした,ゆうめいではありませんでした,yuumei dewa arimasen deshita,Terkenal.,na_polite_past_negative_dewa_arimasen_deshita,true,true,Generated na-adjective test case.
+act_n5_166,N5,有名,ゆうめい,yuumei,na_adjective,na_polite_past_negative_ja_arimasen_deshita,有名じゃありませんでした,ゆうめいじゃありませんでした,yuumei ja arimasen deshita,Terkenal.,na_polite_past_negative_ja_arimasen_deshita,true,true,Generated na-adjective test case.
+act_n5_167,N5,有名,ゆうめい,yuumei,na_adjective,na_connective_de,有名で,ゆうめいで,yuumei de,Terkenal.,na_connective_de,true,true,Generated na-adjective test case.
+act_n5_168,N5,有名,ゆうめい,yuumei,na_adjective,na_adverbial_ni,有名に,ゆうめいに,yuumei ni,Terkenal.,na_adverbial_ni,true,true,Generated na-adjective test case.
+act_n5_169,N5,上手,じょうず,jouzu,na_adjective,na_plain_nonpast_affirmative_da,上手だ,じょうずだ,jouzu da,Jago; mahir.,na_plain_nonpast_affirmative_da,true,true,Generated na-adjective test case.
+act_n5_170,N5,上手,じょうず,jouzu,na_adjective,na_polite_nonpast_affirmative_desu,上手です,じょうずです,jouzu desu,Jago; mahir.,na_polite_nonpast_affirmative_desu,true,true,Generated na-adjective test case.
+act_n5_171,N5,上手,じょうず,jouzu,na_adjective,na_before_noun_na,上手な人,じょうずなひと,jouzu na hito,Jago; mahir.,na_before_noun_na,true,true,Generated na-adjective test case.
+act_n5_172,N5,上手,じょうず,jouzu,na_adjective,na_plain_nonpast_negative_dewa_nai,上手ではない,じょうずではない,jouzu dewa nai,Jago; mahir.,na_plain_nonpast_negative_dewa_nai,true,true,Generated na-adjective test case.
+act_n5_173,N5,上手,じょうず,jouzu,na_adjective,na_plain_nonpast_negative_ja_nai,上手じゃない,じょうずじゃない,jouzu ja nai,Jago; mahir.,na_plain_nonpast_negative_ja_nai,true,true,Generated na-adjective test case.
+act_n5_174,N5,上手,じょうず,jouzu,na_adjective,na_polite_nonpast_negative_dewa_arimasen,上手ではありません,じょうずではありません,jouzu dewa arimasen,Jago; mahir.,na_polite_nonpast_negative_dewa_arimasen,true,true,Generated na-adjective test case.
+act_n5_175,N5,上手,じょうず,jouzu,na_adjective,na_polite_nonpast_negative_ja_arimasen,上手じゃありません,じょうずじゃありません,jouzu ja arimasen,Jago; mahir.,na_polite_nonpast_negative_ja_arimasen,true,true,Generated na-adjective test case.
+act_n5_176,N5,上手,じょうず,jouzu,na_adjective,na_plain_past_affirmative_datta,上手だった,じょうずだった,jouzu datta,Jago; mahir.,na_plain_past_affirmative_datta,true,true,Generated na-adjective test case.
+act_n5_177,N5,上手,じょうず,jouzu,na_adjective,na_polite_past_affirmative_deshita,上手でした,じょうずでした,jouzu deshita,Jago; mahir.,na_polite_past_affirmative_deshita,true,true,Generated na-adjective test case.
+act_n5_178,N5,上手,じょうず,jouzu,na_adjective,na_plain_past_negative_dewa_nakatta,上手ではなかった,じょうずではなかった,jouzu dewa nakatta,Jago; mahir.,na_plain_past_negative_dewa_nakatta,true,true,Generated na-adjective test case.
+act_n5_179,N5,上手,じょうず,jouzu,na_adjective,na_plain_past_negative_ja_nakatta,上手じゃなかった,じょうずじゃなかった,jouzu ja nakatta,Jago; mahir.,na_plain_past_negative_ja_nakatta,true,true,Generated na-adjective test case.
+act_n5_180,N5,上手,じょうず,jouzu,na_adjective,na_polite_past_negative_dewa_arimasen_deshita,上手ではありませんでした,じょうずではありませんでした,jouzu dewa arimasen deshita,Jago; mahir.,na_polite_past_negative_dewa_arimasen_deshita,true,true,Generated na-adjective test case.
+act_n5_181,N5,上手,じょうず,jouzu,na_adjective,na_polite_past_negative_ja_arimasen_deshita,上手じゃありませんでした,じょうずじゃありませんでした,jouzu ja arimasen deshita,Jago; mahir.,na_polite_past_negative_ja_arimasen_deshita,true,true,Generated na-adjective test case.
+act_n5_182,N5,上手,じょうず,jouzu,na_adjective,na_connective_de,上手で,じょうずで,jouzu de,Jago; mahir.,na_connective_de,true,true,Generated na-adjective test case.
+act_n5_183,N5,上手,じょうず,jouzu,na_adjective,na_adverbial_ni,上手に,じょうずに,jouzu ni,Jago; mahir.,na_adverbial_ni,true,true,Generated na-adjective test case.
+act_n5_184,N5,きれい,きれい,kirei,na_adjective,invalid_i_plain_negative,きれいではない,きれいではない,kirei dewa nai,Bersih; indah.,na adjective ending in i exception,true,true,Do not generate きれくない.
+act_n5_185,N5,有名,ゆうめい,yuumei,na_adjective,na_before_noun_na,有名な人,ゆうめいなひと,yuumei na hito,Terkenal.,na adjective ending in i exception,true,true,Do not generate 有名い.
+act_n5_186,N4+,大きい,おおきい,ookii,i_adjective_special,special_prenominal_na,大きな家,おおきないえ,ooki na ie,Besar.,special prenominal,false,false,大きい is still i-adjective; 大きな is fixed prenominal.
+act_n5_187,N4+,小さい,ちいさい,chiisai,i_adjective_special,special_prenominal_na,小さな家,ちいさないえ,chiisa na ie,Kecil.,special prenominal,false,false,小さい is still i-adjective; 小さな is fixed prenominal.

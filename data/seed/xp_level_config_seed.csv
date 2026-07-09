@@ -1,0 +1,51 @@
+﻿id,level,level_title_id,required_total_xp,xp_to_next_level,reward_coins,reward_item_key,unlock_feature_keys,daily_xp_soft_cap,daily_xp_hard_cap,recommended_new_cards_bonus,badge_key,source_url,notes
+xp_level_001,1,Pemula Baru Spawn,0,100,0,,,310,820,0,,https://arxiv.org/abs/2203.16175,Soft/hard caps prevent XP farming from overshadowing learning.
+xp_level_002,2,Pemula Baru Spawn,100,174,14,,,320,840,0,,https://arxiv.org/abs/2203.16175,Soft/hard caps prevent XP farming from overshadowing learning.
+xp_level_003,3,Pemula Baru Spawn,274,225,16,cosmetic_level_3,daily_challenge,330,860,0,level_3,https://arxiv.org/abs/2203.16175,Soft/hard caps prevent XP farming from overshadowing learning.
+xp_level_004,4,Pemula Baru Spawn,499,266,18,,,340,880,0,,https://arxiv.org/abs/2203.16175,Soft/hard caps prevent XP farming from overshadowing learning.
+xp_level_005,5,Kana Grinder,765,304,20,cosmetic_level_5,srs_flashcards,350,900,0,level_5,https://arxiv.org/abs/2203.16175,Soft/hard caps prevent XP farming from overshadowing learning.
+xp_level_006,6,Kana Grinder,1069,336,22,,,360,920,0,,https://arxiv.org/abs/2203.16175,Soft/hard caps prevent XP farming from overshadowing learning.
+xp_level_007,7,Kana Grinder,1405,368,24,,,370,940,0,,https://arxiv.org/abs/2203.16175,Soft/hard caps prevent XP farming from overshadowing learning.
+xp_level_008,8,Kana Grinder,1773,395,26,,,380,960,0,,https://arxiv.org/abs/2203.16175,Soft/hard caps prevent XP farming from overshadowing learning.
+xp_level_009,9,Kana Grinder,2168,422,28,,,390,980,0,,https://arxiv.org/abs/2203.16175,Soft/hard caps prevent XP farming from overshadowing learning.
+xp_level_010,10,N5 Explorer,2590,448,30,cosmetic_level_10,kanji_lessons,400,1000,1,level_10,https://arxiv.org/abs/2203.16175,Soft/hard caps prevent XP farming from overshadowing learning.
+xp_level_011,11,N5 Explorer,3038,472,32,,,410,1020,1,,https://arxiv.org/abs/2203.16175,Soft/hard caps prevent XP farming from overshadowing learning.
+xp_level_012,12,N5 Explorer,3510,495,34,,,420,1040,1,,https://arxiv.org/abs/2203.16175,Soft/hard caps prevent XP farming from overshadowing learning.
+xp_level_013,13,N5 Explorer,4005,517,36,,,430,1060,1,,https://arxiv.org/abs/2203.16175,Soft/hard caps prevent XP farming from overshadowing learning.
+xp_level_014,14,N5 Explorer,4522,539,38,,,440,1080,1,,https://arxiv.org/abs/2203.16175,Soft/hard caps prevent XP farming from overshadowing learning.
+xp_level_015,15,N5 Explorer,5061,560,40,cosmetic_level_15,mock_test_mini,450,1100,1,level_15,https://arxiv.org/abs/2203.16175,Soft/hard caps prevent XP farming from overshadowing learning.
+xp_level_016,16,N5 Explorer,5621,580,42,,,460,1120,1,,https://arxiv.org/abs/2203.16175,Soft/hard caps prevent XP farming from overshadowing learning.
+xp_level_017,17,N5 Explorer,6201,599,44,,,470,1140,1,,https://arxiv.org/abs/2203.16175,Soft/hard caps prevent XP farming from overshadowing learning.
+xp_level_018,18,N5 Explorer,6800,619,46,,,480,1160,1,,https://arxiv.org/abs/2203.16175,Soft/hard caps prevent XP farming from overshadowing learning.
+xp_level_019,19,N5 Explorer,7419,637,48,,,490,1180,1,,https://arxiv.org/abs/2203.16175,Soft/hard caps prevent XP farming from overshadowing learning.
+xp_level_020,20,Grammar Tamer,8056,655,50,cosmetic_level_20,,500,1200,2,level_20,https://arxiv.org/abs/2203.16175,Soft/hard caps prevent XP farming from overshadowing learning.
+xp_level_021,21,Grammar Tamer,8711,673,52,,,510,1220,2,,https://arxiv.org/abs/2203.16175,Soft/hard caps prevent XP farming from overshadowing learning.
+xp_level_022,22,Grammar Tamer,9384,690,54,,,520,1240,2,,https://arxiv.org/abs/2203.16175,Soft/hard caps prevent XP farming from overshadowing learning.
+xp_level_023,23,Grammar Tamer,10074,708,56,,,530,1260,2,,https://arxiv.org/abs/2203.16175,Soft/hard caps prevent XP farming from overshadowing learning.
+xp_level_024,24,Grammar Tamer,10782,723,58,,,540,1280,2,,https://arxiv.org/abs/2203.16175,Soft/hard caps prevent XP farming from overshadowing learning.
+xp_level_025,25,Grammar Tamer,11505,741,60,cosmetic_level_25,avatar_shop,550,1300,2,level_25,https://arxiv.org/abs/2203.16175,Soft/hard caps prevent XP farming from overshadowing learning.
+xp_level_026,26,Grammar Tamer,12246,756,62,,,560,1320,2,,https://arxiv.org/abs/2203.16175,Soft/hard caps prevent XP farming from overshadowing learning.
+xp_level_027,27,Grammar Tamer,13002,772,64,,,570,1340,2,,https://arxiv.org/abs/2203.16175,Soft/hard caps prevent XP farming from overshadowing learning.
+xp_level_028,28,Grammar Tamer,13774,787,66,,,580,1360,2,,https://arxiv.org/abs/2203.16175,Soft/hard caps prevent XP farming from overshadowing learning.
+xp_level_029,29,Grammar Tamer,14561,803,68,,,590,1380,2,,https://arxiv.org/abs/2203.16175,Soft/hard caps prevent XP farming from overshadowing learning.
+xp_level_030,30,Kanji Climber,15364,818,70,cosmetic_level_30,,600,1400,3,level_30,https://arxiv.org/abs/2203.16175,Soft/hard caps prevent XP farming from overshadowing learning.
+xp_level_031,31,Kanji Climber,16182,832,72,,,610,1420,3,,https://arxiv.org/abs/2203.16175,Soft/hard caps prevent XP farming from overshadowing learning.
+xp_level_032,32,Kanji Climber,17014,847,74,,,620,1440,3,,https://arxiv.org/abs/2203.16175,Soft/hard caps prevent XP farming from overshadowing learning.
+xp_level_033,33,Kanji Climber,17861,861,76,,,630,1460,3,,https://arxiv.org/abs/2203.16175,Soft/hard caps prevent XP farming from overshadowing learning.
+xp_level_034,34,Kanji Climber,18722,876,78,,,640,1480,3,,https://arxiv.org/abs/2203.16175,Soft/hard caps prevent XP farming from overshadowing learning.
+xp_level_035,35,Kanji Climber,19598,889,80,,,650,1500,3,,https://arxiv.org/abs/2203.16175,Soft/hard caps prevent XP farming from overshadowing learning.
+xp_level_036,36,Kanji Climber,20487,903,82,,,660,1520,3,,https://arxiv.org/abs/2203.16175,Soft/hard caps prevent XP farming from overshadowing learning.
+xp_level_037,37,Kanji Climber,21390,917,84,,,670,1540,3,,https://arxiv.org/abs/2203.16175,Soft/hard caps prevent XP farming from overshadowing learning.
+xp_level_038,38,Kanji Climber,22307,930,86,,,680,1560,3,,https://arxiv.org/abs/2203.16175,Soft/hard caps prevent XP farming from overshadowing learning.
+xp_level_039,39,Kanji Climber,23237,944,88,,,690,1580,3,,https://arxiv.org/abs/2203.16175,Soft/hard caps prevent XP farming from overshadowing learning.
+xp_level_040,40,N5 Challenger,24181,956,90,cosmetic_level_40,legendary_badges,700,1600,4,level_40,https://arxiv.org/abs/2203.16175,Soft/hard caps prevent XP farming from overshadowing learning.
+xp_level_041,41,N5 Challenger,25137,970,92,,,710,1620,4,,https://arxiv.org/abs/2203.16175,Soft/hard caps prevent XP farming from overshadowing learning.
+xp_level_042,42,N5 Challenger,26107,982,94,,,720,1640,4,,https://arxiv.org/abs/2203.16175,Soft/hard caps prevent XP farming from overshadowing learning.
+xp_level_043,43,N5 Challenger,27089,995,96,,,730,1660,4,,https://arxiv.org/abs/2203.16175,Soft/hard caps prevent XP farming from overshadowing learning.
+xp_level_044,44,N5 Challenger,28084,1008,98,,,740,1680,4,,https://arxiv.org/abs/2203.16175,Soft/hard caps prevent XP farming from overshadowing learning.
+xp_level_045,45,N5 Challenger,29092,1020,100,,,750,1700,4,,https://arxiv.org/abs/2203.16175,Soft/hard caps prevent XP farming from overshadowing learning.
+xp_level_046,46,N5 Challenger,30112,1032,102,,,760,1720,4,,https://arxiv.org/abs/2203.16175,Soft/hard caps prevent XP farming from overshadowing learning.
+xp_level_047,47,N5 Challenger,31144,1045,104,,,770,1740,4,,https://arxiv.org/abs/2203.16175,Soft/hard caps prevent XP farming from overshadowing learning.
+xp_level_048,48,N5 Challenger,32189,1056,106,,,780,1760,4,,https://arxiv.org/abs/2203.16175,Soft/hard caps prevent XP farming from overshadowing learning.
+xp_level_049,49,N5 Challenger,33245,1069,108,,,790,1780,4,,https://arxiv.org/abs/2203.16175,Soft/hard caps prevent XP farming from overshadowing learning.
+xp_level_050,50,N5 Legend,34314,,110,cosmetic_level_50,,800,1800,5,level_50,https://arxiv.org/abs/2203.16175,Soft/hard caps prevent XP farming from overshadowing learning.

@@ -1,0 +1,3592 @@
+[
+  {
+    "expr": "ああ",
+    "mEn": "Ah!, Oh!",
+    "mId": "Ah!, Oh!"
+  },
+  {
+    "expr": "会う",
+    "mEn": "to meet, to see",
+    "mId": "bertemu, melihat"
+  },
+  {
+    "expr": "青",
+    "mEn": "blue",
+    "mId": "biru"
+  },
+  {
+    "expr": "青い",
+    "mEn": "blue",
+    "mId": "biru"
+  },
+  {
+    "expr": "赤",
+    "mEn": "red",
+    "mId": "merah"
+  },
+  {
+    "expr": "赤い",
+    "mEn": "red",
+    "mId": "merah"
+  },
+  {
+    "expr": "明るい",
+    "mEn": "bright (in reference to personality or weather); cheerful",
+    "mId": "terang, ceria"
+  },
+  {
+    "expr": "秋",
+    "mEn": "fall (season)",
+    "mId": "musim gugur"
+  },
+  {
+    "expr": "開く",
+    "mEn": "to open, to become open",
+    "mId": "terbuka, membuka"
+  },
+  {
+    "expr": "開ける",
+    "mEn": "to open (v.t.)",
+    "mId": "membuka"
+  },
+  {
+    "expr": "上げる",
+    "mEn": "to raise, to lift",
+    "mId": "menaikkan, memberi"
+  },
+  {
+    "expr": "朝",
+    "mEn": "morning",
+    "mId": "pagi"
+  },
+  {
+    "expr": "朝御飯",
+    "mEn": "breakfast",
+    "mId": "sarapan"
+  },
+  {
+    "expr": "明後日",
+    "mEn": "day after tomorrow",
+    "mId": "lusa"
+  },
+  {
+    "expr": "足; 脚",
+    "mEn": "foot; leg",
+    "mId": "kaki"
+  },
+  {
+    "expr": "明日",
+    "mEn": "tomorrow",
+    "mId": "besok"
+  },
+  {
+    "expr": "あそこ",
+    "mEn": "there, over there, that place",
+    "mId": "di sana"
+  },
+  {
+    "expr": "遊ぶ",
+    "mEn": "to play; to spend time pleasantly; to hang out",
+    "mId": "bermain"
+  },
+  {
+    "expr": "暖かい",
+    "mEn": "warm",
+    "mId": "hangat"
+  },
+  {
+    "expr": "頭",
+    "mEn": "head",
+    "mId": "kepala"
+  },
+  {
+    "expr": "新しい",
+    "mEn": "new",
+    "mId": "baru"
+  },
+  {
+    "expr": "あちら",
+    "mEn": "this way (polite)",
+    "mId": "arah sana (sopan)"
+  },
+  {
+    "expr": "暑い",
+    "mEn": "hot (in reference to weather), warm",
+    "mId": "panas (cuaca/lingkungan)"
+  },
+  {
+    "expr": "熱い",
+    "mEn": "hot (objects)",
+    "mId": "panas (benda/cairan)"
+  },
+  {
+    "expr": "厚い",
+    "mEn": "kind, warm(hearted), thick, deep",
+    "mId": "tebal"
+  },
+  {
+    "expr": "あっち",
+    "mEn": "over there",
+    "mId": "di sana"
+  },
+  {
+    "expr": "後",
+    "mEn": "afterwards (later); in the future; the rest; since then",
+    "mId": "setelah, belakang"
+  },
+  {
+    "expr": "あなた",
+    "mEn": "you",
+    "mId": "anda/kamu"
+  },
+  {
+    "expr": "兄",
+    "mEn": "(my) older brother (humble)",
+    "mId": "kakak laki-laki"
+  },
+  {
+    "expr": "姉",
+    "mEn": "(my) older sister (humble)",
+    "mId": "kakak perempuan"
+  },
+  {
+    "expr": "アパート",
+    "mEn": "apartment (abbr.)",
+    "mId": "apartemen"
+  },
+  {
+    "expr": "あの",
+    "mEn": "that over there; like that, that way; um...",
+    "mId": "itu di sana, oh (ekspresi ragu)"
+  },
+  {
+    "expr": "浴びる",
+    "mEn": "to bathe, to shower",
+    "mId": "mandi"
+  },
+  {
+    "expr": "危ない",
+    "mEn": "dangerous, critical",
+    "mId": "berbahaya"
+  },
+  {
+    "expr": "甘い",
+    "mEn": "generous, sweet",
+    "mId": "manis"
+  },
+  {
+    "expr": "余り",
+    "mEn": "not very; surplus",
+    "mId": "tidak terlalu, sisa"
+  },
+  {
+    "expr": "雨",
+    "mEn": "rain",
+    "mId": "hujan"
+  },
+  {
+    "expr": "飴",
+    "mEn": "(hard) candy",
+    "mId": "permen"
+  },
+  {
+    "expr": "洗う",
+    "mEn": "to wash",
+    "mId": "mencuci"
+  },
+  {
+    "expr": "在る",
+    "mEn": "to be, to have",
+    "mId": "ada (bentuk kuno)"
+  },
+  {
+    "expr": "有る",
+    "mEn": "to be, to have",
+    "mId": "ada (benda mati)"
+  },
+  {
+    "expr": "歩く",
+    "mEn": "to walk",
+    "mId": "berjalan"
+  },
+  {
+    "expr": "あれ",
+    "mEn": "that one (over there)",
+    "mId": "itu di sana"
+  },
+  {
+    "expr": "いい; よい",
+    "mEn": "good",
+    "mId": "baik"
+  },
+  {
+    "expr": "いいえ",
+    "mEn": "no, not at all",
+    "mId": "tidak"
+  },
+  {
+    "expr": "言う",
+    "mEn": "to say",
+    "mId": "mengatakan"
+  },
+  {
+    "expr": "家",
+    "mEn": "house, home",
+    "mId": "rumah"
+  },
+  {
+    "expr": "いかが",
+    "mEn": "how, in what way",
+    "mId": "bagaimana (sopan)"
+  },
+  {
+    "expr": "行く",
+    "mEn": "to go",
+    "mId": "pergi"
+  },
+  {
+    "expr": "いくつ",
+    "mEn": "how many, how old",
+    "mId": "berapa banyak, berapa buah"
+  },
+  {
+    "expr": "いくら",
+    "mEn": "how much, how many",
+    "mId": "berapa (harga/jumlah)"
+  },
+  {
+    "expr": "池",
+    "mEn": "pond",
+    "mId": "kolam"
+  },
+  {
+    "expr": "医者",
+    "mEn": "doctor; physician",
+    "mId": "dokter"
+  },
+  {
+    "expr": "椅子",
+    "mEn": "chair",
+    "mId": "kursi"
+  },
+  {
+    "expr": "忙しい",
+    "mEn": "busy (people, days)",
+    "mId": "sibuk"
+  },
+  {
+    "expr": "痛い",
+    "mEn": "hurt; painful; sore",
+    "mId": "sakit/nyeri"
+  },
+  {
+    "expr": "一",
+    "mEn": "one",
+    "mId": "satu"
+  },
+  {
+    "expr": "一日",
+    "mEn": "one day (duration)",
+    "mId": "satu hari"
+  },
+  {
+    "expr": "一番",
+    "mEn": "best (most), first, number one",
+    "mId": "terbaik, pertama, nomor satu"
+  },
+  {
+    "expr": "いつ",
+    "mEn": "when",
+    "mId": "kapan"
+  },
+  {
+    "expr": "五日",
+    "mEn": "five days; fifth day of the month",
+    "mId": "hari ke-5, lima hari"
+  },
+  {
+    "expr": "一緒",
+    "mEn": "together",
+    "mId": "bersama"
+  },
+  {
+    "expr": "五つ",
+    "mEn": "five things",
+    "mId": "lima buah"
+  },
+  {
+    "expr": "いつも",
+    "mEn": "always, usually, every time, never (with neg. verb)",
+    "mId": "selalu, biasanya"
+  },
+  {
+    "expr": "犬",
+    "mEn": "dog",
+    "mId": "anjing"
+  },
+  {
+    "expr": "今",
+    "mEn": "now",
+    "mId": "sekarang"
+  },
+  {
+    "expr": "意味",
+    "mEn": "meaning, significance",
+    "mId": "arti/makna"
+  },
+  {
+    "expr": "妹",
+    "mEn": "younger sister (humble)",
+    "mId": "adik perempuan"
+  },
+  {
+    "expr": "嫌",
+    "mEn": "disagreeable, detestable, unpleasant",
+    "mId": "tidak menyenangkan, menyebalkan"
+  },
+  {
+    "expr": "入口",
+    "mEn": "entrance",
+    "mId": "pintu masuk"
+  },
+  {
+    "expr": "居る",
+    "mEn": "(humble) to be (animate), to exist",
+    "mId": "ada (makhluk hidup)"
+  },
+  {
+    "expr": "要る",
+    "mEn": "to need",
+    "mId": "membutuhkan"
+  },
+  {
+    "expr": "入れる",
+    "mEn": "to put in",
+    "mId": "memasukkan"
+  },
+  {
+    "expr": "色",
+    "mEn": "color",
+    "mId": "warna"
+  },
+  {
+    "expr": "色々",
+    "mEn": "various",
+    "mId": "bermacam-macam"
+  },
+  {
+    "expr": "上",
+    "mEn": "above (up, top, etc.), over, on top of",
+    "mId": "atas"
+  },
+  {
+    "expr": "後ろ",
+    "mEn": "back, behind, rear",
+    "mId": "belakang"
+  },
+  {
+    "expr": "薄い",
+    "mEn": "thin, weak",
+    "mId": "tipis, lemah"
+  },
+  {
+    "expr": "歌",
+    "mEn": "a song",
+    "mId": "lagu"
+  },
+  {
+    "expr": "歌う",
+    "mEn": "to sing",
+    "mId": "bernyanyi"
+  },
+  {
+    "expr": "うち",
+    "mEn": "home; house; my place",
+    "mId": "rumah, tempat saya"
+  },
+  {
+    "expr": "生まれる",
+    "mEn": "to be born",
+    "mId": "lahir"
+  },
+  {
+    "expr": "海",
+    "mEn": "sea, beach",
+    "mId": "laut"
+  },
+  {
+    "expr": "売る",
+    "mEn": "to sell (v.t.)",
+    "mId": "menjual"
+  },
+  {
+    "expr": "うるさい",
+    "mEn": "noisy; annoying",
+    "mId": "berisik"
+  },
+  {
+    "expr": "上着",
+    "mEn": "coat, jacket",
+    "mId": "jaket, mantel"
+  },
+  {
+    "expr": "絵",
+    "mEn": "a painting; a picture; a drawing",
+    "mId": "lukisan, gambar"
+  },
+  {
+    "expr": "映画",
+    "mEn": "movie, film",
+    "mId": "film"
+  },
+  {
+    "expr": "映画館",
+    "mEn": "movie theater, cinema",
+    "mId": "bioskop"
+  },
+  {
+    "expr": "英語",
+    "mEn": "English (language)",
+    "mId": "bahasa Inggris"
+  },
+  {
+    "expr": "ええ",
+    "mEn": "yes",
+    "mId": "ya"
+  },
+  {
+    "expr": "駅",
+    "mEn": "station",
+    "mId": "stasiun"
+  },
+  {
+    "expr": "エレベーター",
+    "mEn": "elevator",
+    "mId": "lift"
+  },
+  {
+    "expr": "～円",
+    "mEn": "Yen",
+    "mId": "yen"
+  },
+  {
+    "expr": "鉛筆",
+    "mEn": "pencil",
+    "mId": "pensil"
+  },
+  {
+    "expr": "お～",
+    "mEn": "honorable ~ (honorific)",
+    "mId": "~ yang terhormat (sapaan sopan)"
+  },
+  {
+    "expr": "美味しい",
+    "mEn": "delicious, tasty",
+    "mId": "enak"
+  },
+  {
+    "expr": "多い",
+    "mEn": "many; there are a lot",
+    "mId": "banyak"
+  },
+  {
+    "expr": "大きい",
+    "mEn": "big, large",
+    "mId": "besar"
+  },
+  {
+    "expr": "大きな",
+    "mEn": "big",
+    "mId": "besar"
+  },
+  {
+    "expr": "大勢",
+    "mEn": "great number of people",
+    "mId": "banyak orang"
+  },
+  {
+    "expr": "お母さん",
+    "mEn": "mother (formal)",
+    "mId": "ibu (formal)"
+  },
+  {
+    "expr": "お菓子",
+    "mEn": "confections, sweets, snack",
+    "mId": "kue, permen, camilan"
+  },
+  {
+    "expr": "お金",
+    "mEn": "money",
+    "mId": "uang"
+  },
+  {
+    "expr": "起きる",
+    "mEn": "to get up (e.g., from sleeping); to happen",
+    "mId": "bangun (dari tidur), terjadi"
+  },
+  {
+    "expr": "置く",
+    "mEn": "to put; to lay; to place",
+    "mId": "meletakkan, menaruh"
+  },
+  {
+    "expr": "奥さん",
+    "mEn": "s) wife (hon.)",
+    "mId": "istri (orang lain)"
+  },
+  {
+    "expr": "お酒",
+    "mEn": "sake; alcohol",
+    "mId": "sake, alcohol"
+  },
+  {
+    "expr": "お皿",
+    "mEn": "plate, dish",
+    "mId": "piring"
+  },
+  {
+    "expr": "伯父; 叔父さん",
+    "mEn": "uncle, middle-aged man",
+    "mId": "paman, pria paruh baya"
+  },
+  {
+    "expr": "おじいさん",
+    "mEn": "grandfather, male senior citizen",
+    "mId": "kakek"
+  },
+  {
+    "expr": "教える",
+    "mEn": "to teach, to inform, to instruct",
+    "mId": "mengajar, memberitahu, memberi petunjuk"
+  },
+  {
+    "expr": "押す",
+    "mEn": "to push, to press, to stamp (e.g., a passport)",
+    "mId": "menekan, mendorong"
+  },
+  {
+    "expr": "遅い",
+    "mEn": "slow; (to be) late",
+    "mId": "lambat/terlambat"
+  },
+  {
+    "expr": "お茶",
+    "mEn": "(green) tea",
+    "mId": "(hijau) teh"
+  },
+  {
+    "expr": "お手洗い",
+    "mEn": "toilet, restroom, bathroom (lit., a place to wash one's hands)",
+    "mId": "toilet, kamar mandi, wastafel"
+  },
+  {
+    "expr": "お父さん",
+    "mEn": "father (formal)",
+    "mId": "ayah (formal)"
+  },
+  {
+    "expr": "弟",
+    "mEn": "younger brother",
+    "mId": "adik laki-laki"
+  },
+  {
+    "expr": "男",
+    "mEn": "man, male",
+    "mId": "laki-laki, pria"
+  },
+  {
+    "expr": "男の子",
+    "mEn": "boy",
+    "mId": "anak laki-laki"
+  },
+  {
+    "expr": "一昨日",
+    "mEn": "the day before yesterday",
+    "mId": "kemarin lusa"
+  },
+  {
+    "expr": "おととし",
+    "mEn": "year before last",
+    "mId": "dua tahun yang lalu"
+  },
+  {
+    "expr": "大人",
+    "mEn": "adult",
+    "mId": "orang dewasa"
+  },
+  {
+    "expr": "お腹",
+    "mEn": "stomach",
+    "mId": "perut"
+  },
+  {
+    "expr": "同じ",
+    "mEn": "same, identical",
+    "mId": "sama"
+  },
+  {
+    "expr": "お兄さん",
+    "mEn": "s) older brother (formal)",
+    "mId": "kakak laki-laki"
+  },
+  {
+    "expr": "お姉さん",
+    "mEn": "older sister (formal)",
+    "mId": "kakak perempuan"
+  },
+  {
+    "expr": "伯母さん; 叔母さん",
+    "mEn": "aunt",
+    "mId": "bibi, tante"
+  },
+  {
+    "expr": "おばあさん",
+    "mEn": "grandmother, female senior-citizen",
+    "mId": "nenek"
+  },
+  {
+    "expr": "お風呂",
+    "mEn": "a bath",
+    "mId": "mandi (berendam)"
+  },
+  {
+    "expr": "お弁当",
+    "mEn": "a boxed lunch",
+    "mId": "bekal makan siang"
+  },
+  {
+    "expr": "覚える",
+    "mEn": "to learn, to commit to memory, to remember, to memorize",
+    "mId": "mengingat/menghafal"
+  },
+  {
+    "expr": "おまわりさん",
+    "mEn": "policeman (friendly term)",
+    "mId": "polisi (sapaan ramah)"
+  },
+  {
+    "expr": "重い",
+    "mEn": "heavy; serious",
+    "mId": "berat"
+  },
+  {
+    "expr": "面白い",
+    "mEn": "interesting, amusing",
+    "mId": "menarik/lucu"
+  },
+  {
+    "expr": "泳ぐ",
+    "mEn": "to swim",
+    "mId": "berenang"
+  },
+  {
+    "expr": "降りる",
+    "mEn": "to get off",
+    "mId": "turun"
+  },
+  {
+    "expr": "終る",
+    "mEn": "to finish, to close",
+    "mId": "selesai"
+  },
+  {
+    "expr": "音楽",
+    "mEn": "Music",
+    "mId": "musik"
+  },
+  {
+    "expr": "女",
+    "mEn": "woman, female",
+    "mId": "perempuan"
+  },
+  {
+    "expr": "女の子",
+    "mEn": "girl",
+    "mId": "anak perempuan"
+  },
+  {
+    "expr": "～回",
+    "mEn": "counter for occurrences (~ times)",
+    "mId": "penghitung untuk frekuensi (~ kali)"
+  },
+  {
+    "expr": "～階",
+    "mEn": "counter for stories (floors) of a building",
+    "mId": "penghitung untuk lantai bangunan (~ lantai)"
+  },
+  {
+    "expr": "外国",
+    "mEn": "foreign country; abroad",
+    "mId": "negara asing"
+  },
+  {
+    "expr": "外国人",
+    "mEn": "foreigner",
+    "mId": "orang asing"
+  },
+  {
+    "expr": "会社",
+    "mEn": "company, corporation",
+    "mId": "perusahaan"
+  },
+  {
+    "expr": "階段",
+    "mEn": "stairs",
+    "mId": "tangga"
+  },
+  {
+    "expr": "買い物",
+    "mEn": "shopping",
+    "mId": "belanja"
+  },
+  {
+    "expr": "買う",
+    "mEn": "to buy",
+    "mId": "membeli"
+  },
+  {
+    "expr": "返す",
+    "mEn": "to return something",
+    "mId": "mengembalikan"
+  },
+  {
+    "expr": "帰る",
+    "mEn": "to go back, to go home, to return",
+    "mId": "pulang"
+  },
+  {
+    "expr": "顔",
+    "mEn": "face (body part)",
+    "mId": "wajah"
+  },
+  {
+    "expr": "かかる",
+    "mEn": "it takes (amount of time, money) (v.i.)",
+    "mId": "membutuhkan (waktu, uang)"
+  },
+  {
+    "expr": "鍵",
+    "mEn": "a lock; a key",
+    "mId": "kunci"
+  },
+  {
+    "expr": "書く",
+    "mEn": "to write",
+    "mId": "menulis"
+  },
+  {
+    "expr": "学生",
+    "mEn": "student",
+    "mId": "pelajar/mahasiswa"
+  },
+  {
+    "expr": "～か月",
+    "mEn": "(number of) months",
+    "mId": "~ bulan (jumlah)"
+  },
+  {
+    "expr": "掛ける",
+    "mEn": "to put on (e.g., glasses); to hang (e.g., on a wall)",
+    "mId": "meletakkan di, menggantung di"
+  },
+  {
+    "expr": "かける",
+    "mEn": "to dial/call (e.g., phone); to sit down",
+    "mId": "mendial, menelepon"
+  },
+  {
+    "expr": "傘",
+    "mEn": "umbrella, parasol",
+    "mId": "payung"
+  },
+  {
+    "expr": "貸す",
+    "mEn": "to lend",
+    "mId": "meminjamkan"
+  },
+  {
+    "expr": "風",
+    "mEn": "wind, breeze",
+    "mId": "angin"
+  },
+  {
+    "expr": "風邪",
+    "mEn": "cold, flu",
+    "mId": "masuk angin, flu"
+  },
+  {
+    "expr": "方",
+    "mEn": "-- honorific form for 人 (ひと) --; way of doing",
+    "mId": "orang/cara (sopan)"
+  },
+  {
+    "expr": "家族",
+    "mEn": "family, members of a family",
+    "mId": "keluarga"
+  },
+  {
+    "expr": "片仮名",
+    "mEn": "katakana",
+    "mId": "katakana"
+  },
+  {
+    "expr": "～月",
+    "mEn": "month of year",
+    "mId": "penghitung bulan"
+  },
+  {
+    "expr": "学校",
+    "mEn": "a school",
+    "mId": "sekolah"
+  },
+  {
+    "expr": "カップ",
+    "mEn": "cup",
+    "mId": "cangkir"
+  },
+  {
+    "expr": "家庭",
+    "mEn": "home; family",
+    "mId": "rumah tangga, keluarga"
+  },
+  {
+    "expr": "角",
+    "mEn": "corner (e.g., desk, pavement)",
+    "mId": "sudut"
+  },
+  {
+    "expr": "かばん",
+    "mEn": "bag, basket",
+    "mId": "tas"
+  },
+  {
+    "expr": "花瓶",
+    "mEn": "(flower) vase",
+    "mId": "vas bunga"
+  },
+  {
+    "expr": "かぶる",
+    "mEn": "to wear, to put on (e.g., a hat on the head)",
+    "mId": "memakai (di kepala)"
+  },
+  {
+    "expr": "紙",
+    "mEn": "paper",
+    "mId": "kertas"
+  },
+  {
+    "expr": "カメラ",
+    "mEn": "camera",
+    "mId": "kamera"
+  },
+  {
+    "expr": "火曜日",
+    "mEn": "Tuesday",
+    "mId": "Selasa"
+  },
+  {
+    "expr": "辛い",
+    "mEn": "hot and spicy; salty",
+    "mId": "pedas"
+  },
+  {
+    "expr": "体",
+    "mEn": "body; health",
+    "mId": "tubuh"
+  },
+  {
+    "expr": "借りる",
+    "mEn": "to borrow, to owe",
+    "mId": "meminjam"
+  },
+  {
+    "expr": "～がる",
+    "mEn": "feel",
+    "mId": "merasa (untuk orang ketiga)"
+  },
+  {
+    "expr": "軽い",
+    "mEn": "light, non-serious, minor",
+    "mId": "ringan"
+  },
+  {
+    "expr": "カレー",
+    "mEn": "curry (abbr. for curry and rice)",
+    "mId": "kari (singkatan)"
+  },
+  {
+    "expr": "カレンダー",
+    "mEn": "calendar",
+    "mId": "kalender"
+  },
+  {
+    "expr": "川; 河",
+    "mEn": "river",
+    "mId": "sungai"
+  },
+  {
+    "expr": "～側",
+    "mEn": "~ side",
+    "mId": "sebelah ~, sisi ~"
+  },
+  {
+    "expr": "可愛い",
+    "mEn": "cute, adorable",
+    "mId": "imut/lucu"
+  },
+  {
+    "expr": "漢字",
+    "mEn": "kanji; Chinese character",
+    "mId": "kanji"
+  },
+  {
+    "expr": "木",
+    "mEn": "tree, wood, timber",
+    "mId": "pohon/kayu"
+  },
+  {
+    "expr": "黄色",
+    "mEn": "yellow",
+    "mId": "kuning"
+  },
+  {
+    "expr": "黄色い",
+    "mEn": "yellow",
+    "mId": "kuning"
+  },
+  {
+    "expr": "消える",
+    "mEn": "to vanish, to disappear",
+    "mId": "menghilang"
+  },
+  {
+    "expr": "聞く",
+    "mEn": "to hear, to listen, to ask",
+    "mId": "mendengar, bertanya"
+  },
+  {
+    "expr": "北",
+    "mEn": "north",
+    "mId": "utara"
+  },
+  {
+    "expr": "ギター",
+    "mEn": "guitar",
+    "mId": "gitar"
+  },
+  {
+    "expr": "汚い",
+    "mEn": "dirty, unclean, filthy",
+    "mId": "kotor"
+  },
+  {
+    "expr": "喫茶店",
+    "mEn": "café",
+    "mId": "kafe"
+  },
+  {
+    "expr": "切手",
+    "mEn": "postal (postage) stamps",
+    "mId": "perangko"
+  },
+  {
+    "expr": "切符",
+    "mEn": "a ticket",
+    "mId": "tiket"
+  },
+  {
+    "expr": "昨日",
+    "mEn": "yesterday",
+    "mId": "kemarin"
+  },
+  {
+    "expr": "九",
+    "mEn": "nine",
+    "mId": "sembilan"
+  },
+  {
+    "expr": "牛肉",
+    "mEn": "beef",
+    "mId": "daging sapi"
+  },
+  {
+    "expr": "牛乳",
+    "mEn": "milk",
+    "mId": "susu"
+  },
+  {
+    "expr": "今日",
+    "mEn": "today, this day",
+    "mId": "hari ini"
+  },
+  {
+    "expr": "教室",
+    "mEn": "classroom",
+    "mId": "kelas/ruang kelas"
+  },
+  {
+    "expr": "兄弟",
+    "mEn": "siblings (humble), brothers and sisters",
+    "mId": "saudara kandung"
+  },
+  {
+    "expr": "去年",
+    "mEn": "last year",
+    "mId": "tahun lalu"
+  },
+  {
+    "expr": "嫌い",
+    "mEn": "dislike",
+    "mId": "benci/tidak suka"
+  },
+  {
+    "expr": "切る",
+    "mEn": "to cut; to hang up (a phone)",
+    "mId": "memotong"
+  },
+  {
+    "expr": "着る",
+    "mEn": "to put on (clothes above your waist); to wear",
+    "mId": "memakai (pakaian)"
+  },
+  {
+    "expr": "綺麗",
+    "mEn": "pretty, clean, tidy",
+    "mId": "cantik, bersih"
+  },
+  {
+    "expr": "キロ; キログラム",
+    "mEn": "(abbr.) kilo (kilogram)",
+    "mId": "singkatan kilo (kilogram)"
+  },
+  {
+    "expr": "キロ; キロメートル",
+    "mEn": "(abbr.) kilo (kilometer)",
+    "mId": "singkatan kilo (kilometer)"
+  },
+  {
+    "expr": "銀行",
+    "mEn": "bank",
+    "mId": "bank"
+  },
+  {
+    "expr": "金曜日",
+    "mEn": "Friday",
+    "mId": "Jumat"
+  },
+  {
+    "expr": "九",
+    "mEn": "nine",
+    "mId": "sembilan"
+  },
+  {
+    "expr": "薬",
+    "mEn": "medicine",
+    "mId": "obat"
+  },
+  {
+    "expr": "下さい",
+    "mEn": "(with te-form verb) please do for me",
+    "mId": "tolong/berikan"
+  },
+  {
+    "expr": "果物",
+    "mEn": "fruit",
+    "mId": "buah"
+  },
+  {
+    "expr": "口",
+    "mEn": "job opening; mouth",
+    "mId": "mulut"
+  },
+  {
+    "expr": "靴",
+    "mEn": "shoes, footwear",
+    "mId": "sepatu"
+  },
+  {
+    "expr": "靴下",
+    "mEn": "socks",
+    "mId": "kaus kaki"
+  },
+  {
+    "expr": "国",
+    "mEn": "country; place of origin",
+    "mId": "negara"
+  },
+  {
+    "expr": "曇り",
+    "mEn": "cloudiness, cloudy weather",
+    "mId": "berawan"
+  },
+  {
+    "expr": "曇る",
+    "mEn": "to become cloudy, to become dim",
+    "mId": "menjadi mendung"
+  },
+  {
+    "expr": "暗い",
+    "mEn": "dark, gloomy",
+    "mId": "gelap/suram"
+  },
+  {
+    "expr": "～くらい; ぐらい",
+    "mEn": "approximate (quantity)",
+    "mId": "kira-kira (jumlah)"
+  },
+  {
+    "expr": "クラス",
+    "mEn": "a class",
+    "mId": "kelas"
+  },
+  {
+    "expr": "グラム",
+    "mEn": "gram",
+    "mId": "gram"
+  },
+  {
+    "expr": "来る",
+    "mEn": "to come",
+    "mId": "datang"
+  },
+  {
+    "expr": "車",
+    "mEn": "car, vehicle",
+    "mId": "mobil/kendaraan"
+  },
+  {
+    "expr": "黒",
+    "mEn": "black",
+    "mId": "hitam"
+  },
+  {
+    "expr": "黒い",
+    "mEn": "black; dark",
+    "mId": "hitam"
+  },
+  {
+    "expr": "警官",
+    "mEn": "police officer",
+    "mId": "polisi"
+  },
+  {
+    "expr": "今朝",
+    "mEn": "this morning",
+    "mId": "pagi ini"
+  },
+  {
+    "expr": "消す",
+    "mEn": "to erase, to delete, to turn off power",
+    "mId": "menghapus/mematikan"
+  },
+  {
+    "expr": "結構",
+    "mEn": "splendid; enough, tolerably",
+    "mId": "cukup/baik"
+  },
+  {
+    "expr": "結婚",
+    "mEn": "marriage (get married)",
+    "mId": "pernikahan"
+  },
+  {
+    "expr": "月曜日",
+    "mEn": "Monday",
+    "mId": "Senin"
+  },
+  {
+    "expr": "玄関",
+    "mEn": "entrance (to a house or a building)",
+    "mId": "pintu masuk"
+  },
+  {
+    "expr": "元気",
+    "mEn": "health(y), energetic",
+    "mId": "sehat/bersemangat"
+  },
+  {
+    "expr": "～個",
+    "mEn": "counter for small items (e.g., fruits, cups)",
+    "mId": "penghitung benda kecil (buah, cangkir)"
+  },
+  {
+    "expr": "五",
+    "mEn": "five",
+    "mId": "lima"
+  },
+  {
+    "expr": "～語",
+    "mEn": "word, language",
+    "mId": "bahasa ~"
+  },
+  {
+    "expr": "公園",
+    "mEn": "a park",
+    "mId": "taman"
+  },
+  {
+    "expr": "交差点",
+    "mEn": "intersection",
+    "mId": "persimpangan"
+  },
+  {
+    "expr": "紅茶",
+    "mEn": "black tea",
+    "mId": "teh hitam"
+  },
+  {
+    "expr": "交番",
+    "mEn": "police box",
+    "mId": "pos polisi"
+  },
+  {
+    "expr": "声",
+    "mEn": "voice",
+    "mId": "suara"
+  },
+  {
+    "expr": "コート",
+    "mEn": "coat; court (e.g., tennis)",
+    "mId": "jas, lapangan tenis"
+  },
+  {
+    "expr": "コーヒー",
+    "mEn": "coffee",
+    "mId": "kopi"
+  },
+  {
+    "expr": "ここ",
+    "mEn": "here, this place",
+    "mId": "di sini"
+  },
+  {
+    "expr": "午後",
+    "mEn": "afternoon, P.M.",
+    "mId": "sore/PM"
+  },
+  {
+    "expr": "九日",
+    "mEn": "nine days; ninth day of the month",
+    "mId": "hari ke-9, sembilan hari"
+  },
+  {
+    "expr": "九つ",
+    "mEn": "nine things",
+    "mId": "sembilan buah"
+  },
+  {
+    "expr": "午前",
+    "mEn": "morning, A.M.",
+    "mId": "pagi/AM"
+  },
+  {
+    "expr": "答える",
+    "mEn": "to answer, to reply",
+    "mId": "menjawab"
+  },
+  {
+    "expr": "こちら",
+    "mEn": "this person (polite); this way (polite)",
+    "mId": "orang ini (sopan), arah ini"
+  },
+  {
+    "expr": "こっち",
+    "mEn": "this person; this direction; this side",
+    "mId": "orang ini, arah ini"
+  },
+  {
+    "expr": "コップ",
+    "mEn": "a tumbler; a glass",
+    "mId": "gelas"
+  },
+  {
+    "expr": "今年",
+    "mEn": "this year",
+    "mId": "tahun ini"
+  },
+  {
+    "expr": "言葉",
+    "mEn": "language; word(s); expression(s)",
+    "mId": "kata/bahasa"
+  },
+  {
+    "expr": "子供",
+    "mEn": "child(ren)",
+    "mId": "anak"
+  },
+  {
+    "expr": "この",
+    "mEn": "this",
+    "mId": "ini"
+  },
+  {
+    "expr": "御飯",
+    "mEn": "rice (cooked); meal",
+    "mId": "nasi/makan"
+  },
+  {
+    "expr": "コピーする",
+    "mEn": "to copy",
+    "mId": "menyalin"
+  },
+  {
+    "expr": "困る",
+    "mEn": "to be bothered, to have difficulty",
+    "mId": "kesulitan"
+  },
+  {
+    "expr": "これ",
+    "mEn": "this one",
+    "mId": "ini"
+  },
+  {
+    "expr": "～ころ; ～ごろ",
+    "mEn": "about, toward, approximately (time)",
+    "mId": "sekitar, kira-kira (waktu)"
+  },
+  {
+    "expr": "今月",
+    "mEn": "this month",
+    "mId": "bulan ini"
+  },
+  {
+    "expr": "今週",
+    "mEn": "this week",
+    "mId": "minggu ini"
+  },
+  {
+    "expr": "こんな",
+    "mEn": "such, like this",
+    "mId": "seperti ini, semacam ini"
+  },
+  {
+    "expr": "今晩",
+    "mEn": "tonight, this evening",
+    "mId": "malam ini"
+  },
+  {
+    "expr": "さあ",
+    "mEn": "come now, well",
+    "mId": "ayo, mari, nah"
+  },
+  {
+    "expr": "～歳",
+    "mEn": "~ years old",
+    "mId": "~ tahun (umur)"
+  },
+  {
+    "expr": "財布",
+    "mEn": "wallet",
+    "mId": "dompet"
+  },
+  {
+    "expr": "魚",
+    "mEn": "fish",
+    "mId": "ikan"
+  },
+  {
+    "expr": "先",
+    "mEn": "future; recent, previous",
+    "mId": "masa depan, ujung, sebelumnya"
+  },
+  {
+    "expr": "咲く",
+    "mEn": "to bloom",
+    "mId": "mekar"
+  },
+  {
+    "expr": "作文",
+    "mEn": "essay; composition",
+    "mId": "karangan, esai"
+  },
+  {
+    "expr": "差す",
+    "mEn": "to raise (stretch out) hands, to raise (e.g., umbrella)",
+    "mId": "mengangkat (tangan), membuka (payung)"
+  },
+  {
+    "expr": "～冊",
+    "mEn": "counter for books",
+    "mId": "penghitung untuk buku (jilid)"
+  },
+  {
+    "expr": "雑誌",
+    "mEn": "magazine, journal",
+    "mId": "majalah"
+  },
+  {
+    "expr": "砂糖",
+    "mEn": "sugar",
+    "mId": "gula"
+  },
+  {
+    "expr": "寒い",
+    "mEn": "cold (in reference to weather)",
+    "mId": "dingin (cuaca)"
+  },
+  {
+    "expr": "さ来年",
+    "mEn": "year after next",
+    "mId": "dua tahun lagi"
+  },
+  {
+    "expr": "～さん",
+    "mEn": "Mr. ~, Ms. ~",
+    "mId": "Sdr/i. ~"
+  },
+  {
+    "expr": "三",
+    "mEn": "three",
+    "mId": "tiga"
+  },
+  {
+    "expr": "散歩",
+    "mEn": "walk, stroll",
+    "mId": "jalan-jalan"
+  },
+  {
+    "expr": "四",
+    "mEn": "four",
+    "mId": "empat"
+  },
+  {
+    "expr": "～時",
+    "mEn": "clock (time)",
+    "mId": "pukul ~ (jam)"
+  },
+  {
+    "expr": "塩",
+    "mEn": "salt",
+    "mId": "garam"
+  },
+  {
+    "expr": "しかし",
+    "mEn": "however; but",
+    "mId": "tetapi, namun"
+  },
+  {
+    "expr": "時間",
+    "mEn": "time",
+    "mId": "waktu/jam"
+  },
+  {
+    "expr": "～時間",
+    "mEn": "~ hours",
+    "mId": "~ jam"
+  },
+  {
+    "expr": "仕事",
+    "mEn": "work, job, occupation, employment",
+    "mId": "pekerjaan"
+  },
+  {
+    "expr": "辞書",
+    "mEn": "dictionary",
+    "mId": "kamus"
+  },
+  {
+    "expr": "静か",
+    "mEn": "quiet, calm",
+    "mId": "tenang, sepi"
+  },
+  {
+    "expr": "下",
+    "mEn": "under, below, beneath",
+    "mId": "bawah"
+  },
+  {
+    "expr": "七",
+    "mEn": "seven",
+    "mId": "tujuh"
+  },
+  {
+    "expr": "質問",
+    "mEn": "question, inquiry",
+    "mId": "pertanyaan"
+  },
+  {
+    "expr": "自転車",
+    "mEn": "bicycle",
+    "mId": "sepeda"
+  },
+  {
+    "expr": "自動車",
+    "mEn": "automobile",
+    "mId": "mobil"
+  },
+  {
+    "expr": "死ぬ",
+    "mEn": "to die",
+    "mId": "mati, meninggal"
+  },
+  {
+    "expr": "字引",
+    "mEn": "dictionary",
+    "mId": "kamus"
+  },
+  {
+    "expr": "自分",
+    "mEn": "myself, oneself",
+    "mId": "diri sendiri"
+  },
+  {
+    "expr": "閉まる",
+    "mEn": "to close, to be closed",
+    "mId": "menutup, tertutup"
+  },
+  {
+    "expr": "閉める",
+    "mEn": "to close, to shut",
+    "mId": "menutup"
+  },
+  {
+    "expr": "締める",
+    "mEn": "to tie, to fasten, to tighten",
+    "mId": "mengikat, mengencangkan"
+  },
+  {
+    "expr": "じゃ; じゃあ",
+    "mEn": "well, well then",
+    "mId": "kalau begitu, nah"
+  },
+  {
+    "expr": "写真",
+    "mEn": "a picture; a photograph",
+    "mId": "foto"
+  },
+  {
+    "expr": "シャツ",
+    "mEn": "shirt",
+    "mId": "kemeja"
+  },
+  {
+    "expr": "シャワー",
+    "mEn": "shower",
+    "mId": "shower, pancuran"
+  },
+  {
+    "expr": "十",
+    "mEn": "ten",
+    "mId": "sepuluh"
+  },
+  {
+    "expr": "～中",
+    "mEn": "during, while",
+    "mId": "selama, sedang"
+  },
+  {
+    "expr": "～週間",
+    "mEn": "~ weeks",
+    "mId": "~ minggu"
+  },
+  {
+    "expr": "授業",
+    "mEn": "a class (of school)",
+    "mId": "pelajaran"
+  },
+  {
+    "expr": "宿題",
+    "mEn": "homework",
+    "mId": "PR"
+  },
+  {
+    "expr": "上手",
+    "mEn": "be good at, skillful",
+    "mId": "mahir"
+  },
+  {
+    "expr": "丈夫",
+    "mEn": "strong, solid, durable",
+    "mId": "kuat, tahan lama"
+  },
+  {
+    "expr": "醤油",
+    "mEn": "soy sauce",
+    "mId": "kecap asin"
+  },
+  {
+    "expr": "食堂",
+    "mEn": "cafeteria, dining hall",
+    "mId": "kantin/ruang makan"
+  },
+  {
+    "expr": "知る",
+    "mEn": "to know, to understand",
+    "mId": "tahu"
+  },
+  {
+    "expr": "白",
+    "mEn": "white",
+    "mId": "putih"
+  },
+  {
+    "expr": "白い",
+    "mEn": "white",
+    "mId": "putih"
+  },
+  {
+    "expr": "～人",
+    "mEn": "counter for people",
+    "mId": "penghitung untuk orang"
+  },
+  {
+    "expr": "新聞",
+    "mEn": "newspaper",
+    "mId": "koran"
+  },
+  {
+    "expr": "水曜日",
+    "mEn": "Wednesday",
+    "mId": "Rabu"
+  },
+  {
+    "expr": "吸う",
+    "mEn": "to breathe in, to suck",
+    "mId": "mengisap/merokok"
+  },
+  {
+    "expr": "スカート",
+    "mEn": "skirt",
+    "mId": "rok"
+  },
+  {
+    "expr": "好き",
+    "mEn": "liking, fondness, love",
+    "mId": "suka"
+  },
+  {
+    "expr": "～すぎ",
+    "mEn": "past; to exceed, ~ too much",
+    "mId": "melewati, terlalu ~"
+  },
+  {
+    "expr": "少ない",
+    "mEn": "a little; a few",
+    "mId": "sedikit"
+  },
+  {
+    "expr": "すぐに",
+    "mEn": "immediately, soon",
+    "mId": "segera"
+  },
+  {
+    "expr": "少し",
+    "mEn": "little, few",
+    "mId": "sedikit"
+  },
+  {
+    "expr": "涼しい",
+    "mEn": "cool, refreshing (in reference to weather)",
+    "mId": "sejuk"
+  },
+  {
+    "expr": "～ずつ",
+    "mEn": "at a time",
+    "mId": "setiap, masing-masing"
+  },
+  {
+    "expr": "ストーブ",
+    "mEn": "heater (lit: stove)",
+    "mId": "pemanas ruangan"
+  },
+  {
+    "expr": "スプーン",
+    "mEn": "spoon",
+    "mId": "sendok"
+  },
+  {
+    "expr": "スポーツ",
+    "mEn": "sport(s)",
+    "mId": "olahraga"
+  },
+  {
+    "expr": "ズボン",
+    "mEn": "trousers",
+    "mId": "celana panjang"
+  },
+  {
+    "expr": "住む",
+    "mEn": "to reside, to live in",
+    "mId": "tinggal"
+  },
+  {
+    "expr": "する",
+    "mEn": "to do, to try; to wear small items (e.g., necktie, watch, etc.)",
+    "mId": "melakukan"
+  },
+  {
+    "expr": "座る",
+    "mEn": "to sit",
+    "mId": "duduk"
+  },
+  {
+    "expr": "背",
+    "mEn": "(one's) height, stature",
+    "mId": "tinggi badan"
+  },
+  {
+    "expr": "生徒",
+    "mEn": "student; pupil",
+    "mId": "murid"
+  },
+  {
+    "expr": "セーター",
+    "mEn": "sweater",
+    "mId": "sweter"
+  },
+  {
+    "expr": "石鹸",
+    "mEn": "soap",
+    "mId": "sabun"
+  },
+  {
+    "expr": "背広",
+    "mEn": "s suit",
+    "mId": "jas"
+  },
+  {
+    "expr": "狭い",
+    "mEn": "narrow; not spacious",
+    "mId": "sempit"
+  },
+  {
+    "expr": "ゼロ",
+    "mEn": "zero",
+    "mId": "nol"
+  },
+  {
+    "expr": "千",
+    "mEn": "thousand",
+    "mId": "seribu"
+  },
+  {
+    "expr": "先月",
+    "mEn": "last month",
+    "mId": "bulan lalu"
+  },
+  {
+    "expr": "先週",
+    "mEn": "last week",
+    "mId": "minggu lalu"
+  },
+  {
+    "expr": "先生",
+    "mEn": "teacher, professor; master; doctor",
+    "mId": "guru/dokter"
+  },
+  {
+    "expr": "洗濯",
+    "mEn": "washing, laundry",
+    "mId": "cucian/mencuci"
+  },
+  {
+    "expr": "全部",
+    "mEn": "all, entire, whole",
+    "mId": "semua"
+  },
+  {
+    "expr": "そう; そうです",
+    "mEn": "yes; appears, to be the case",
+    "mId": "ya (setuju), sepertinya, memang begitu"
+  },
+  {
+    "expr": "掃除",
+    "mEn": "cleaning, sweeping",
+    "mId": "bersih-bersih"
+  },
+  {
+    "expr": "そうして; そして",
+    "mEn": "and, like that",
+    "mId": "dan, juga"
+  },
+  {
+    "expr": "そこ",
+    "mEn": "that place, there; bottom, sole",
+    "mId": "tempat itu, situ, bawah"
+  },
+  {
+    "expr": "そちら",
+    "mEn": "over there",
+    "mId": "di sana"
+  },
+  {
+    "expr": "そっち",
+    "mEn": "over there",
+    "mId": "di sana"
+  },
+  {
+    "expr": "外",
+    "mEn": "outside, exterior",
+    "mId": "luar"
+  },
+  {
+    "expr": "その",
+    "mEn": "that",
+    "mId": "itu"
+  },
+  {
+    "expr": "そば",
+    "mEn": "near, close, beside; Japanese traditional buckwheat noodle",
+    "mId": "samping, dekat, mi soba"
+  },
+  {
+    "expr": "空",
+    "mEn": "sky",
+    "mId": "langit"
+  },
+  {
+    "expr": "それ",
+    "mEn": "that one",
+    "mId": "itu"
+  },
+  {
+    "expr": "それから",
+    "mEn": "and then, after that",
+    "mId": "setelah itu"
+  },
+  {
+    "expr": "それでは",
+    "mEn": "in that situation, well then...",
+    "mId": "kalau begitu"
+  },
+  {
+    "expr": "～台",
+    "mEn": "counter for vehicles; machines",
+    "mId": "penghitung untuk kendaraan, mesin"
+  },
+  {
+    "expr": "大学",
+    "mEn": "college; university",
+    "mId": "universitas"
+  },
+  {
+    "expr": "大使館",
+    "mEn": "embassy",
+    "mId": "kedutaan besar"
+  },
+  {
+    "expr": "大丈夫",
+    "mEn": "s ok (all right); No need to worry; Everything is under control",
+    "mId": "tidak apa-apa, aman"
+  },
+  {
+    "expr": "大好き",
+    "mEn": "very like-able, like very much",
+    "mId": "sangat suka"
+  },
+  {
+    "expr": "大切",
+    "mEn": "important",
+    "mId": "penting"
+  },
+  {
+    "expr": "台所",
+    "mEn": "kitchen",
+    "mId": "dapur"
+  },
+  {
+    "expr": "大変",
+    "mEn": "very; difficult, hard",
+    "mId": "sangat, sulit, berat"
+  },
+  {
+    "expr": "高い",
+    "mEn": "tall, high; expensive",
+    "mId": "tinggi, mahal"
+  },
+  {
+    "expr": "～だけ",
+    "mEn": "only ~, just ~, as ~",
+    "mId": "hanya, sekadar"
+  },
+  {
+    "expr": "沢山",
+    "mEn": "many, much",
+    "mId": "banyak"
+  },
+  {
+    "expr": "タクシー",
+    "mEn": "taxi",
+    "mId": "taksi"
+  },
+  {
+    "expr": "出す",
+    "mEn": "to take (something) out; to hand in (something)",
+    "mId": "mengeluarkan, mengirim"
+  },
+  {
+    "expr": "～たち",
+    "mEn": "plural suffix",
+    "mId": "bentuk jamak"
+  },
+  {
+    "expr": "立つ",
+    "mEn": "to stand up",
+    "mId": "berdiri up"
+  },
+  {
+    "expr": "たて",
+    "mEn": "length, height",
+    "mId": "panjang, tinggi (vertikal)"
+  },
+  {
+    "expr": "建物",
+    "mEn": "building",
+    "mId": "bangunan, gedung"
+  },
+  {
+    "expr": "楽しい",
+    "mEn": "enjoyable, fun",
+    "mId": "menyenangkan"
+  },
+  {
+    "expr": "頼む",
+    "mEn": "to request, to ask (a favor)",
+    "mId": "meminta, memesan"
+  },
+  {
+    "expr": "たばこ",
+    "mEn": "tobacco, cigarettes",
+    "mId": "rokok"
+  },
+  {
+    "expr": "多分",
+    "mEn": "perhaps, probably, maybe",
+    "mId": "mungkin"
+  },
+  {
+    "expr": "食べ物",
+    "mEn": "food",
+    "mId": "makanan"
+  },
+  {
+    "expr": "食べる",
+    "mEn": "to eat",
+    "mId": "makan"
+  },
+  {
+    "expr": "卵",
+    "mEn": "egg",
+    "mId": "telur"
+  },
+  {
+    "expr": "誰",
+    "mEn": "who",
+    "mId": "siapa"
+  },
+  {
+    "expr": "誰か",
+    "mEn": "someone",
+    "mId": "seseorang"
+  },
+  {
+    "expr": "誕生日",
+    "mEn": "birthday",
+    "mId": "ulang tahun"
+  },
+  {
+    "expr": "段々",
+    "mEn": "gradually, by degrees",
+    "mId": "perlahan-lahan"
+  },
+  {
+    "expr": "小さい",
+    "mEn": "small, little",
+    "mId": "kecil"
+  },
+  {
+    "expr": "小さな",
+    "mEn": "small, little",
+    "mId": "kecil, sedikit"
+  },
+  {
+    "expr": "近い",
+    "mEn": "near, close by, short",
+    "mId": "dekat"
+  },
+  {
+    "expr": "違う",
+    "mEn": "to be different; to differ; wrong",
+    "mId": "berbeda"
+  },
+  {
+    "expr": "近く",
+    "mEn": "nearby; in the neighborhood",
+    "mId": "dekat, sekitarnya"
+  },
+  {
+    "expr": "地下鉄",
+    "mEn": "underground train, subway",
+    "mId": "kereta bawah tanah"
+  },
+  {
+    "expr": "地図",
+    "mEn": "a map",
+    "mId": "peta"
+  },
+  {
+    "expr": "父",
+    "mEn": "(my) father",
+    "mId": "ayah (sendiri)"
+  },
+  {
+    "expr": "茶色",
+    "mEn": "brown",
+    "mId": "cokelat"
+  },
+  {
+    "expr": "茶碗",
+    "mEn": "rice bowl",
+    "mId": "mangkuk nasi"
+  },
+  {
+    "expr": "～中",
+    "mEn": "during, while ~ing",
+    "mId": "selama, sedang"
+  },
+  {
+    "expr": "丁度",
+    "mEn": "just, right, exactly",
+    "mId": "tepat, pas"
+  },
+  {
+    "expr": "ちょっと",
+    "mEn": "a little, somewhat; just a little, somewhat",
+    "mId": "sedikit, sebentar"
+  },
+  {
+    "expr": "一日",
+    "mEn": "one day; first day of the month",
+    "mId": "satu hari"
+  },
+  {
+    "expr": "使う",
+    "mEn": "to use",
+    "mId": "menggunakan"
+  },
+  {
+    "expr": "疲れる",
+    "mEn": "to get (become) tired; to become fatigued",
+    "mId": "lelah"
+  },
+  {
+    "expr": "次",
+    "mEn": "next",
+    "mId": "berikutnya"
+  },
+  {
+    "expr": "着く",
+    "mEn": "to arrive at, to reach",
+    "mId": "tiba"
+  },
+  {
+    "expr": "机",
+    "mEn": "desk",
+    "mId": "meja"
+  },
+  {
+    "expr": "作る",
+    "mEn": "to make, to create",
+    "mId": "membuat"
+  },
+  {
+    "expr": "つける",
+    "mEn": "to turn on (e.g., a light); to take",
+    "mId": "menyalakan, menempelkan"
+  },
+  {
+    "expr": "勤める",
+    "mEn": "to work (for)",
+    "mId": "bekerja"
+  },
+  {
+    "expr": "つまらない",
+    "mEn": "boring, dull; insignificant",
+    "mId": "membosankan, tidak penting"
+  },
+  {
+    "expr": "冷たい",
+    "mEn": "cold (things, people)",
+    "mId": "dingin"
+  },
+  {
+    "expr": "強い",
+    "mEn": "strong, powerful",
+    "mId": "kuat"
+  },
+  {
+    "expr": "手",
+    "mEn": "hand",
+    "mId": "tangan"
+  },
+  {
+    "expr": "テープ",
+    "mEn": "tape",
+    "mId": "pita kaset"
+  },
+  {
+    "expr": "テープレコーダー",
+    "mEn": "tape recorder",
+    "mId": "perekam pita kaset"
+  },
+  {
+    "expr": "テーブル",
+    "mEn": "table",
+    "mId": "meja"
+  },
+  {
+    "expr": "出かける",
+    "mEn": "to go out; to depart",
+    "mId": "pergi keluar"
+  },
+  {
+    "expr": "手紙",
+    "mEn": "letter",
+    "mId": "surat"
+  },
+  {
+    "expr": "できる",
+    "mEn": "to be able to (to accomplish)",
+    "mId": "bisa, mampu"
+  },
+  {
+    "expr": "出口",
+    "mEn": "an exit",
+    "mId": "pintu keluar"
+  },
+  {
+    "expr": "テスト",
+    "mEn": "test",
+    "mId": "tes, ujian"
+  },
+  {
+    "expr": "では",
+    "mEn": "then, well, so",
+    "mId": "kalau begitu"
+  },
+  {
+    "expr": "デパート",
+    "mEn": "(abbr.) department store",
+    "mId": "toko serba ada"
+  },
+  {
+    "expr": "でも",
+    "mEn": "but, however",
+    "mId": "tapi"
+  },
+  {
+    "expr": "出る",
+    "mEn": "to appear, to leave",
+    "mId": "keluar/muncul"
+  },
+  {
+    "expr": "テレビ",
+    "mEn": "television, TV",
+    "mId": "televisi"
+  },
+  {
+    "expr": "天気",
+    "mEn": "weather",
+    "mId": "cuaca"
+  },
+  {
+    "expr": "電気",
+    "mEn": "electricity, (electric) light",
+    "mId": "listrik/lampu"
+  },
+  {
+    "expr": "電車",
+    "mEn": "electric train",
+    "mId": "kereta listrik"
+  },
+  {
+    "expr": "電話",
+    "mEn": "a telephone",
+    "mId": "telepon"
+  },
+  {
+    "expr": "戸",
+    "mEn": "door (Japanese style)",
+    "mId": "pintu geser Jepang"
+  },
+  {
+    "expr": "～度",
+    "mEn": "counter for occurrences; ~ degree; ~ point",
+    "mId": "penghitung frekuensi (~ kali), ~ derajat, ~ poin"
+  },
+  {
+    "expr": "ドア",
+    "mEn": "door (Western style)",
+    "mId": "pintu"
+  },
+  {
+    "expr": "トイレ",
+    "mEn": "bathroom; toilet",
+    "mId": "toilet"
+  },
+  {
+    "expr": "どう",
+    "mEn": "how, in what way",
+    "mId": "bagaimana"
+  },
+  {
+    "expr": "どうして",
+    "mEn": "why, for what reason",
+    "mId": "kenapa"
+  },
+  {
+    "expr": "どうぞ",
+    "mEn": "please, kindly, by all means",
+    "mId": "silakan, tolong"
+  },
+  {
+    "expr": "動物",
+    "mEn": "animal",
+    "mId": "hewan, binatang"
+  },
+  {
+    "expr": "どうも",
+    "mEn": "Thank you; somehow; no matter how hard one may try",
+    "mId": "terima kasih, bagaimana pun juga"
+  },
+  {
+    "expr": "十",
+    "mEn": "ten (~)",
+    "mId": "sepuluh"
+  },
+  {
+    "expr": "遠い",
+    "mEn": "far (away), distant",
+    "mId": "jauh"
+  },
+  {
+    "expr": "十日",
+    "mEn": "ten days; tenth day of the month",
+    "mId": "hari ke-10, sepuluh hari"
+  },
+  {
+    "expr": "～時",
+    "mEn": "at the time of ~",
+    "mId": "pukul ~ (jam)"
+  },
+  {
+    "expr": "時々",
+    "mEn": "sometimes",
+    "mId": "kadang-kadang"
+  },
+  {
+    "expr": "時計",
+    "mEn": "a watch; a clock",
+    "mId": "jam"
+  },
+  {
+    "expr": "どこ",
+    "mEn": "where, what place",
+    "mId": "mana, di mana"
+  },
+  {
+    "expr": "所",
+    "mEn": "place",
+    "mId": "tempat"
+  },
+  {
+    "expr": "年",
+    "mEn": "year, age",
+    "mId": "tahun, umur"
+  },
+  {
+    "expr": "図書館",
+    "mEn": "library",
+    "mId": "perpustakaan"
+  },
+  {
+    "expr": "どちら",
+    "mEn": "which (one) (way); where (polite)",
+    "mId": "yang mana (sopan), ke mana"
+  },
+  {
+    "expr": "どっち",
+    "mEn": "which one, which way",
+    "mId": "yang mana (dari dua)"
+  },
+  {
+    "expr": "とても",
+    "mEn": "very (much), greatly, exceedingly",
+    "mId": "sangat"
+  },
+  {
+    "expr": "どなた",
+    "mEn": "who",
+    "mId": "siapa (sopan)"
+  },
+  {
+    "expr": "隣",
+    "mEn": "next to, next door to",
+    "mId": "di samping, sebelah"
+  },
+  {
+    "expr": "どの",
+    "mEn": "which",
+    "mId": "yang mana"
+  },
+  {
+    "expr": "飛ぶ",
+    "mEn": "to fly, to hop",
+    "mId": "terbang, melompat"
+  },
+  {
+    "expr": "止まる",
+    "mEn": "to come to a halt",
+    "mId": "berhenti"
+  },
+  {
+    "expr": "友達",
+    "mEn": "friend",
+    "mId": "teman"
+  },
+  {
+    "expr": "土曜日",
+    "mEn": "Saturday",
+    "mId": "hari Sabtu"
+  },
+  {
+    "expr": "鳥",
+    "mEn": "chicken (lit., bird)",
+    "mId": "burung"
+  },
+  {
+    "expr": "鶏肉",
+    "mEn": "chicken meat",
+    "mId": "daging ayam"
+  },
+  {
+    "expr": "取る",
+    "mEn": "to take (a class); to get (a grade)",
+    "mId": "mengambil, mendapatkan"
+  },
+  {
+    "expr": "撮る",
+    "mEn": "to take (a photo), to make (a film)",
+    "mId": "memotret, merekam"
+  },
+  {
+    "expr": "どれ",
+    "mEn": "which one",
+    "mId": "yang mana"
+  },
+  {
+    "expr": "どんな",
+    "mEn": "what, what kind of",
+    "mId": "jenis apa, seperti apa"
+  },
+  {
+    "expr": "ない",
+    "mEn": "there isn't, doesn't have",
+    "mId": "tidak ada"
+  },
+  {
+    "expr": "ナイフ",
+    "mEn": "knife",
+    "mId": "pisau"
+  },
+  {
+    "expr": "中",
+    "mEn": "inside, middle, among",
+    "mId": "tengah/dalam"
+  },
+  {
+    "expr": "長い",
+    "mEn": "long, lengthy",
+    "mId": "panjang"
+  },
+  {
+    "expr": "鳴く",
+    "mEn": "to make sound (animal)",
+    "mId": "membuat suara (hewan)"
+  },
+  {
+    "expr": "無くす",
+    "mEn": "to lose something",
+    "mId": "menghilangkan"
+  },
+  {
+    "expr": "なぜ",
+    "mEn": "why (same as どうして)",
+    "mId": "kenapa"
+  },
+  {
+    "expr": "夏",
+    "mEn": "summer",
+    "mId": "musim panas"
+  },
+  {
+    "expr": "夏休み",
+    "mEn": "summer vacation",
+    "mId": "liburan musim panas"
+  },
+  {
+    "expr": "～など",
+    "mEn": "et cetera",
+    "mId": "dan lain-lain"
+  },
+  {
+    "expr": "七つ",
+    "mEn": "seven things",
+    "mId": "tujuh buah"
+  },
+  {
+    "expr": "何",
+    "mEn": "what",
+    "mId": "apa"
+  },
+  {
+    "expr": "七日",
+    "mEn": "seven days; seventh day (of the month)",
+    "mId": "hari ke-7, tujuh hari"
+  },
+  {
+    "expr": "名前",
+    "mEn": "name",
+    "mId": "nama"
+  },
+  {
+    "expr": "習う",
+    "mEn": "to learn",
+    "mId": "belajar"
+  },
+  {
+    "expr": "並ぶ",
+    "mEn": "to line up, to stand in a line (v.i.)",
+    "mId": "berbaris"
+  },
+  {
+    "expr": "並べる",
+    "mEn": "to put (things) side by side; to line up",
+    "mId": "mengatur/menyusun"
+  },
+  {
+    "expr": "なる",
+    "mEn": "to become",
+    "mId": "menjadi"
+  },
+  {
+    "expr": "何～",
+    "mEn": "what sort of ~",
+    "mId": "apa jenis"
+  },
+  {
+    "expr": "二",
+    "mEn": "two",
+    "mId": "dua"
+  },
+  {
+    "expr": "にぎやか",
+    "mEn": "bustling, busy",
+    "mId": "bustling, sibuk"
+  },
+  {
+    "expr": "肉",
+    "mEn": "meat",
+    "mId": "daging"
+  },
+  {
+    "expr": "西",
+    "mEn": "west",
+    "mId": "barat"
+  },
+  {
+    "expr": "～日",
+    "mEn": "~ day of the month, for ~ days",
+    "mId": "hari ke-, penghitung hari"
+  },
+  {
+    "expr": "日曜日",
+    "mEn": "Sunday",
+    "mId": "Minggu"
+  },
+  {
+    "expr": "荷物",
+    "mEn": "luggage; baggage",
+    "mId": "barang bawaan"
+  },
+  {
+    "expr": "ニュース",
+    "mEn": "news",
+    "mId": "berita"
+  },
+  {
+    "expr": "庭",
+    "mEn": "garden",
+    "mId": "taman"
+  },
+  {
+    "expr": "～人",
+    "mEn": "counter for people",
+    "mId": "penghitung untuk orang"
+  },
+  {
+    "expr": "脱ぐ",
+    "mEn": "to take off (clothes)",
+    "mId": "melepas pakaian"
+  },
+  {
+    "expr": "温い",
+    "mEn": "lukewarm",
+    "mId": "suam-suam kuku, agak hangat"
+  },
+  {
+    "expr": "ネクタイ",
+    "mEn": "tie, necktie",
+    "mId": "dasi"
+  },
+  {
+    "expr": "猫",
+    "mEn": "cat",
+    "mId": "kucing"
+  },
+  {
+    "expr": "寝る",
+    "mEn": "to sleep; to go to sleep; to go to bed",
+    "mId": "tidur"
+  },
+  {
+    "expr": "～年",
+    "mEn": "~ years",
+    "mId": "tahun ~"
+  },
+  {
+    "expr": "ノート",
+    "mEn": "notebook",
+    "mId": "buku catatan"
+  },
+  {
+    "expr": "登る",
+    "mEn": "to climb",
+    "mId": "memanjat"
+  },
+  {
+    "expr": "飲み物",
+    "mEn": "drink, beverage",
+    "mId": "minuman"
+  },
+  {
+    "expr": "飲む",
+    "mEn": "to drink",
+    "mId": "minum"
+  },
+  {
+    "expr": "乗る",
+    "mEn": "to get on, to ride in, to board",
+    "mId": "naik kendaraan"
+  },
+  {
+    "expr": "歯",
+    "mEn": "tooth",
+    "mId": "gigi"
+  },
+  {
+    "expr": "パーティー",
+    "mEn": "a party",
+    "mId": "pesta"
+  },
+  {
+    "expr": "はい",
+    "mEn": "yes",
+    "mId": "ya"
+  },
+  {
+    "expr": "～杯",
+    "mEn": "counter for cupfuls",
+    "mId": "penghitung untuk cangkir/gelas"
+  },
+  {
+    "expr": "灰皿",
+    "mEn": "ashtray",
+    "mId": "asbak"
+  },
+  {
+    "expr": "入る",
+    "mEn": "to enter, to contain, to hold",
+    "mId": "masuk, berisi"
+  },
+  {
+    "expr": "葉書",
+    "mEn": "postcard",
+    "mId": "kartu pos"
+  },
+  {
+    "expr": "はく",
+    "mEn": "to put on (items below your waist)",
+    "mId": "memakai (bawahan/celana)"
+  },
+  {
+    "expr": "箱",
+    "mEn": "box",
+    "mId": "kotak"
+  },
+  {
+    "expr": "橋",
+    "mEn": "bridge",
+    "mId": "jembatan"
+  },
+  {
+    "expr": "箸",
+    "mEn": "chopsticks",
+    "mId": "sumpit"
+  },
+  {
+    "expr": "始まる",
+    "mEn": "(something) begins",
+    "mId": "dimulai"
+  },
+  {
+    "expr": "初め; 始め",
+    "mEn": "beginning, start",
+    "mId": "permulaan, awal"
+  },
+  {
+    "expr": "初めて",
+    "mEn": "for the first time",
+    "mId": "kali pertama"
+  },
+  {
+    "expr": "走る",
+    "mEn": "to run",
+    "mId": "berlari"
+  },
+  {
+    "expr": "バス",
+    "mEn": "bus; bath; bass",
+    "mId": "bus"
+  },
+  {
+    "expr": "バター",
+    "mEn": "butter",
+    "mId": "mentega"
+  },
+  {
+    "expr": "二十歳",
+    "mEn": "20 years old",
+    "mId": "umur 20 tahun"
+  },
+  {
+    "expr": "働く",
+    "mEn": "to work",
+    "mId": "bekerja"
+  },
+  {
+    "expr": "八",
+    "mEn": "eight",
+    "mId": "delapan"
+  },
+  {
+    "expr": "二十日",
+    "mEn": "twenty days, twentieth (day of the month)",
+    "mId": "hari ke-20, duapuluh hari"
+  },
+  {
+    "expr": "花",
+    "mEn": "flower",
+    "mId": "bunga"
+  },
+  {
+    "expr": "鼻",
+    "mEn": "nose",
+    "mId": "hidung"
+  },
+  {
+    "expr": "話",
+    "mEn": "talk (chat), story",
+    "mId": "cerita, pembicaraan"
+  },
+  {
+    "expr": "話す",
+    "mEn": "to speak",
+    "mId": "berbicara"
+  },
+  {
+    "expr": "母",
+    "mEn": "(my) mother",
+    "mId": "ibu (sendiri)"
+  },
+  {
+    "expr": "早い",
+    "mEn": "early",
+    "mId": "awal/cepat"
+  },
+  {
+    "expr": "速い",
+    "mEn": "fast, quick",
+    "mId": "cepat"
+  },
+  {
+    "expr": "春",
+    "mEn": "spring",
+    "mId": "musim semi"
+  },
+  {
+    "expr": "貼る",
+    "mEn": "to post; to paste; to attach",
+    "mId": "menempelkan"
+  },
+  {
+    "expr": "晴れ",
+    "mEn": "clear (sunny) weather",
+    "mId": "cerah"
+  },
+  {
+    "expr": "晴れる",
+    "mEn": "to be sunny",
+    "mId": "menjadi cerah"
+  },
+  {
+    "expr": "半",
+    "mEn": "half (e.g., にじはん | half-past two)",
+    "mId": "setengah"
+  },
+  {
+    "expr": "晩",
+    "mEn": "evening",
+    "mId": "malam"
+  },
+  {
+    "expr": "～番",
+    "mEn": "~st; ~th best",
+    "mId": "nomor ~, ke-~"
+  },
+  {
+    "expr": "パン",
+    "mEn": "bread",
+    "mId": "roti"
+  },
+  {
+    "expr": "ハンカチ",
+    "mEn": "handkerchief",
+    "mId": "saputangan"
+  },
+  {
+    "expr": "番号",
+    "mEn": "number, series of digits",
+    "mId": "nomor"
+  },
+  {
+    "expr": "晩御飯",
+    "mEn": "dinner, evening meal",
+    "mId": "makan malam"
+  },
+  {
+    "expr": "半分",
+    "mEn": "half",
+    "mId": "setengah"
+  },
+  {
+    "expr": "東",
+    "mEn": "east",
+    "mId": "timur"
+  },
+  {
+    "expr": "～匹",
+    "mEn": "counter for small animals",
+    "mId": "penghitung untuk hewan kecil (ekor)"
+  },
+  {
+    "expr": "引く",
+    "mEn": "to pull, to draw; subtract",
+    "mId": "menarik"
+  },
+  {
+    "expr": "弾く",
+    "mEn": "to play (a string instrument or piano)",
+    "mId": "memainkan alat musik"
+  },
+  {
+    "expr": "低い",
+    "mEn": "short, low",
+    "mId": "rendah/pendek"
+  },
+  {
+    "expr": "飛行機",
+    "mEn": "airplane",
+    "mId": "pesawat"
+  },
+  {
+    "expr": "左",
+    "mEn": "left hand side",
+    "mId": "kiri"
+  },
+  {
+    "expr": "人",
+    "mEn": "man, person",
+    "mId": "orang"
+  },
+  {
+    "expr": "一つ",
+    "mEn": "one thing",
+    "mId": "satu buah"
+  },
+  {
+    "expr": "一月",
+    "mEn": "one month",
+    "mId": "satu bulan"
+  },
+  {
+    "expr": "一人",
+    "mEn": "one person",
+    "mId": "satu orang"
+  },
+  {
+    "expr": "暇",
+    "mEn": "free time, leisure",
+    "mId": "waktu luang"
+  },
+  {
+    "expr": "百",
+    "mEn": "hundred",
+    "mId": "seratus"
+  },
+  {
+    "expr": "病院",
+    "mEn": "hospital",
+    "mId": "rumah sakit"
+  },
+  {
+    "expr": "病気",
+    "mEn": "illness; sickness",
+    "mId": "sakit/penyakit"
+  },
+  {
+    "expr": "平仮名",
+    "mEn": "hiragana",
+    "mId": "hiragana"
+  },
+  {
+    "expr": "昼",
+    "mEn": "noon, daytime",
+    "mId": "siang"
+  },
+  {
+    "expr": "昼御飯",
+    "mEn": "lunch, midday meal",
+    "mId": "makan siang"
+  },
+  {
+    "expr": "広い",
+    "mEn": "spacious; wide; broad",
+    "mId": "luas"
+  },
+  {
+    "expr": "フィルム",
+    "mEn": "film (roll of)",
+    "mId": "film, klise"
+  },
+  {
+    "expr": "封筒",
+    "mEn": "envelope",
+    "mId": "amplop"
+  },
+  {
+    "expr": "プール",
+    "mEn": "swimming pool",
+    "mId": "kolam renang"
+  },
+  {
+    "expr": "フォーク",
+    "mEn": "fork",
+    "mId": "garpu"
+  },
+  {
+    "expr": "吹く",
+    "mEn": "to blow (wind, etc.)",
+    "mId": "meniup"
+  },
+  {
+    "expr": "服",
+    "mEn": "clothes",
+    "mId": "pakaian"
+  },
+  {
+    "expr": "二つ",
+    "mEn": "two things",
+    "mId": "dua buah"
+  },
+  {
+    "expr": "豚肉",
+    "mEn": "pork",
+    "mId": "daging babi"
+  },
+  {
+    "expr": "二人",
+    "mEn": "two people",
+    "mId": "dua orang"
+  },
+  {
+    "expr": "二日",
+    "mEn": "two days; second day of the month",
+    "mId": "hari ke-2, dua hari"
+  },
+  {
+    "expr": "太い",
+    "mEn": "fat, thick",
+    "mId": "gemuk/tebal"
+  },
+  {
+    "expr": "冬",
+    "mEn": "winter",
+    "mId": "musim dingin"
+  },
+  {
+    "expr": "降る",
+    "mEn": "to precipitate, to fall (e.g., rain, snow, etc.)",
+    "mId": "turun (hujan/salju)"
+  },
+  {
+    "expr": "古い",
+    "mEn": "old (in reference to objects, not people), aged, ancient",
+    "mId": "tua/lama"
+  },
+  {
+    "expr": "～分",
+    "mEn": "~ minutes",
+    "mId": "~ menit"
+  },
+  {
+    "expr": "文章",
+    "mEn": "sentence, text",
+    "mId": "kalimat/teks"
+  },
+  {
+    "expr": "ページ",
+    "mEn": "a page",
+    "mId": "halaman (buku)"
+  },
+  {
+    "expr": "下手",
+    "mEn": "unskillful, poor",
+    "mId": "tidak mahir"
+  },
+  {
+    "expr": "ベッド",
+    "mEn": "bed",
+    "mId": "tempat tidur"
+  },
+  {
+    "expr": "ペット",
+    "mEn": "pet",
+    "mId": "hewan peliharaan"
+  },
+  {
+    "expr": "部屋",
+    "mEn": "a room",
+    "mId": "kamar"
+  },
+  {
+    "expr": "辺",
+    "mEn": "area, vicinity",
+    "mId": "sekitar, daerah"
+  },
+  {
+    "expr": "ペン",
+    "mEn": "pen",
+    "mId": "pena"
+  },
+  {
+    "expr": "勉強",
+    "mEn": "study",
+    "mId": "belajar"
+  },
+  {
+    "expr": "便利",
+    "mEn": "convenient, handy",
+    "mId": "praktis/berguna"
+  },
+  {
+    "expr": "帽子",
+    "mEn": "hat; cap",
+    "mId": "topi"
+  },
+  {
+    "expr": "ボールペン",
+    "mEn": "ball-point pen",
+    "mId": "pulpen"
+  },
+  {
+    "expr": "外",
+    "mEn": "other, the rest",
+    "mId": "luar"
+  },
+  {
+    "expr": "ポケット",
+    "mEn": "pocket",
+    "mId": "saku"
+  },
+  {
+    "expr": "欲しい",
+    "mEn": "to want, in need of",
+    "mId": "ingin"
+  },
+  {
+    "expr": "ポスト",
+    "mEn": "mailbox; post, position",
+    "mId": "kotak pos"
+  },
+  {
+    "expr": "細い",
+    "mEn": "thin, slender, fine",
+    "mId": "tipis/langsing"
+  },
+  {
+    "expr": "ボタン",
+    "mEn": "button",
+    "mId": "tombol"
+  },
+  {
+    "expr": "ホテル",
+    "mEn": "hotel",
+    "mId": "hotel"
+  },
+  {
+    "expr": "本",
+    "mEn": "book",
+    "mId": "buku"
+  },
+  {
+    "expr": "～本",
+    "mEn": "counter for long cylindrical things",
+    "mId": "penghitung untuk benda panjang silindris"
+  },
+  {
+    "expr": "本棚",
+    "mEn": "bookshelf",
+    "mId": "rak buku"
+  },
+  {
+    "expr": "本当",
+    "mEn": "real, true",
+    "mId": "benar, nyata"
+  },
+  {
+    "expr": "～枚",
+    "mEn": "counter for flat things",
+    "mId": "penghitung benda pipih"
+  },
+  {
+    "expr": "毎朝",
+    "mEn": "every morning",
+    "mId": "setiap pagi"
+  },
+  {
+    "expr": "毎月",
+    "mEn": "every month, monthly",
+    "mId": "setiap bulan"
+  },
+  {
+    "expr": "毎週",
+    "mEn": "every week",
+    "mId": "setiap minggu"
+  },
+  {
+    "expr": "毎日",
+    "mEn": "every day",
+    "mId": "setiap hari"
+  },
+  {
+    "expr": "毎年",
+    "mEn": "every year, yearly, annually",
+    "mId": "setiap tahun"
+  },
+  {
+    "expr": "毎晩",
+    "mEn": "every night",
+    "mId": "setiap malam"
+  },
+  {
+    "expr": "前",
+    "mEn": "before, in front",
+    "mId": "depan/sebelum"
+  },
+  {
+    "expr": "～前",
+    "mEn": "in front of ~",
+    "mId": "depan, sebelum"
+  },
+  {
+    "expr": "曲る",
+    "mEn": "to turn, to bend",
+    "mId": "belok/membengkok"
+  },
+  {
+    "expr": "まずい",
+    "mEn": "terrible (in reference to food), unappetizing, unpleasant (taste)",
+    "mId": "tidak enak/buruk"
+  },
+  {
+    "expr": "また",
+    "mEn": "and; furthermore",
+    "mId": "lagi/dan"
+  },
+  {
+    "expr": "まだ",
+    "mEn": "yet, still, besides",
+    "mId": "masih/belum"
+  },
+  {
+    "expr": "町",
+    "mEn": "town; city",
+    "mId": "kota"
+  },
+  {
+    "expr": "待つ",
+    "mEn": "to wait",
+    "mId": "menunggu"
+  },
+  {
+    "expr": "まっすぐ",
+    "mEn": "straight (ahead), direct",
+    "mId": "lurus"
+  },
+  {
+    "expr": "マッチ",
+    "mEn": "match",
+    "mId": "korek api"
+  },
+  {
+    "expr": "窓",
+    "mEn": "window",
+    "mId": "jendela"
+  },
+  {
+    "expr": "丸い; 円い",
+    "mEn": "round, circular",
+    "mId": "bulat, bundar"
+  },
+  {
+    "expr": "万",
+    "mEn": "ten thousand",
+    "mId": "sepuluh ribu"
+  },
+  {
+    "expr": "万年筆",
+    "mEn": "fountain pen",
+    "mId": "pulpen tinta"
+  },
+  {
+    "expr": "磨く",
+    "mEn": "to brush (teeth); to polish",
+    "mId": "menyikat/memoles"
+  },
+  {
+    "expr": "右",
+    "mEn": "right hand side",
+    "mId": "kanan"
+  },
+  {
+    "expr": "短い",
+    "mEn": "short (length)",
+    "mId": "pendek"
+  },
+  {
+    "expr": "水",
+    "mEn": "water",
+    "mId": "air"
+  },
+  {
+    "expr": "店",
+    "mEn": "store, shop",
+    "mId": "toko"
+  },
+  {
+    "expr": "見せる",
+    "mEn": "to show, to display",
+    "mId": "memperlihatkan"
+  },
+  {
+    "expr": "道",
+    "mEn": "road, street; way, directions",
+    "mId": "jalan"
+  },
+  {
+    "expr": "三日",
+    "mEn": "three days, third day of the month",
+    "mId": "hari ke-3, tiga hari"
+  },
+  {
+    "expr": "三つ",
+    "mEn": "three things",
+    "mId": "tiga buah"
+  },
+  {
+    "expr": "緑",
+    "mEn": "green",
+    "mId": "hijau"
+  },
+  {
+    "expr": "皆さん",
+    "mEn": "all of you, everyone",
+    "mId": "semua kalian, semuanya"
+  },
+  {
+    "expr": "南",
+    "mEn": "South",
+    "mId": "selatan"
+  },
+  {
+    "expr": "耳",
+    "mEn": "ear",
+    "mId": "telinga"
+  },
+  {
+    "expr": "見る",
+    "mEn": "to see, to look",
+    "mId": "melihat/menonton"
+  },
+  {
+    "expr": "みんな",
+    "mEn": "all, everyone, everybody",
+    "mId": "semua, semua orang"
+  },
+  {
+    "expr": "六日",
+    "mEn": "six days; sixth day of month",
+    "mId": "hari ke-6, enam hari"
+  },
+  {
+    "expr": "向こう",
+    "mEn": "beyond, over there",
+    "mId": "sebelah sana, seberang"
+  },
+  {
+    "expr": "難しい",
+    "mEn": "difficult",
+    "mId": "sulit"
+  },
+  {
+    "expr": "六つ",
+    "mEn": "six things",
+    "mId": "enam buah"
+  },
+  {
+    "expr": "村",
+    "mEn": "village",
+    "mId": "desa"
+  },
+  {
+    "expr": "目",
+    "mEn": "eye(s)",
+    "mId": "mata"
+  },
+  {
+    "expr": "メートル",
+    "mEn": "meter",
+    "mId": "meter"
+  },
+  {
+    "expr": "眼鏡",
+    "mEn": "eye glasses",
+    "mId": "kacamata"
+  },
+  {
+    "expr": "もう",
+    "mEn": "already; again; more",
+    "mId": "sudah/lagi"
+  },
+  {
+    "expr": "木曜日",
+    "mEn": "Thursday",
+    "mId": "hari Kamis"
+  },
+  {
+    "expr": "もしもし",
+    "mEn": "Hello? (used on the phone)",
+    "mId": "halo (di telepon)"
+  },
+  {
+    "expr": "持つ",
+    "mEn": "to hold, to carry; to possess",
+    "mId": "memegang/memiliki"
+  },
+  {
+    "expr": "もっと",
+    "mEn": "more",
+    "mId": "lebih"
+  },
+  {
+    "expr": "物",
+    "mEn": "thing (concrete object)",
+    "mId": "barang, benda"
+  },
+  {
+    "expr": "門",
+    "mEn": "gate",
+    "mId": "gerbang"
+  },
+  {
+    "expr": "問題",
+    "mEn": "a problem",
+    "mId": "masalah, pertanyaan"
+  },
+  {
+    "expr": "～屋",
+    "mEn": "~ shop",
+    "mId": "~ toko"
+  },
+  {
+    "expr": "八百屋",
+    "mEn": "greengrocer",
+    "mId": "toko sayur"
+  },
+  {
+    "expr": "野菜",
+    "mEn": "vegetable",
+    "mId": "sayur"
+  },
+  {
+    "expr": "易しい",
+    "mEn": "easy, plain, simple",
+    "mId": "mudah"
+  },
+  {
+    "expr": "安い",
+    "mEn": "inexpensive; cheap (things)",
+    "mId": "murah"
+  },
+  {
+    "expr": "休み",
+    "mEn": "holiday; day off; absence",
+    "mId": "libur, istirahat"
+  },
+  {
+    "expr": "休む",
+    "mEn": "to rest, to have a break, to get time off",
+    "mId": "beristirahat"
+  },
+  {
+    "expr": "八つ",
+    "mEn": "eight things",
+    "mId": "delapan buah"
+  },
+  {
+    "expr": "山",
+    "mEn": "mountain",
+    "mId": "gunung"
+  },
+  {
+    "expr": "やる",
+    "mEn": "to do; to give (to pets, parents, siblings, etc.)",
+    "mId": "melakukan/memberi"
+  },
+  {
+    "expr": "夕方",
+    "mEn": "late afternoon (typically just before dinner time), evening",
+    "mId": "sore (sebelum malam)"
+  },
+  {
+    "expr": "夕飯",
+    "mEn": "dinner, supper, evening meal",
+    "mId": "makan malam"
+  },
+  {
+    "expr": "郵便局",
+    "mEn": "post office",
+    "mId": "kantor pos"
+  },
+  {
+    "expr": "昨夜",
+    "mEn": "last night",
+    "mId": "tadi malam"
+  },
+  {
+    "expr": "有名",
+    "mEn": "famous",
+    "mId": "terkenal"
+  },
+  {
+    "expr": "雪",
+    "mEn": "snow",
+    "mId": "salju"
+  },
+  {
+    "expr": "ゆっくりと",
+    "mEn": "slowly, at ease",
+    "mId": "pelan-pelan"
+  },
+  {
+    "expr": "八日",
+    "mEn": "eight days; eighth day of the month",
+    "mId": "hari ke-8, delapan hari"
+  },
+  {
+    "expr": "洋服",
+    "mEn": "Western-style clothes",
+    "mId": "pakaian gaya barat"
+  },
+  {
+    "expr": "よく",
+    "mEn": "frequently, often (much); well, skillfully",
+    "mId": "sering, dengan baik"
+  },
+  {
+    "expr": "横",
+    "mEn": "beside; side; width",
+    "mId": "samping, lebar"
+  },
+  {
+    "expr": "四日",
+    "mEn": "four days; fourth day of the month",
+    "mId": "hari ke-4, empat hari"
+  },
+  {
+    "expr": "四つ",
+    "mEn": "four things",
+    "mId": "empat buah"
+  },
+  {
+    "expr": "呼ぶ",
+    "mEn": "s name); to invite",
+    "mId": "memanggil"
+  },
+  {
+    "expr": "読む",
+    "mEn": "to read",
+    "mId": "membaca"
+  },
+  {
+    "expr": "夜",
+    "mEn": "evening, night",
+    "mId": "malam"
+  },
+  {
+    "expr": "弱い",
+    "mEn": "weak",
+    "mId": "lemah"
+  },
+  {
+    "expr": "来月",
+    "mEn": "next month",
+    "mId": "bulan depan"
+  },
+  {
+    "expr": "来週",
+    "mEn": "next week",
+    "mId": "minggu depan"
+  },
+  {
+    "expr": "来年",
+    "mEn": "next year",
+    "mId": "tahun depan"
+  },
+  {
+    "expr": "ラジオ",
+    "mEn": "radio",
+    "mId": "radio"
+  },
+  {
+    "expr": "ラジオカセ",
+    "mEn": "radio cassette player",
+    "mId": "radio kaset"
+  },
+  {
+    "expr": "りっぱ",
+    "mEn": "splendid, fine",
+    "mId": "megah, hebat"
+  },
+  {
+    "expr": "留学生",
+    "mEn": "international student",
+    "mId": "pelajar asing"
+  },
+  {
+    "expr": "両親",
+    "mEn": "parents (lit., both parents)",
+    "mId": "kedua orang tua"
+  },
+  {
+    "expr": "料理",
+    "mEn": "cooking; cuisine",
+    "mId": "memasak, masakan"
+  },
+  {
+    "expr": "旅行",
+    "mEn": "travel, trip",
+    "mId": "perjalanan, wisata"
+  },
+  {
+    "expr": "零",
+    "mEn": "zero, nought",
+    "mId": "nol"
+  },
+  {
+    "expr": "冷蔵庫",
+    "mEn": "refrigerator",
+    "mId": "kulkas"
+  },
+  {
+    "expr": "レコード",
+    "mEn": "record",
+    "mId": "rekaman/piringan hitam"
+  },
+  {
+    "expr": "レストラン",
+    "mEn": "restaurant",
+    "mId": "restoran"
+  },
+  {
+    "expr": "練習",
+    "mEn": "(to) practice",
+    "mId": "latihan"
+  },
+  {
+    "expr": "廊下",
+    "mEn": "corridor",
+    "mId": "lorong, koridor"
+  },
+  {
+    "expr": "六",
+    "mEn": "six",
+    "mId": "enam"
+  },
+  {
+    "expr": "ワイシャツ",
+    "mEn": "shirt (lit: white shirt), business shirt",
+    "mId": "kemeja kerja"
+  },
+  {
+    "expr": "若い",
+    "mEn": "young",
+    "mId": "muda"
+  },
+  {
+    "expr": "分かる",
+    "mEn": "to understand",
+    "mId": "mengerti"
+  },
+  {
+    "expr": "忘れる",
+    "mEn": "to forget",
+    "mId": "melupakan"
+  },
+  {
+    "expr": "私",
+    "mEn": "I, myself",
+    "mId": "saya"
+  },
+  {
+    "expr": "私",
+    "mEn": "I (formal), myself, private affairs",
+    "mId": "saya"
+  },
+  {
+    "expr": "渡す",
+    "mEn": "to hand (something) over (v.t.); to get across",
+    "mId": "menyerahkan"
+  },
+  {
+    "expr": "渡る",
+    "mEn": "to cross over, to go across",
+    "mId": "menyeberang"
+  },
+  {
+    "expr": "悪い",
+    "mEn": "bad, sinful; inferior",
+    "mId": "buruk"
+  }
+]

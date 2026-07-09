@@ -1,0 +1,786 @@
+[
+  {
+    "filename": "achievement_anti_farming_rules_seed.csv",
+    "path": "data/seed/achievement_anti_farming_rules_seed.csv",
+    "size_bytes": 1676,
+    "row_count": 7,
+    "columns": [],
+    "has_id_column": true,
+    "id_column": "id",
+    "categories": [
+      "achievement"
+    ],
+    "validation": {
+      "status": "pass",
+      "errors": 0,
+      "warnings": 0
+    }
+  },
+  {
+    "filename": "achievement_badge_definitions_seed.csv",
+    "path": "data/seed/achievement_badge_definitions_seed.csv",
+    "size_bytes": 31188,
+    "row_count": 87,
+    "columns": [],
+    "has_id_column": true,
+    "id_column": "id",
+    "categories": [
+      "achievement"
+    ],
+    "validation": {
+      "status": "pass",
+      "errors": 0,
+      "warnings": 0
+    }
+  },
+  {
+    "filename": "achievement_metric_catalog_seed.csv",
+    "path": "data/seed/achievement_metric_catalog_seed.csv",
+    "size_bytes": 15447,
+    "row_count": 46,
+    "columns": [],
+    "has_id_column": true,
+    "id_column": "id",
+    "categories": [
+      "achievement"
+    ],
+    "validation": {
+      "status": "pass",
+      "errors": 0,
+      "warnings": 0
+    }
+  },
+  {
+    "filename": "achievement_trigger_rules_seed.csv",
+    "path": "data/seed/achievement_trigger_rules_seed.csv",
+    "size_bytes": 49028,
+    "row_count": 87,
+    "columns": [],
+    "has_id_column": true,
+    "id_column": "id",
+    "categories": [
+      "achievement"
+    ],
+    "validation": {
+      "status": "pass",
+      "errors": 0,
+      "warnings": 0
+    }
+  },
+  {
+    "filename": "achievement_user_state_schema_seed.csv",
+    "path": "data/seed/achievement_user_state_schema_seed.csv",
+    "size_bytes": 2500,
+    "row_count": 24,
+    "columns": [],
+    "has_id_column": true,
+    "id_column": "id",
+    "categories": [
+      "srs",
+      "achievement"
+    ],
+    "validation": {
+      "status": "pass",
+      "errors": 0,
+      "warnings": 0
+    }
+  },
+  {
+    "filename": "japanese_calendar_time_n5_seed.csv",
+    "path": "data/seed/japanese_calendar_time_n5_seed.csv",
+    "size_bytes": 10887,
+    "row_count": 58,
+    "columns": [],
+    "has_id_column": true,
+    "id_column": "id",
+    "categories": [
+      "numbers"
+    ],
+    "validation": {
+      "status": "pass",
+      "errors": 0,
+      "warnings": 0
+    }
+  },
+  {
+    "filename": "japanese_counter_forms_n5_seed.csv",
+    "path": "data/seed/japanese_counter_forms_n5_seed.csv",
+    "size_bytes": 42190,
+    "row_count": 209,
+    "columns": [],
+    "has_id_column": true,
+    "id_column": "id",
+    "categories": [
+      "numbers"
+    ],
+    "validation": {
+      "status": "pass",
+      "errors": 0,
+      "warnings": 0
+    }
+  },
+  {
+    "filename": "japanese_counters_seed.csv",
+    "path": "data/seed/japanese_counters_seed.csv",
+    "size_bytes": 8818,
+    "row_count": 33,
+    "columns": [],
+    "has_id_column": true,
+    "id_column": "id",
+    "categories": [
+      "numbers"
+    ],
+    "validation": {
+      "status": "pass",
+      "errors": 0,
+      "warnings": 0
+    }
+  },
+  {
+    "filename": "japanese_numbers_seed.csv",
+    "path": "data/seed/japanese_numbers_seed.csv",
+    "size_bytes": 28430,
+    "row_count": 126,
+    "columns": [],
+    "has_id_column": true,
+    "id_column": "id",
+    "categories": [
+      "numbers"
+    ],
+    "validation": {
+      "status": "pass",
+      "errors": 0,
+      "warnings": 0
+    }
+  },
+  {
+    "filename": "japanese_symbols_punctuation_seed.csv",
+    "path": "data/seed/japanese_symbols_punctuation_seed.csv",
+    "size_bytes": 38968,
+    "row_count": 116,
+    "columns": [],
+    "has_id_column": true,
+    "id_column": "id",
+    "categories": [
+      "symbols"
+    ],
+    "validation": {
+      "status": "pass",
+      "errors": 0,
+      "warnings": 0
+    }
+  },
+  {
+    "filename": "jlpt_n5_adjective_conjugation_rules_seed.csv",
+    "path": "data/seed/jlpt_n5_adjective_conjugation_rules_seed.csv",
+    "size_bytes": 33735,
+    "row_count": 59,
+    "columns": [],
+    "has_id_column": true,
+    "id_column": "id",
+    "categories": [
+      "other"
+    ],
+    "validation": {
+      "status": "pass",
+      "errors": 0,
+      "warnings": 0
+    }
+  },
+  {
+    "filename": "jlpt_n5_adjective_conjugation_test_cases_seed.csv",
+    "path": "data/seed/jlpt_n5_adjective_conjugation_test_cases_seed.csv",
+    "size_bytes": 42173,
+    "row_count": 187,
+    "columns": [],
+    "has_id_column": true,
+    "id_column": "id",
+    "categories": [
+      "other"
+    ],
+    "validation": {
+      "status": "pass",
+      "errors": 0,
+      "warnings": 0
+    }
+  },
+  {
+    "filename": "jlpt_n5_example_sentences_seed.csv",
+    "path": "data/seed/jlpt_n5_example_sentences_seed.csv",
+    "size_bytes": 134597,
+    "row_count": 293,
+    "columns": [],
+    "has_id_column": true,
+    "id_column": "id",
+    "categories": [
+      "other"
+    ],
+    "validation": {
+      "status": "pass",
+      "errors": 0,
+      "warnings": 0
+    }
+  },
+  {
+    "filename": "jlpt_n5_grammar_core_84_seed.csv",
+    "path": "data/seed/jlpt_n5_grammar_core_84_seed.csv",
+    "size_bytes": 54181,
+    "row_count": 84,
+    "columns": [],
+    "has_id_column": true,
+    "id_column": "id",
+    "categories": [
+      "grammar"
+    ],
+    "validation": {
+      "status": "pass",
+      "errors": 0,
+      "warnings": 0
+    }
+  },
+  {
+    "filename": "jlpt_n5_grammar_seed.csv",
+    "path": "data/seed/jlpt_n5_grammar_seed.csv",
+    "size_bytes": 75589,
+    "row_count": 113,
+    "columns": [],
+    "has_id_column": true,
+    "id_column": "id",
+    "categories": [
+      "grammar"
+    ],
+    "validation": {
+      "status": "pass",
+      "errors": 0,
+      "warnings": 0
+    }
+  },
+  {
+    "filename": "jlpt_n5_kanji_extended_103.csv",
+    "path": "data/seed/jlpt_n5_kanji_extended_103.csv",
+    "size_bytes": 62022,
+    "row_count": 103,
+    "columns": [],
+    "has_id_column": true,
+    "id_column": "id",
+    "categories": [
+      "kanji"
+    ],
+    "validation": {
+      "status": "pass",
+      "errors": 0,
+      "warnings": 0
+    }
+  },
+  {
+    "filename": "jlpt_n5_kanji_radical_map_seed.csv",
+    "path": "data/seed/jlpt_n5_kanji_radical_map_seed.csv",
+    "size_bytes": 36763,
+    "row_count": 103,
+    "columns": [],
+    "has_id_column": true,
+    "id_column": "id",
+    "categories": [
+      "kanji"
+    ],
+    "validation": {
+      "status": "pass",
+      "errors": 0,
+      "warnings": 0
+    }
+  },
+  {
+    "filename": "jlpt_n5_lesson_content_map_seed.csv",
+    "path": "data/seed/jlpt_n5_lesson_content_map_seed.csv",
+    "size_bytes": 50714,
+    "row_count": 204,
+    "columns": [],
+    "has_id_column": true,
+    "id_column": "id",
+    "categories": [
+      "lesson"
+    ],
+    "validation": {
+      "status": "pass",
+      "errors": 0,
+      "warnings": 0
+    }
+  },
+  {
+    "filename": "jlpt_n5_lesson_roadmap_tree_seed.csv",
+    "path": "data/seed/jlpt_n5_lesson_roadmap_tree_seed.csv",
+    "size_bytes": 87316,
+    "row_count": 136,
+    "columns": [],
+    "has_id_column": true,
+    "id_column": "id",
+    "categories": [
+      "lesson"
+    ],
+    "validation": {
+      "status": "pass",
+      "errors": 0,
+      "warnings": 0
+    }
+  },
+  {
+    "filename": "jlpt_n5_particles_seed.csv",
+    "path": "data/seed/jlpt_n5_particles_seed.csv",
+    "size_bytes": 20753,
+    "row_count": 42,
+    "columns": [],
+    "has_id_column": true,
+    "id_column": "id",
+    "categories": [
+      "particles"
+    ],
+    "validation": {
+      "status": "pass",
+      "errors": 0,
+      "warnings": 0
+    }
+  },
+  {
+    "filename": "jlpt_n5_quiz_item_samples_seed.csv",
+    "path": "data/seed/jlpt_n5_quiz_item_samples_seed.csv",
+    "size_bytes": 15272,
+    "row_count": 27,
+    "columns": [],
+    "has_id_column": true,
+    "id_column": "id",
+    "categories": [
+      "quiz"
+    ],
+    "validation": {
+      "status": "pass",
+      "errors": 0,
+      "warnings": 0
+    }
+  },
+  {
+    "filename": "jlpt_n5_quiz_sections_seed.csv",
+    "path": "data/seed/jlpt_n5_quiz_sections_seed.csv",
+    "size_bytes": 3887,
+    "row_count": 11,
+    "columns": [],
+    "has_id_column": true,
+    "id_column": "id",
+    "categories": [
+      "quiz"
+    ],
+    "validation": {
+      "status": "pass",
+      "errors": 0,
+      "warnings": 0
+    }
+  },
+  {
+    "filename": "jlpt_n5_quiz_templates_seed.csv",
+    "path": "data/seed/jlpt_n5_quiz_templates_seed.csv",
+    "size_bytes": 25596,
+    "row_count": 38,
+    "columns": [],
+    "has_id_column": true,
+    "id_column": "id",
+    "categories": [
+      "quiz"
+    ],
+    "validation": {
+      "status": "pass",
+      "errors": 0,
+      "warnings": 0
+    }
+  },
+  {
+    "filename": "jlpt_n5_roadmap_milestones_seed.csv",
+    "path": "data/seed/jlpt_n5_roadmap_milestones_seed.csv",
+    "size_bytes": 4624,
+    "row_count": 11,
+    "columns": [],
+    "has_id_column": true,
+    "id_column": "id",
+    "categories": [
+      "lesson"
+    ],
+    "validation": {
+      "status": "pass",
+      "errors": 0,
+      "warnings": 0
+    }
+  },
+  {
+    "filename": "jlpt_n5_verb_conjugation_rules_seed.csv",
+    "path": "data/seed/jlpt_n5_verb_conjugation_rules_seed.csv",
+    "size_bytes": 38651,
+    "row_count": 78,
+    "columns": [],
+    "has_id_column": true,
+    "id_column": "id",
+    "categories": [
+      "other"
+    ],
+    "validation": {
+      "status": "pass",
+      "errors": 0,
+      "warnings": 0
+    }
+  },
+  {
+    "filename": "jlpt_n5_verb_conjugation_test_cases_seed.csv",
+    "path": "data/seed/jlpt_n5_verb_conjugation_test_cases_seed.csv",
+    "size_bytes": 12349,
+    "row_count": 88,
+    "columns": [],
+    "has_id_column": true,
+    "id_column": "id",
+    "categories": [
+      "other"
+    ],
+    "validation": {
+      "status": "pass",
+      "errors": 0,
+      "warnings": 0
+    }
+  },
+  {
+    "filename": "jlpt_n5_vocab_example_sentences_autogen.csv",
+    "path": "data/seed/jlpt_n5_vocab_example_sentences_autogen.csv",
+    "size_bytes": 457828,
+    "row_count": 718,
+    "columns": [],
+    "has_id_column": true,
+    "id_column": "id",
+    "categories": [
+      "vocabulary"
+    ],
+    "validation": {
+      "status": "pass",
+      "errors": 0,
+      "warnings": 0
+    }
+  },
+  {
+    "filename": "jlpt_n5_vocabulary_seed_categories.csv",
+    "path": "data/seed/jlpt_n5_vocabulary_seed_categories.csv",
+    "size_bytes": 441154,
+    "row_count": 718,
+    "columns": [],
+    "has_id_column": true,
+    "id_column": "id",
+    "categories": [
+      "vocabulary"
+    ],
+    "validation": {
+      "status": "pass",
+      "errors": 0,
+      "warnings": 0
+    }
+  },
+  {
+    "filename": "jlpt_n5_vocabulary_seed_with_examples.csv",
+    "path": "data/seed/jlpt_n5_vocabulary_seed_with_examples.csv",
+    "size_bytes": 544282,
+    "row_count": 718,
+    "columns": [],
+    "has_id_column": true,
+    "id_column": "id",
+    "categories": [
+      "vocabulary"
+    ],
+    "validation": {
+      "status": "pass",
+      "errors": 0,
+      "warnings": 0
+    }
+  },
+  {
+    "filename": "kana_characters_hiragana_katakana.csv",
+    "path": "data/seed/kana_characters_hiragana_katakana.csv",
+    "size_bytes": 91748,
+    "row_count": 267,
+    "columns": [],
+    "has_id_column": true,
+    "id_column": "id",
+    "categories": [
+      "kana"
+    ],
+    "validation": {
+      "status": "pass",
+      "errors": 0,
+      "warnings": 0
+    }
+  },
+  {
+    "filename": "kanji_radical_variants_seed.csv",
+    "path": "data/seed/kanji_radical_variants_seed.csv",
+    "size_bytes": 19114,
+    "row_count": 106,
+    "columns": [],
+    "has_id_column": true,
+    "id_column": "id",
+    "categories": [
+      "kanji"
+    ],
+    "validation": {
+      "status": "pass",
+      "errors": 0,
+      "warnings": 0
+    }
+  },
+  {
+    "filename": "kanji_radicals_214_seed.csv",
+    "path": "data/seed/kanji_radicals_214_seed.csv",
+    "size_bytes": 76607,
+    "row_count": 214,
+    "columns": [],
+    "has_id_column": true,
+    "id_column": "id",
+    "categories": [
+      "kanji"
+    ],
+    "validation": {
+      "status": "pass",
+      "errors": 0,
+      "warnings": 0
+    }
+  },
+  {
+    "filename": "quiz_answer_schemas_seed.csv",
+    "path": "data/seed/quiz_answer_schemas_seed.csv",
+    "size_bytes": 2961,
+    "row_count": 9,
+    "columns": [],
+    "has_id_column": true,
+    "id_column": "id",
+    "categories": [
+      "quiz"
+    ],
+    "validation": {
+      "status": "pass",
+      "errors": 0,
+      "warnings": 0
+    }
+  },
+  {
+    "filename": "reading_passage_content_map_n5_seed.csv",
+    "path": "data/seed/reading_passage_content_map_n5_seed.csv",
+    "size_bytes": 37804,
+    "row_count": 123,
+    "columns": [],
+    "has_id_column": true,
+    "id_column": "id",
+    "categories": [
+      "reading"
+    ],
+    "validation": {
+      "status": "pass",
+      "errors": 0,
+      "warnings": 0
+    }
+  },
+  {
+    "filename": "reading_passages_n5_seed.csv",
+    "path": "data/seed/reading_passages_n5_seed.csv",
+    "size_bytes": 54406,
+    "row_count": 41,
+    "columns": [],
+    "has_id_column": true,
+    "id_column": "id",
+    "categories": [
+      "reading"
+    ],
+    "validation": {
+      "status": "pass",
+      "errors": 0,
+      "warnings": 0
+    }
+  },
+  {
+    "filename": "reading_questions_n5_seed.csv",
+    "path": "data/seed/reading_questions_n5_seed.csv",
+    "size_bytes": 93715,
+    "row_count": 123,
+    "columns": [],
+    "has_id_column": true,
+    "id_column": "id",
+    "categories": [
+      "reading",
+      "quiz"
+    ],
+    "validation": {
+      "status": "pass",
+      "errors": 0,
+      "warnings": 0
+    }
+  },
+  {
+    "filename": "reading_sections_n5_seed.csv",
+    "path": "data/seed/reading_sections_n5_seed.csv",
+    "size_bytes": 1460,
+    "row_count": 4,
+    "columns": [],
+    "has_id_column": true,
+    "id_column": "id",
+    "categories": [
+      "reading"
+    ],
+    "validation": {
+      "status": "pass",
+      "errors": 0,
+      "warnings": 0
+    }
+  },
+  {
+    "filename": "reward_catalog_seed.csv",
+    "path": "data/seed/reward_catalog_seed.csv",
+    "size_bytes": 3673,
+    "row_count": 24,
+    "columns": [],
+    "has_id_column": true,
+    "id_column": "id",
+    "categories": [
+      "achievement"
+    ],
+    "validation": {
+      "status": "pass",
+      "errors": 0,
+      "warnings": 0
+    }
+  },
+  {
+    "filename": "srs_algorithm_presets_seed.csv",
+    "path": "data/seed/srs_algorithm_presets_seed.csv",
+    "size_bytes": 2048,
+    "row_count": 3,
+    "columns": [],
+    "has_id_column": true,
+    "id_column": "id",
+    "categories": [
+      "srs"
+    ],
+    "validation": {
+      "status": "pass",
+      "errors": 0,
+      "warnings": 0
+    }
+  },
+  {
+    "filename": "srs_card_templates_seed.csv",
+    "path": "data/seed/srs_card_templates_seed.csv",
+    "size_bytes": 6668,
+    "row_count": 15,
+    "columns": [],
+    "has_id_column": true,
+    "id_column": "id",
+    "categories": [
+      "srs"
+    ],
+    "validation": {
+      "status": "pass",
+      "errors": 0,
+      "warnings": 0
+    }
+  },
+  {
+    "filename": "srs_deck_configs_seed.csv",
+    "path": "data/seed/srs_deck_configs_seed.csv",
+    "size_bytes": 4317,
+    "row_count": 9,
+    "columns": [],
+    "has_id_column": true,
+    "id_column": "id",
+    "categories": [
+      "srs"
+    ],
+    "validation": {
+      "status": "pass",
+      "errors": 0,
+      "warnings": 0
+    }
+  },
+  {
+    "filename": "srs_queue_rules_seed.csv",
+    "path": "data/seed/srs_queue_rules_seed.csv",
+    "size_bytes": 2335,
+    "row_count": 8,
+    "columns": [],
+    "has_id_column": true,
+    "id_column": "id",
+    "categories": [
+      "srs"
+    ],
+    "validation": {
+      "status": "pass",
+      "errors": 0,
+      "warnings": 0
+    }
+  },
+  {
+    "filename": "srs_rating_options_seed.csv",
+    "path": "data/seed/srs_rating_options_seed.csv",
+    "size_bytes": 1074,
+    "row_count": 4,
+    "columns": [],
+    "has_id_column": true,
+    "id_column": "id",
+    "categories": [
+      "srs"
+    ],
+    "validation": {
+      "status": "pass",
+      "errors": 0,
+      "warnings": 0
+    }
+  },
+  {
+    "filename": "srs_state_transition_rules_seed.csv",
+    "path": "data/seed/srs_state_transition_rules_seed.csv",
+    "size_bytes": 3616,
+    "row_count": 16,
+    "columns": [],
+    "has_id_column": true,
+    "id_column": "id",
+    "categories": [
+      "srs"
+    ],
+    "validation": {
+      "status": "pass",
+      "errors": 0,
+      "warnings": 0
+    }
+  },
+  {
+    "filename": "srs_user_card_state_schema_seed.csv",
+    "path": "data/seed/srs_user_card_state_schema_seed.csv",
+    "size_bytes": 3035,
+    "row_count": 28,
+    "columns": [],
+    "has_id_column": true,
+    "id_column": "id",
+    "categories": [
+      "srs"
+    ],
+    "validation": {
+      "status": "pass",
+      "errors": 0,
+      "warnings": 0
+    }
+  },
+  {
+    "filename": "xp_level_config_seed.csv",
+    "path": "data/seed/xp_level_config_seed.csv",
+    "size_bytes": 8155,
+    "row_count": 50,
+    "columns": [],
+    "has_id_column": true,
+    "id_column": "id",
+    "categories": [
+      "achievement"
+    ],
+    "validation": {
+      "status": "pass",
+      "errors": 0,
+      "warnings": 0
+    }
+  }
+]

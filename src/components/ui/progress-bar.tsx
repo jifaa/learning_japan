@@ -1,0 +1,71 @@
+"use client"
+
+import { Progress } from "@/components/ui/progress"
+import { cn } from "@/lib/utils"
+
+interface ProgressBarProps {
+  value: number
+  max?: number
+  label?: string
+  showValue?: boolean
+  size?: "sm" | "md" | "lg"
+  variant?: "default" | "success" | "warning"
+  className?: string
+}
+
+export function ProgressBar({
+  value,
+  max = 100,
+  label,
+  showValue = true,
+  size = "md",
+  variant = "default",
+  className,
+}: ProgressBarProps) {
+  const percentage = Math.min(Math.max((value / max) * 100, 0), 100)
+
+  const sizeClasses = {
+    sm: "h-1",
+    md: "h-2",
+    lg: "h-3",
+  }
+
+  const variantClasses = {
+    default: "[&>div]:bg-primary",
+    success: "[&>div]:bg-success",
+    warning: "[&>div]:bg-warning",
+  }
+
+  return (
+    <div className={cn("space-y-2", className)}>
+      {(label || showValue) && (
+        <div className="flex items-center justify-between text-sm">
+          {label && <p className="font-medium text-foreground">{label}</p>}
+          {showValue && (
+            <p className="text-muted-foreground">
+              {value}/{max}
+            </p>
+          )}
+        </div>
+      )}
+      <div
+        className={cn(
+          "w-full overflow-hidden rounded-full bg-muted",
+          sizeClasses[size]
+        )}
+      >
+        <div
+          className={cn(
+            "h-full rounded-full transition-all duration-500 ease-out",
+            variantClasses[variant]
+          )}
+          style={{ width: `${percentage}%` }}
+          role="progressbar"
+          aria-valuenow={value}
+          aria-valuemin={0}
+          aria-valuemax={max}
+        />
+      </div>
+    </div>
+  )
+}

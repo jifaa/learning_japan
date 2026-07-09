@@ -1,0 +1,667 @@
+[
+  {
+    "expr": "ああ",
+    "mEn": "Ah!, Oh!",
+    "mId": "Ah!, Oh!"
+  },
+  {
+    "expr": "あっち",
+    "mEn": "over there",
+    "mId": "over there"
+  },
+  {
+    "expr": "飴",
+    "mEn": "(hard) candy",
+    "mId": "(hard) candy"
+  },
+  {
+    "expr": "一緒",
+    "mEn": "together",
+    "mId": "together"
+  },
+  {
+    "expr": "嫌",
+    "mEn": "disagreeable, detestable, unpleasant",
+    "mId": "disagreeable, detestable, unpleasant"
+  },
+  {
+    "expr": "色々",
+    "mEn": "various",
+    "mId": "various"
+  },
+  {
+    "expr": "上着",
+    "mEn": "coat, jacket",
+    "mId": "coat, jacket"
+  },
+  {
+    "expr": "映画",
+    "mEn": "movie, film",
+    "mId": "movie, film"
+  },
+  {
+    "expr": "映画館",
+    "mEn": "movie theater, cinema",
+    "mId": "movie theater, cinema"
+  },
+  {
+    "expr": "ええ",
+    "mEn": "yes",
+    "mId": "yes"
+  },
+  {
+    "expr": "お～",
+    "mEn": "honorable ~ (honorific)",
+    "mId": "honorable ~ (honorific)"
+  },
+  {
+    "expr": "お菓子",
+    "mEn": "confections, sweets, snack",
+    "mId": "confections, sweets, snack"
+  },
+  {
+    "expr": "お金",
+    "mEn": "money",
+    "mId": "money"
+  },
+  {
+    "expr": "奥さん",
+    "mEn": "s) wife (hon.)",
+    "mId": "s) wife (hon.)"
+  },
+  {
+    "expr": "お皿",
+    "mEn": "plate, dish",
+    "mId": "plate, dish"
+  },
+  {
+    "expr": "大人",
+    "mEn": "adult",
+    "mId": "adult"
+  },
+  {
+    "expr": "お腹",
+    "mEn": "stomach",
+    "mId": "stomach"
+  },
+  {
+    "expr": "同じ",
+    "mEn": "same, identical",
+    "mId": "same, identical"
+  },
+  {
+    "expr": "伯母さん; 叔母さん",
+    "mEn": "aunt",
+    "mId": "aunt"
+  },
+  {
+    "expr": "おばあさん",
+    "mEn": "grandmother, female senior-citizen",
+    "mId": "grandmother, female senior-citizen"
+  },
+  {
+    "expr": "～か月",
+    "mEn": "(number of) months",
+    "mId": "(number of) months"
+  },
+  {
+    "expr": "片仮名",
+    "mEn": "katakana",
+    "mId": "katakana"
+  },
+  {
+    "expr": "～がる",
+    "mEn": "feel",
+    "mId": "feel"
+  },
+  {
+    "expr": "カレンダー",
+    "mEn": "calendar",
+    "mId": "calendar"
+  },
+  {
+    "expr": "～側",
+    "mEn": "~ side",
+    "mId": "~ side"
+  },
+  {
+    "expr": "ギター",
+    "mEn": "guitar",
+    "mId": "guitar"
+  },
+  {
+    "expr": "銀行",
+    "mEn": "bank",
+    "mId": "bank"
+  },
+  {
+    "expr": "～くらい; ぐらい",
+    "mEn": "approximate (quantity)",
+    "mId": "approximate (quantity)"
+  },
+  {
+    "expr": "グラム",
+    "mEn": "gram",
+    "mId": "gram"
+  },
+  {
+    "expr": "～語",
+    "mEn": "word, language",
+    "mId": "word, language"
+  },
+  {
+    "expr": "財布",
+    "mEn": "wallet",
+    "mId": "wallet"
+  },
+  {
+    "expr": "砂糖",
+    "mEn": "sugar",
+    "mId": "sugar"
+  },
+  {
+    "expr": "～さん",
+    "mEn": "Mr. ~, Ms. ~",
+    "mId": "Mr. ~, Ms. ~"
+  },
+  {
+    "expr": "塩",
+    "mEn": "salt",
+    "mId": "salt"
+  },
+  {
+    "expr": "～時間",
+    "mEn": "~ hours",
+    "mId": "~ hours"
+  },
+  {
+    "expr": "静か",
+    "mEn": "quiet, calm",
+    "mId": "quiet, calm"
+  },
+  {
+    "expr": "じゃ; じゃあ",
+    "mEn": "well, well then",
+    "mId": "well, well then"
+  },
+  {
+    "expr": "シャツ",
+    "mEn": "shirt",
+    "mId": "shirt"
+  },
+  {
+    "expr": "シャワー",
+    "mEn": "shower",
+    "mId": "shower"
+  },
+  {
+    "expr": "～中",
+    "mEn": "during, while",
+    "mId": "during, while"
+  },
+  {
+    "expr": "～週間",
+    "mEn": "~ weeks",
+    "mId": "~ weeks"
+  },
+  {
+    "expr": "醤油",
+    "mEn": "soy sauce",
+    "mId": "soy sauce"
+  },
+  {
+    "expr": "スカート",
+    "mEn": "skirt",
+    "mId": "skirt"
+  },
+  {
+    "expr": "ストーブ",
+    "mEn": "heater (lit: stove)",
+    "mId": "heater (lit: stove)"
+  },
+  {
+    "expr": "スプーン",
+    "mEn": "spoon",
+    "mId": "spoon"
+  },
+  {
+    "expr": "スポーツ",
+    "mEn": "sport(s)",
+    "mId": "sport(s)"
+  },
+  {
+    "expr": "ズボン",
+    "mEn": "trousers",
+    "mId": "trousers"
+  },
+  {
+    "expr": "セーター",
+    "mEn": "sweater",
+    "mId": "sweater"
+  },
+  {
+    "expr": "石鹸",
+    "mEn": "soap",
+    "mId": "soap"
+  },
+  {
+    "expr": "背広",
+    "mEn": "s suit",
+    "mId": "s suit"
+  },
+  {
+    "expr": "ゼロ",
+    "mEn": "zero",
+    "mId": "zero"
+  },
+  {
+    "expr": "そちら",
+    "mEn": "over there",
+    "mId": "over there"
+  },
+  {
+    "expr": "そっち",
+    "mEn": "over there",
+    "mId": "over there"
+  },
+  {
+    "expr": "その",
+    "mEn": "that",
+    "mId": "that"
+  },
+  {
+    "expr": "大使館",
+    "mEn": "embassy",
+    "mId": "embassy"
+  },
+  {
+    "expr": "大切",
+    "mEn": "important",
+    "mId": "important"
+  },
+  {
+    "expr": "台所",
+    "mEn": "kitchen",
+    "mId": "kitchen"
+  },
+  {
+    "expr": "～たち",
+    "mEn": "plural suffix",
+    "mId": "plural suffix"
+  },
+  {
+    "expr": "たて",
+    "mEn": "length, height",
+    "mId": "length, height"
+  },
+  {
+    "expr": "建物",
+    "mEn": "building",
+    "mId": "building"
+  },
+  {
+    "expr": "楽しい",
+    "mEn": "enjoyable, fun",
+    "mId": "enjoyable, fun"
+  },
+  {
+    "expr": "たばこ",
+    "mEn": "tobacco, cigarettes",
+    "mId": "tobacco, cigarettes"
+  },
+  {
+    "expr": "多分",
+    "mEn": "perhaps, probably, maybe",
+    "mId": "perhaps, probably, maybe"
+  },
+  {
+    "expr": "卵",
+    "mEn": "egg",
+    "mId": "egg"
+  },
+  {
+    "expr": "誰か",
+    "mEn": "someone",
+    "mId": "someone"
+  },
+  {
+    "expr": "～中",
+    "mEn": "during, while ~ing",
+    "mId": "during, while ~ing"
+  },
+  {
+    "expr": "テープ",
+    "mEn": "tape",
+    "mId": "tape"
+  },
+  {
+    "expr": "テープレコーダー",
+    "mEn": "tape recorder",
+    "mId": "tape recorder"
+  },
+  {
+    "expr": "テスト",
+    "mEn": "test",
+    "mId": "test"
+  },
+  {
+    "expr": "では",
+    "mEn": "then, well, so",
+    "mId": "then, well, so"
+  },
+  {
+    "expr": "動物",
+    "mEn": "animal",
+    "mId": "animal"
+  },
+  {
+    "expr": "所",
+    "mEn": "place",
+    "mId": "place"
+  },
+  {
+    "expr": "図書館",
+    "mEn": "library",
+    "mId": "library"
+  },
+  {
+    "expr": "とても",
+    "mEn": "very (much), greatly, exceedingly",
+    "mId": "very (much), greatly, exceedingly"
+  },
+  {
+    "expr": "どなた",
+    "mEn": "who",
+    "mId": "who"
+  },
+  {
+    "expr": "どの",
+    "mEn": "which",
+    "mId": "which"
+  },
+  {
+    "expr": "友達",
+    "mEn": "friend",
+    "mId": "friend"
+  },
+  {
+    "expr": "土曜日",
+    "mEn": "Saturday",
+    "mId": "Saturday"
+  },
+  {
+    "expr": "鳥",
+    "mEn": "chicken (lit., bird)",
+    "mId": "chicken (lit., bird)"
+  },
+  {
+    "expr": "ナイフ",
+    "mEn": "knife",
+    "mId": "knife"
+  },
+  {
+    "expr": "夏休み",
+    "mEn": "summer vacation",
+    "mId": "summer vacation"
+  },
+  {
+    "expr": "～など",
+    "mEn": "et cetera",
+    "mId": "et cetera"
+  },
+  {
+    "expr": "温い",
+    "mEn": "lukewarm",
+    "mId": "lukewarm"
+  },
+  {
+    "expr": "ネクタイ",
+    "mEn": "tie, necktie",
+    "mId": "tie, necktie"
+  },
+  {
+    "expr": "～年",
+    "mEn": "~ years",
+    "mId": "~ years"
+  },
+  {
+    "expr": "歯",
+    "mEn": "tooth",
+    "mId": "tooth"
+  },
+  {
+    "expr": "灰皿",
+    "mEn": "ashtray",
+    "mId": "ashtray"
+  },
+  {
+    "expr": "葉書",
+    "mEn": "postcard",
+    "mId": "postcard"
+  },
+  {
+    "expr": "箱",
+    "mEn": "box",
+    "mId": "box"
+  },
+  {
+    "expr": "橋",
+    "mEn": "bridge",
+    "mId": "bridge"
+  },
+  {
+    "expr": "箸",
+    "mEn": "chopsticks",
+    "mId": "chopsticks"
+  },
+  {
+    "expr": "始まる",
+    "mEn": "(something) begins",
+    "mId": "(something) begins"
+  },
+  {
+    "expr": "バター",
+    "mEn": "butter",
+    "mId": "butter"
+  },
+  {
+    "expr": "花",
+    "mEn": "flower",
+    "mId": "flower"
+  },
+  {
+    "expr": "鼻",
+    "mEn": "nose",
+    "mId": "nose"
+  },
+  {
+    "expr": "話",
+    "mEn": "talk (chat), story",
+    "mId": "talk (chat), story"
+  },
+  {
+    "expr": "春",
+    "mEn": "spring",
+    "mId": "spring"
+  },
+  {
+    "expr": "ハンカチ",
+    "mEn": "handkerchief",
+    "mId": "handkerchief"
+  },
+  {
+    "expr": "半分",
+    "mEn": "half",
+    "mId": "half"
+  },
+  {
+    "expr": "平仮名",
+    "mEn": "hiragana",
+    "mId": "hiragana"
+  },
+  {
+    "expr": "フィルム",
+    "mEn": "film (roll of)",
+    "mId": "film (roll of)"
+  },
+  {
+    "expr": "フォーク",
+    "mEn": "fork",
+    "mId": "fork"
+  },
+  {
+    "expr": "～分",
+    "mEn": "~ minutes",
+    "mId": "~ minutes"
+  },
+  {
+    "expr": "ベッド",
+    "mEn": "bed",
+    "mId": "bed"
+  },
+  {
+    "expr": "ペット",
+    "mEn": "pet",
+    "mId": "pet"
+  },
+  {
+    "expr": "辺",
+    "mEn": "area, vicinity",
+    "mId": "area, vicinity"
+  },
+  {
+    "expr": "ペン",
+    "mEn": "pen",
+    "mId": "pen"
+  },
+  {
+    "expr": "ボールペン",
+    "mEn": "ball-point pen",
+    "mId": "ball-point pen"
+  },
+  {
+    "expr": "ホテル",
+    "mEn": "hotel",
+    "mId": "hotel"
+  },
+  {
+    "expr": "本棚",
+    "mEn": "bookshelf",
+    "mId": "bookshelf"
+  },
+  {
+    "expr": "本当",
+    "mEn": "real, true",
+    "mId": "real, true"
+  },
+  {
+    "expr": "毎週",
+    "mEn": "every week",
+    "mId": "every week"
+  },
+  {
+    "expr": "マッチ",
+    "mEn": "match",
+    "mId": "match"
+  },
+  {
+    "expr": "丸い; 円い",
+    "mEn": "round, circular",
+    "mId": "round, circular"
+  },
+  {
+    "expr": "みんな",
+    "mEn": "all, everyone, everybody",
+    "mId": "all, everyone, everybody"
+  },
+  {
+    "expr": "向こう",
+    "mEn": "beyond, over there",
+    "mId": "beyond, over there"
+  },
+  {
+    "expr": "村",
+    "mEn": "village",
+    "mId": "village"
+  },
+  {
+    "expr": "メートル",
+    "mEn": "meter",
+    "mId": "meter"
+  },
+  {
+    "expr": "木曜日",
+    "mEn": "Thursday",
+    "mId": "Thursday"
+  },
+  {
+    "expr": "もっと",
+    "mEn": "more",
+    "mId": "more"
+  },
+  {
+    "expr": "物",
+    "mEn": "thing (concrete object)",
+    "mId": "thing (concrete object)"
+  },
+  {
+    "expr": "門",
+    "mEn": "gate",
+    "mId": "gate"
+  },
+  {
+    "expr": "八百屋",
+    "mEn": "greengrocer",
+    "mId": "greengrocer"
+  },
+  {
+    "expr": "洋服",
+    "mEn": "Western-style clothes",
+    "mId": "Western-style clothes"
+  },
+  {
+    "expr": "ラジオ",
+    "mEn": "radio",
+    "mId": "radio"
+  },
+  {
+    "expr": "ラジオカセ",
+    "mEn": "radio cassette player",
+    "mId": "radio cassette player"
+  },
+  {
+    "expr": "りっぱ",
+    "mEn": "splendid, fine",
+    "mId": "splendid, fine"
+  },
+  {
+    "expr": "両親",
+    "mEn": "parents (lit., both parents)",
+    "mId": "parents (lit., both parents)"
+  },
+  {
+    "expr": "旅行",
+    "mEn": "travel, trip",
+    "mId": "travel, trip"
+  },
+  {
+    "expr": "零",
+    "mEn": "zero, nought",
+    "mId": "zero, nought"
+  },
+  {
+    "expr": "冷蔵庫",
+    "mEn": "refrigerator",
+    "mId": "refrigerator"
+  },
+  {
+    "expr": "練習",
+    "mEn": "(to) practice",
+    "mId": "(to) practice"
+  },
+  {
+    "expr": "廊下",
+    "mEn": "corridor",
+    "mId": "corridor"
+  }
+]

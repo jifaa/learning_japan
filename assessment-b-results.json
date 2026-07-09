@@ -1,0 +1,18 @@
+{
+  "cli_scan_exit_code": 0,
+  "cli_findings_count": 0,
+  "cli_findings": [],
+  "browser_injection_attempted": true,
+  "browser_findings": [
+    "animate-fade-in animation class found on landing page (Root) - fade-in animations are common AI-generated site pattern"
+  ],
+  "false_positives": [
+    "All 375 CLI findings were from impeccable skill's bundled detector JS files, not project source",
+    "Skeleton/placeholder detection on login/register is a false positive - these are valid loading state UI patterns",
+    "animate-fade-in on landing page is likely intentional entrance animation, not an anti-pattern"
+  ],
+  "skipped_browser_reasons": [
+    "Playwright Chromium browser download repeatedly failed with ENOSPC (disk space) error on C: drive",
+    "Chrome headless mode attempted but Playwright browser not available"
+  ]
+}

@@ -1,0 +1,59 @@
+﻿id,jlpt_level,set_type,display_order,calendar_type,value,kanji,reading_kana,romaji,romaji_alt,meaning_id,is_irregular,is_common,recommended_for_quiz,source_url,notes
+cal_n5_0001,N5,calendar_time_n5,1,weekday,monday,月曜日,げつようび,getsuyoubi,,Senin,false,true,true,https://www.mlcjapanese.co.jp/n5_01_07.html,
+cal_n5_0002,N5,calendar_time_n5,2,weekday,tuesday,火曜日,かようび,kayoubi,,Selasa,false,true,true,https://www.mlcjapanese.co.jp/n5_01_07.html,
+cal_n5_0003,N5,calendar_time_n5,3,weekday,wednesday,水曜日,すいようび,suiyoubi,,Rabu,false,true,true,https://www.mlcjapanese.co.jp/n5_01_07.html,
+cal_n5_0004,N5,calendar_time_n5,4,weekday,thursday,木曜日,もくようび,mokuyoubi,,Kamis,false,true,true,https://www.mlcjapanese.co.jp/n5_01_07.html,
+cal_n5_0005,N5,calendar_time_n5,5,weekday,friday,金曜日,きんようび,kinyoubi,,Jumat,false,true,true,https://www.mlcjapanese.co.jp/n5_01_07.html,
+cal_n5_0006,N5,calendar_time_n5,6,weekday,saturday,土曜日,どようび,doyoubi,,Sabtu,false,true,true,https://www.mlcjapanese.co.jp/n5_01_07.html,
+cal_n5_0007,N5,calendar_time_n5,7,weekday,sunday,日曜日,にちようび,nichiyoubi,,Minggu,false,true,true,https://www.mlcjapanese.co.jp/n5_01_07.html,
+cal_n5_0008,N5,calendar_time_n5,8,month_name,1,一月,いちがつ,ichigatsu,,Januari,false,true,true,https://www.mlcjapanese.co.jp/n5_01_07.html,Calendar month name.
+cal_n5_0009,N5,calendar_time_n5,9,month_name,2,二月,にがつ,nigatsu,,Februari,false,true,true,https://www.mlcjapanese.co.jp/n5_01_07.html,Calendar month name.
+cal_n5_0010,N5,calendar_time_n5,10,month_name,3,三月,さんがつ,sangatsu,,Maret,false,true,true,https://www.mlcjapanese.co.jp/n5_01_07.html,Calendar month name.
+cal_n5_0011,N5,calendar_time_n5,11,month_name,4,四月,しがつ,shigatsu,,April,true,true,true,https://www.mlcjapanese.co.jp/n5_01_07.html,Calendar month name.
+cal_n5_0012,N5,calendar_time_n5,12,month_name,5,五月,ごがつ,gogatsu,,Mei,false,true,true,https://www.mlcjapanese.co.jp/n5_01_07.html,Calendar month name.
+cal_n5_0013,N5,calendar_time_n5,13,month_name,6,六月,ろくがつ,rokugatsu,,Juni,false,true,true,https://www.mlcjapanese.co.jp/n5_01_07.html,Calendar month name.
+cal_n5_0014,N5,calendar_time_n5,14,month_name,7,七月,しちがつ,shichigatsu,,Juli,true,true,true,https://www.mlcjapanese.co.jp/n5_01_07.html,Calendar month name.
+cal_n5_0015,N5,calendar_time_n5,15,month_name,8,八月,はちがつ,hachigatsu,,Agustus,false,true,true,https://www.mlcjapanese.co.jp/n5_01_07.html,Calendar month name.
+cal_n5_0016,N5,calendar_time_n5,16,month_name,9,九月,くがつ,kugatsu,,September,true,true,true,https://www.mlcjapanese.co.jp/n5_01_07.html,Calendar month name.
+cal_n5_0017,N5,calendar_time_n5,17,month_name,10,十月,じゅうがつ,juugatsu,,Oktober,false,true,true,https://www.mlcjapanese.co.jp/n5_01_07.html,Calendar month name.
+cal_n5_0018,N5,calendar_time_n5,18,month_name,11,十一月,じゅういちがつ,juuichigatsu,,November,false,true,true,https://www.mlcjapanese.co.jp/n5_01_07.html,Calendar month name.
+cal_n5_0019,N5,calendar_time_n5,19,month_name,12,十二月,じゅうにがつ,juunigatsu,,Desember,false,true,true,https://www.mlcjapanese.co.jp/n5_01_07.html,Calendar month name.
+cal_n5_0020,N5,calendar_time_n5,20,day_of_month,1,一日,ついたち,tsuitachi,,tanggal 1,true,true,true,https://www.mlcjapanese.co.jp/n5_01_07.html,Calendar date/day-of-month.
+cal_n5_0021,N5,calendar_time_n5,21,day_of_month,2,二日,ふつか,futsuka,,tanggal 2,true,true,true,https://www.mlcjapanese.co.jp/n5_01_07.html,Calendar date/day-of-month.
+cal_n5_0022,N5,calendar_time_n5,22,day_of_month,3,三日,みっか,mikka,,tanggal 3,true,true,true,https://www.mlcjapanese.co.jp/n5_01_07.html,Calendar date/day-of-month.
+cal_n5_0023,N5,calendar_time_n5,23,day_of_month,4,四日,よっか,yokka,,tanggal 4,true,true,true,https://www.mlcjapanese.co.jp/n5_01_07.html,Calendar date/day-of-month.
+cal_n5_0024,N5,calendar_time_n5,24,day_of_month,5,五日,いつか,itsuka,,tanggal 5,true,true,true,https://www.mlcjapanese.co.jp/n5_01_07.html,Calendar date/day-of-month.
+cal_n5_0025,N5,calendar_time_n5,25,day_of_month,6,六日,むいか,muika,,tanggal 6,true,true,true,https://www.mlcjapanese.co.jp/n5_01_07.html,Calendar date/day-of-month.
+cal_n5_0026,N5,calendar_time_n5,26,day_of_month,7,七日,なのか,nanoka,,tanggal 7,true,true,true,https://www.mlcjapanese.co.jp/n5_01_07.html,Calendar date/day-of-month.
+cal_n5_0027,N5,calendar_time_n5,27,day_of_month,8,八日,ようか,youka,,tanggal 8,true,true,true,https://www.mlcjapanese.co.jp/n5_01_07.html,Calendar date/day-of-month.
+cal_n5_0028,N5,calendar_time_n5,28,day_of_month,9,九日,ここのか,kokonoka,,tanggal 9,true,true,true,https://www.mlcjapanese.co.jp/n5_01_07.html,Calendar date/day-of-month.
+cal_n5_0029,N5,calendar_time_n5,29,day_of_month,10,十日,とおか,tooka,,tanggal 10,true,true,true,https://www.mlcjapanese.co.jp/n5_01_07.html,Calendar date/day-of-month.
+cal_n5_0030,N5,calendar_time_n5,30,day_of_month,11,十一日,じゅういちにち,juuichinichi,,tanggal 11,false,true,true,https://www.mlcjapanese.co.jp/n5_01_07.html,Calendar date/day-of-month.
+cal_n5_0031,N5,calendar_time_n5,31,day_of_month,12,十二日,じゅうににち,juuninichi,,tanggal 12,false,true,true,https://www.mlcjapanese.co.jp/n5_01_07.html,Calendar date/day-of-month.
+cal_n5_0032,N5,calendar_time_n5,32,day_of_month,13,十三日,じゅうさんにち,juusannichi,,tanggal 13,false,true,true,https://www.mlcjapanese.co.jp/n5_01_07.html,Calendar date/day-of-month.
+cal_n5_0033,N5,calendar_time_n5,33,day_of_month,14,十四日,じゅうよっか,juuyokka,,tanggal 14,true,true,true,https://www.mlcjapanese.co.jp/n5_01_07.html,Calendar date/day-of-month.
+cal_n5_0034,N5,calendar_time_n5,34,day_of_month,15,十五日,じゅうごにち,juugonichi,,tanggal 15,false,true,true,https://www.mlcjapanese.co.jp/n5_01_07.html,Calendar date/day-of-month.
+cal_n5_0035,N5,calendar_time_n5,35,day_of_month,16,十六日,じゅうろくにち,juurokunichi,,tanggal 16,false,true,true,https://www.mlcjapanese.co.jp/n5_01_07.html,Calendar date/day-of-month.
+cal_n5_0036,N5,calendar_time_n5,36,day_of_month,17,十七日,じゅうしちにち,juushichinichi,,tanggal 17,false,true,true,https://www.mlcjapanese.co.jp/n5_01_07.html,Calendar date/day-of-month.
+cal_n5_0037,N5,calendar_time_n5,37,day_of_month,18,十八日,じゅうはちにち,juuhachinichi,,tanggal 18,false,true,true,https://www.mlcjapanese.co.jp/n5_01_07.html,Calendar date/day-of-month.
+cal_n5_0038,N5,calendar_time_n5,38,day_of_month,19,十九日,じゅうくにち,juukunichi,,tanggal 19,true,true,true,https://www.mlcjapanese.co.jp/n5_01_07.html,Calendar date/day-of-month.
+cal_n5_0039,N5,calendar_time_n5,39,day_of_month,20,二十日,はつか,hatsuka,,tanggal 20,true,true,true,https://www.mlcjapanese.co.jp/n5_01_07.html,Calendar date/day-of-month.
+cal_n5_0040,N5,calendar_time_n5,40,day_of_month,21,二十一日,にじゅういちにち,nijuuichinichi,,tanggal 21,false,true,true,https://www.mlcjapanese.co.jp/n5_01_07.html,Calendar date/day-of-month.
+cal_n5_0041,N5,calendar_time_n5,41,day_of_month,22,二十二日,にじゅうににち,nijuuninichi,,tanggal 22,false,true,true,https://www.mlcjapanese.co.jp/n5_01_07.html,Calendar date/day-of-month.
+cal_n5_0042,N5,calendar_time_n5,42,day_of_month,23,二十三日,にじゅうさんにち,nijuusannichi,,tanggal 23,false,true,true,https://www.mlcjapanese.co.jp/n5_01_07.html,Calendar date/day-of-month.
+cal_n5_0043,N5,calendar_time_n5,43,day_of_month,24,二十四日,にじゅうよっか,nijuuyokka,,tanggal 24,true,true,true,https://www.mlcjapanese.co.jp/n5_01_07.html,Calendar date/day-of-month.
+cal_n5_0044,N5,calendar_time_n5,44,day_of_month,25,二十五日,にじゅうごにち,nijuugonichi,,tanggal 25,false,true,true,https://www.mlcjapanese.co.jp/n5_01_07.html,Calendar date/day-of-month.
+cal_n5_0045,N5,calendar_time_n5,45,day_of_month,26,二十六日,にじゅうろくにち,nijuurokunichi,,tanggal 26,false,true,true,https://www.mlcjapanese.co.jp/n5_01_07.html,Calendar date/day-of-month.
+cal_n5_0046,N5,calendar_time_n5,46,day_of_month,27,二十七日,にじゅうしちにち,nijuushichinichi,,tanggal 27,false,true,true,https://www.mlcjapanese.co.jp/n5_01_07.html,Calendar date/day-of-month.
+cal_n5_0047,N5,calendar_time_n5,47,day_of_month,28,二十八日,にじゅうはちにち,nijuuhachinichi,,tanggal 28,false,true,true,https://www.mlcjapanese.co.jp/n5_01_07.html,Calendar date/day-of-month.
+cal_n5_0048,N5,calendar_time_n5,48,day_of_month,29,二十九日,にじゅうくにち,nijuukunichi,,tanggal 29,true,true,true,https://www.mlcjapanese.co.jp/n5_01_07.html,Calendar date/day-of-month.
+cal_n5_0049,N5,calendar_time_n5,49,day_of_month,30,三十日,さんじゅうにち,sanjuunichi,,tanggal 30,false,true,true,https://www.mlcjapanese.co.jp/n5_01_07.html,Calendar date/day-of-month.
+cal_n5_0050,N5,calendar_time_n5,50,day_of_month,31,三十一日,さんじゅういちにち,sanjuuichinichi,,tanggal 31,false,true,true,https://www.mlcjapanese.co.jp/n5_01_07.html,Calendar date/day-of-month.
+cal_n5_0051,N5,calendar_time_n5,51,time_expression,morning_am,午前,ごぜん,gozen,,AM; pagi/sebelum siang,false,true,true,https://www.tofugu.com/japanese-grammar/date-and-time/,Useful with time/calendar counters.
+cal_n5_0052,N5,calendar_time_n5,52,time_expression,afternoon_pm,午後,ごご,gogo,,PM; sore/setelah siang,false,true,true,https://www.tofugu.com/japanese-grammar/date-and-time/,Useful with time/calendar counters.
+cal_n5_0053,N5,calendar_time_n5,53,time_expression,half,半,はん,han,,setengah; lewat 30 menit,false,true,true,https://www.tofugu.com/japanese-grammar/date-and-time/,Useful with time/calendar counters.
+cal_n5_0054,N5,calendar_time_n5,54,time_expression,around_time,頃,ごろ,goro,,sekitar jam/waktu,false,true,true,https://www.tofugu.com/japanese-grammar/date-and-time/,Useful with time/calendar counters.
+cal_n5_0055,N5,calendar_time_n5,55,time_expression,about_duration,ぐらい,ぐらい,gurai,,sekitar durasi/jumlah,false,true,true,https://www.tofugu.com/japanese-grammar/date-and-time/,Useful with time/calendar counters.
+cal_n5_0056,N5,calendar_time_n5,56,time_expression,about_duration_kurai,くらい,くらい,kurai,,sekitar durasi/jumlah,false,true,true,https://www.tofugu.com/japanese-grammar/date-and-time/,Useful with time/calendar counters.
+cal_n5_0057,N5,calendar_time_n5,57,time_expression,weekend,週末,しゅうまつ,shuumatsu,,akhir pekan,false,true,true,https://www.tofugu.com/japanese-grammar/date-and-time/,Useful with time/calendar counters.
+cal_n5_0058,N5,calendar_time_n5,58,time_expression,weekday,平日,へいじつ,heijitsu,,hari kerja,false,true,true,https://www.tofugu.com/japanese-grammar/date-and-time/,Useful with time/calendar counters.

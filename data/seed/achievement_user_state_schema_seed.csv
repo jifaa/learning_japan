@@ -1,0 +1,25 @@
+﻿id,table_name,field_name,field_type,nullable,default_value,description_id,index_recommendation,example_value,notes
+ach_schema_001,user_achievements,id,uuid,false,,Primary key.,primary_key,ua_001,
+ach_schema_002,user_achievements,user_id,uuid,false,,Pemilik achievement.,compound_unique,user_123,"unique(user_id, achievement_key)"
+ach_schema_003,user_achievements,achievement_key,string,false,,Achievement key.,compound_unique,kana_master,
+ach_schema_004,user_achievements,status,enum,false,locked,locked/in_progress/unlocked/claimed/hidden.,index,unlocked,
+ach_schema_005,user_achievements,progress_value,float,false,0,Progress saat ini.,,80,
+ach_schema_006,user_achievements,target_value,float,false,1,Target threshold.,,100,
+ach_schema_007,user_achievements,unlocked_at,datetime,true,,Waktu unlock.,index,2026-07-01T20:00:00+08:00,
+ach_schema_008,user_achievements,claimed_at,datetime,true,,Waktu reward diklaim.,index,,
+ach_schema_009,user_achievements,evidence_json,jsonb,true,,Snapshot evidence saat unlock.,,"{""quiz_id"":""q123"",""score"":92}",Useful for Open Badge-like metadata.
+ach_schema_010,user_achievements,created_at,datetime,false,now(),Created timestamp.,,,
+ach_schema_011,user_rewards,id,uuid,false,,Primary key.,primary_key,ur_001,
+ach_schema_012,user_rewards,user_id,uuid,false,,Pemilik reward.,compound_unique,user_123,"unique(user_id, reward_item_key)"
+ach_schema_013,user_rewards,reward_item_key,string,false,,Reward/cosmetic key.,compound_unique,avatar_n5_ready,
+ach_schema_014,user_rewards,source_achievement_key,string,true,,Achievement sumber unlock.,index,n5_ready,
+ach_schema_015,user_rewards,is_equipped,boolean,false,false,Apakah sedang dipakai.,index,true,
+ach_schema_016,user_rewards,equipped_slot,string,true,,Slot cosmetic.,index,avatar,
+ach_schema_017,user_rewards,unlocked_at,datetime,false,now(),Waktu unlock.,,,
+ach_schema_018,user_xp_ledger,id,uuid,false,,Primary key XP ledger.,primary_key,xp_001,
+ach_schema_019,user_xp_ledger,user_id,uuid,false,,Pemilik XP.,index,user_123,
+ach_schema_020,user_xp_ledger,xp_delta,integer,false,0,Perubahan XP.,,50,
+ach_schema_021,user_xp_ledger,coin_delta,integer,false,0,Perubahan coin.,,10,
+ach_schema_022,user_xp_ledger,source_type,string,false,,achievement/quiz/srs/lesson/daily.,index,achievement,
+ach_schema_023,user_xp_ledger,source_id,string,false,,ID sumber.,index,ach_n5_001,
+ach_schema_024,user_xp_ledger,created_at,datetime,false,now(),Waktu ledger.,index,2026-07-01T20:00:00+08:00,

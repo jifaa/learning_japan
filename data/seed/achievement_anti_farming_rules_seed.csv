@@ -1,0 +1,8 @@
+﻿id,rule_key,display_order,applies_to,condition_json,action_key,description_id,recommended_for_mvp,notes
+anti_rule_001,anti_farm_default,1,xp|achievements,"{""max_identical_item_awards_per_day"": 3}",limit_award,Batasi reward dari item yang sama agar user tidak farming satu soal doang.,true,Keeps gamification aligned with learning.
+anti_rule_002,anti_farm_daily_xp_cap,2,xp,"{""use_daily_xp_soft_cap"": true, ""use_daily_xp_hard_cap"": true}",cap_xp,Soft/hard cap XP harian per level.,true,Keeps gamification aligned with learning.
+anti_rule_003,anti_farm_min_quiz_items,3,quiz_achievements,"{""minimum_items_for_accuracy_badge"": 10}",require_min_items,Badge accuracy hanya valid untuk quiz dengan minimal 10 soal.,true,Keeps gamification aligned with learning.
+anti_rule_004,anti_farm_srs_real_due,4,srs_achievements,"{""count_only_due_reviews"": true}",exclude_early_spam,SRS review hanya dihitung kalau kartu memang due atau learning due.,true,Keeps gamification aligned with learning.
+anti_rule_005,anti_farm_no_duplicate_session,5,streak|daily_challenge,"{""one_streak_increment_per_local_day"": true}",dedupe_daily,Streak naik maksimal sekali per hari lokal user.,true,Keeps gamification aligned with learning.
+anti_rule_006,anti_farm_mock_integrity,6,mock_test,"{""mock_attempt_min_duration_percent"": 60}",flag_suspicious,Mock test terlalu cepat ditandai suspicious dan tidak award badge.,true,Keeps gamification aligned with learning.
+anti_rule_007,anti_farm_hidden_badge,7,secret,"{""do_not_show_progress_until_unlocked"": true}",hide_progress,Secret achievement tidak tampil progress-nya sebelum unlock.,false,Keeps gamification aligned with learning.

@@ -1,0 +1,107 @@
+﻿id,base_radical_id,radical_number,base_radical,variant_form,variant_unicode_codepoint,variant_unicode_name,variant_position_category,japanese_name_hiragana,japanese_name_romaji,meaning_id,is_common,n5_relevant,source_url,notes_id
+rad_var_001,rad_kx_005,5,乙,⺃,U+2E83,CJK RADICAL SECOND TWO,variant,おつ,otsu,kedua; belakangan,false,false,https://kanjialive.com/214-traditional-kanji-radicals/,varian 乙
+rad_var_002,rad_kx_009,9,人,亻,U+4EBB,CJK UNIFIED IDEOGRAPH-4EBB,hen,ひと,hito,orang,true,true,https://kanjialive.com/214-traditional-kanji-radicals/,にんべん; kiri
+rad_var_003,rad_kx_009,9,人,𠆢,U+201A2,CJK UNIFIED IDEOGRAPH-201A2,kanmuri,ひと,hito,orang,false,false,https://kanjialive.com/214-traditional-kanji-radicals/,ひとやね; atas
+rad_var_004,rad_kx_012,12,八,丷,U+4E37,CJK UNIFIED IDEOGRAPH-4E37,kanmuri,はち,hachi,delapan,false,false,https://kanjialive.com/214-traditional-kanji-radicals/,はちがしら; atas
+rad_var_005,rad_kx_016,16,几,⺇,U+2E87,CJK RADICAL TABLE,kanmuri,きにょう,kinyou,meja; bentuk angin,false,false,https://kanjialive.com/214-traditional-kanji-radicals/,かぜかんむり; atas
+rad_var_006,rad_kx_018,18,刀,刂,U+5202,CJK UNIFIED IDEOGRAPH-5202,tsukuri,かたな,katana,pisau; pedang,true,false,https://kanjialive.com/214-traditional-kanji-radicals/,りっとう; kanan
+rad_var_007,rad_kx_030,30,口,,U+E723,,hen,くち,kuchi,mulut,false,false,https://kanjialive.com/214-traditional-kanji-radicals/,くちへん; kiri
+rad_var_008,rad_kx_032,32,土,,U+E744,,hen,つち,tsuchi,tanah,false,false,https://kanjialive.com/214-traditional-kanji-radicals/,つちへん; kiri
+rad_var_009,rad_kx_033,33,士,,U+E734,,kanmuri,さむらい,samurai,sarjana; samurai,false,false,https://kanjialive.com/214-traditional-kanji-radicals/,さむらいかんむり; atas
+rad_var_010,rad_kx_038,38,女,,U+E732,,hen,おんな,onna,perempuan,false,false,https://kanjialive.com/214-traditional-kanji-radicals/,おんなへん; kiri
+rad_var_011,rad_kx_039,39,子,孑,U+5B51,CJK UNIFIED IDEOGRAPH-5B51,variant,こ,ko,anak,false,false,https://kanjialive.com/214-traditional-kanji-radicals/,varian anak
+rad_var_012,rad_kx_039,39,子,,U+E721,,hen,こ,ko,anak,false,false,https://kanjialive.com/214-traditional-kanji-radicals/,こへん; kiri
+rad_var_013,rad_kx_042,42,小,⺌,U+2E8C,CJK RADICAL SMALL ONE,kanmuri,しょう,shou,kecil,false,false,https://kanjialive.com/214-traditional-kanji-radicals/,しょうかんむり; atas
+rad_var_014,rad_kx_046,46,山,,U+E750,,hen,やま,yama,gunung,false,false,https://kanjialive.com/214-traditional-kanji-radicals/,やまへん; kiri
+rad_var_015,rad_kx_046,46,山,,U+E751,,kanmuri,やま,yama,gunung,false,false,https://kanjialive.com/214-traditional-kanji-radicals/,やまかんむり; atas
+rad_var_016,rad_kx_047,47,川,巛,U+5DDB,CJK UNIFIED IDEOGRAPH-5DDB,variant,さんぼんがわ,sanbongawa,sungai,false,false,https://kanjialive.com/214-traditional-kanji-radicals/,まがりがわ; bentuk sungai berliku
+rad_var_017,rad_kx_048,48,工,,U+E739,,hen,たくみ,takumi,kerja; keterampilan,false,false,https://kanjialive.com/214-traditional-kanji-radicals/,たくみへん; kiri
+rad_var_018,rad_kx_057,57,弓,,U+E752,,hen,ゆみ,yumi,busur,false,false,https://kanjialive.com/214-traditional-kanji-radicals/,ゆみへん; kiri
+rad_var_019,rad_kx_058,58,彐,彑,U+5F51,CJK UNIFIED IDEOGRAPH-5F51,variant,けいがしら,keigashira,moncong; kepala babi,false,false,https://kanjialive.com/214-traditional-kanji-radicals/,varian 彐
+rad_var_020,rad_kx_058,58,彐,⺕,U+2E95,CJK RADICAL SNOUT TWO,variant,けいがしら,keigashira,moncong; kepala babi,false,false,https://kanjialive.com/214-traditional-kanji-radicals/,varian kepala babi
+rad_var_021,rad_kx_058,58,彐,⺔,U+2E94,CJK RADICAL SNOUT ONE,variant,けいがしら,keigashira,moncong; kepala babi,false,false,https://kanjialive.com/214-traditional-kanji-radicals/,varian kepala babi
+rad_var_022,rad_kx_061,61,心,忄,U+5FC4,CJK UNIFIED IDEOGRAPH-5FC4,hen,こころ,kokoro,hati; pikiran; jiwa,true,false,https://kanjialive.com/214-traditional-kanji-radicals/,りっしんべん; kiri
+rad_var_023,rad_kx_061,61,心,⺗,U+2E97,CJK RADICAL HEART TWO,ashi,こころ,kokoro,hati; pikiran; jiwa,false,false,https://kanjialive.com/214-traditional-kanji-radicals/,したごころ; bawah
+rad_var_024,rad_kx_063,63,戸,戶,U+6236,CJK UNIFIED IDEOGRAPH-6236,variant,と,to,pintu,false,false,https://kanjialive.com/214-traditional-kanji-radicals/,bentuk tradisional
+rad_var_025,rad_kx_063,63,戸,户,U+6237,CJK UNIFIED IDEOGRAPH-6237,variant,と,to,pintu,false,false,https://kanjialive.com/214-traditional-kanji-radicals/,bentuk varian
+rad_var_026,rad_kx_064,64,手,扌,U+624C,CJK UNIFIED IDEOGRAPH-624C,hen,て,te,tangan,true,false,https://kanjialive.com/214-traditional-kanji-radicals/,てへん; kiri
+rad_var_027,rad_kx_064,64,手,龵,U+9FB5,CJK UNIFIED IDEOGRAPH-9FB5,kanmuri,て,te,tangan,false,false,https://kanjialive.com/214-traditional-kanji-radicals/,varian tangan atas
+rad_var_028,rad_kx_066,66,攴,攵,U+6535,CJK UNIFIED IDEOGRAPH-6535,tsukuri,ぼくづくり,bokuzukuri,memukul; ketukan,false,false,https://kanjialive.com/214-traditional-kanji-radicals/,ぼくづくり; kanan
+rad_var_029,rad_kx_066,66,攴,⺙,U+2E99,CJK RADICAL RAP,tsukuri,ぼくづくり,bokuzukuri,memukul; ketukan,false,false,https://kanjialive.com/214-traditional-kanji-radicals/,varian kanan
+rad_var_030,rad_kx_070,70,方,,U+E712,,hen,ほう,hou,arah; persegi; bendera,false,false,https://kanjialive.com/214-traditional-kanji-radicals/,ほうへん; kiri
+rad_var_031,rad_kx_072,72,日,,U+E708,,hen,ひ,hi,matahari; hari; waktu,false,false,https://kanjialive.com/214-traditional-kanji-radicals/,ひへん; kiri
+rad_var_032,rad_kx_074,74,月,⺝,U+2E9D,CJK RADICAL MOON,hen,つき,tsuki,bulan; periode,false,false,https://kanjialive.com/214-traditional-kanji-radicals/,つきへん; kiri
+rad_var_033,rad_kx_075,75,木,,U+E720,,hen,き,ki,pohon; kayu,false,false,https://kanjialive.com/214-traditional-kanji-radicals/,きへん; kiri
+rad_var_034,rad_kx_078,78,歹,歺,U+6B7A,CJK UNIFIED IDEOGRAPH-6B7A,variant,がつ,gatsu,kematian; membusuk,false,false,https://kanjialive.com/214-traditional-kanji-radicals/,varian 歹
+rad_var_035,rad_kx_085,85,水,氵,U+6C35,CJK UNIFIED IDEOGRAPH-6C35,hen,みず,mizu,air,true,false,https://kanjialive.com/214-traditional-kanji-radicals/,さんずい; kiri
+rad_var_036,rad_kx_085,85,水,氺,U+6C3A,CJK UNIFIED IDEOGRAPH-6C3A,ashi,みず,mizu,air,false,false,https://kanjialive.com/214-traditional-kanji-radicals/,したみず; bawah
+rad_var_037,rad_kx_086,86,火,灬,U+706C,CJK UNIFIED IDEOGRAPH-706C,ashi,ひ,hi,api,true,false,https://kanjialive.com/214-traditional-kanji-radicals/,れっか; bawah
+rad_var_038,rad_kx_086,86,火,,U+E709,,hen,ひ,hi,api,false,false,https://kanjialive.com/214-traditional-kanji-radicals/,ひへん; kiri
+rad_var_039,rad_kx_087,87,爪,爫,U+722B,CJK UNIFIED IDEOGRAPH-722B,kanmuri,つめ,tsume,cakar; kuku,false,false,https://kanjialive.com/214-traditional-kanji-radicals/,つめかんむり; atas
+rad_var_040,rad_kx_087,87,爪,⺤,U+2EA4,CJK RADICAL PAW ONE,kanmuri,つめ,tsume,cakar; kuku,false,false,https://kanjialive.com/214-traditional-kanji-radicals/,varian atas
+rad_var_041,rad_kx_093,93,牛,牜,U+725C,CJK UNIFIED IDEOGRAPH-725C,hen,うし,ushi,sapi,false,false,https://kanjialive.com/214-traditional-kanji-radicals/,うしへん; kiri
+rad_var_042,rad_kx_093,93,牛,⺧,U+2EA7,CJK RADICAL COW,variant,うし,ushi,sapi,false,false,https://kanjialive.com/214-traditional-kanji-radicals/,varian sapi
+rad_var_043,rad_kx_094,94,犬,犭,U+72AD,CJK UNIFIED IDEOGRAPH-72AD,hen,いぬ,inu,anjing,true,false,https://kanjialive.com/214-traditional-kanji-radicals/,けものへん; kiri
+rad_var_044,rad_kx_096,96,玉,王,U+738B,CJK UNIFIED IDEOGRAPH-738B,hen,たま,tama,giok; permata,true,false,https://kanjialive.com/214-traditional-kanji-radicals/,おうへん; kiri
+rad_var_045,rad_kx_103,103,疋,⺪,U+2EAA,CJK RADICAL BOLT OF CLOTH,hen,ひき,hiki,gulungan kain,false,false,https://kanjialive.com/214-traditional-kanji-radicals/,ひきへん; kiri
+rad_var_046,rad_kx_109,109,目,罒,U+7F52,CJK UNIFIED IDEOGRAPH-7F52,kanmuri,め,me,mata,false,false,https://kanjialive.com/214-traditional-kanji-radicals/,よこめ/ami-like; atas
+rad_var_047,rad_kx_109,109,目,⺫,U+2EAB,CJK RADICAL EYE,kanmuri,め,me,mata,false,false,https://kanjialive.com/214-traditional-kanji-radicals/,varian mata/jaring atas
+rad_var_048,rad_kx_113,113,示,礻,U+793B,CJK UNIFIED IDEOGRAPH-793B,hen,しめす,shimesu,altar; tanda; roh,true,true,https://kanjialive.com/214-traditional-kanji-radicals/,しめすへん; kiri
+rad_var_049,rad_kx_113,113,示,⺭,U+2EAD,CJK RADICAL SPIRIT TWO,hen,しめす,shimesu,altar; tanda; roh,false,false,https://kanjialive.com/214-traditional-kanji-radicals/,varian altar kiri
+rad_var_050,rad_kx_118,118,竹,⺮,U+2EAE,CJK RADICAL BAMBOO,kanmuri,たけ,take,bambu,true,false,https://kanjialive.com/214-traditional-kanji-radicals/,たけかんむり; atas
+rad_var_051,rad_kx_119,119,米,,U+E722,,hen,こめ,kome,beras,false,false,https://kanjialive.com/214-traditional-kanji-radicals/,こめへん; kiri
+rad_var_052,rad_kx_120,120,糸,糹,U+7CF9,CJK UNIFIED IDEOGRAPH-7CF9,hen,いと,ito,benang; sutra,false,false,https://kanjialive.com/214-traditional-kanji-radicals/,いとへん; kiri
+rad_var_053,rad_kx_122,122,网,罒,U+7F52,CJK UNIFIED IDEOGRAPH-7F52,kanmuri,あみめ,amime,jaring,false,false,https://kanjialive.com/214-traditional-kanji-radicals/,あみがしら; atas
+rad_var_054,rad_kx_122,122,网,㓁,U+34C1,CJK UNIFIED IDEOGRAPH-34C1,kanmuri,あみめ,amime,jaring,false,false,https://kanjialive.com/214-traditional-kanji-radicals/,varian jaring
+rad_var_055,rad_kx_122,122,网,⺫,U+2EAB,CJK RADICAL EYE,kanmuri,あみめ,amime,jaring,false,false,https://kanjialive.com/214-traditional-kanji-radicals/,varian jaring atas
+rad_var_056,rad_kx_123,123,羊,⺷,U+2EB7,CJK RADICAL RAM,variant,ひつじ,hitsuji,domba,false,false,https://kanjialive.com/214-traditional-kanji-radicals/,varian domba
+rad_var_057,rad_kx_128,128,耳,,U+E728,,hen,みみ,mimi,telinga,false,false,https://kanjialive.com/214-traditional-kanji-radicals/,みみへん; kiri
+rad_var_058,rad_kx_130,130,肉,月,U+6708,CJK UNIFIED IDEOGRAPH-6708,hen,にく,niku,daging,false,true,https://kanjialive.com/214-traditional-kanji-radicals/,にくづき; bentuk daging kiri
+rad_var_059,rad_kx_133,133,至,,U+E714,,hen,いたる,itaru,tiba; mencapai,false,false,https://kanjialive.com/214-traditional-kanji-radicals/,いたるへん; kiri
+rad_var_060,rad_kx_137,137,舟,,U+E702,,hen,ふね,fune,perahu; kapal,false,false,https://kanjialive.com/214-traditional-kanji-radicals/,ふねへん; kiri
+rad_var_061,rad_kx_140,140,艸,艹,U+8279,CJK UNIFIED IDEOGRAPH-8279,kanmuri,くさ,kusa,rumput; tanaman,true,true,https://kanjialive.com/214-traditional-kanji-radicals/,くさかんむり; atas
+rad_var_062,rad_kx_140,140,艸,⺾,U+2EBE,CJK RADICAL GRASS ONE,kanmuri,くさ,kusa,rumput; tanaman,true,false,https://kanjialive.com/214-traditional-kanji-radicals/,varian rumput atas
+rad_var_063,rad_kx_142,142,虫,,U+E729,,hen,むし,mushi,serangga; cacing,false,false,https://kanjialive.com/214-traditional-kanji-radicals/,むしへん; kiri
+rad_var_064,rad_kx_145,145,衣,衤,U+8864,CJK UNIFIED IDEOGRAPH-8864,hen,ころも,koromo,pakaian,true,false,https://kanjialive.com/214-traditional-kanji-radicals/,ころもへん; kiri
+rad_var_065,rad_kx_145,145,衣,⻂,U+2EC2,CJK RADICAL CLOTHES,hen,ころも,koromo,pakaian,false,false,https://kanjialive.com/214-traditional-kanji-radicals/,varian pakaian kiri
+rad_var_066,rad_kx_146,146,西,襾,U+897E,CJK UNIFIED IDEOGRAPH-897E,kanmuri,にし,nishi,barat; penutup,true,true,https://kanjialive.com/214-traditional-kanji-radicals/,varian penutup/barat
+rad_var_067,rad_kx_146,146,西,覀,U+8980,CJK UNIFIED IDEOGRAPH-8980,kanmuri,にし,nishi,barat; penutup,false,false,https://kanjialive.com/214-traditional-kanji-radicals/,varian penutup/barat
+rad_var_068,rad_kx_146,146,西,⻃,U+2EC3,CJK RADICAL WEST ONE,kanmuri,にし,nishi,barat; penutup,false,false,https://kanjialive.com/214-traditional-kanji-radicals/,varian barat
+rad_var_069,rad_kx_148,148,角,,U+E745,,hen,つの,tsuno,tanduk; sudut,false,false,https://kanjialive.com/214-traditional-kanji-radicals/,つのへん; kiri
+rad_var_070,rad_kx_149,149,言,訁,U+8A01,CJK UNIFIED IDEOGRAPH-8A01,hen,げん,gen,kata; ucapan,true,false,https://kanjialive.com/214-traditional-kanji-radicals/,ごんべん; kiri
+rad_var_071,rad_kx_149,149,言,讠,U+8BA0,CJK UNIFIED IDEOGRAPH-8BA0,hen,げん,gen,kata; ucapan,false,false,https://kanjialive.com/214-traditional-kanji-radicals/,simplified speech radical
+rad_var_072,rad_kx_150,150,谷,,U+E740,,hen,たに,tani,lembah,false,false,https://kanjialive.com/214-traditional-kanji-radicals/,たにへん; kiri
+rad_var_073,rad_kx_151,151,豆,,U+E725,,hen,まめ,mame,kacang,false,false,https://kanjialive.com/214-traditional-kanji-radicals/,まめへん; kiri
+rad_var_074,rad_kx_154,154,貝,貝,U+8C9D,CJK UNIFIED IDEOGRAPH-8C9D,base,かい,kai,kerang; harta; kekayaan,false,true,https://kanjialive.com/214-traditional-kanji-radicals/,base shell
+rad_var_075,rad_kx_156,156,走,赱,U+8D71,CJK UNIFIED IDEOGRAPH-8D71,variant,はしる,hashiru,berlari,false,false,https://kanjialive.com/214-traditional-kanji-radicals/,varian run
+rad_var_076,rad_kx_156,156,走,,U+E736,,nyou,はしる,hashiru,berlari,false,false,https://kanjialive.com/214-traditional-kanji-radicals/,そうにょう; wrap bawah
+rad_var_077,rad_kx_157,157,足,⻊,U+2ECA,CJK RADICAL FOOT,hen,あし,ashi,kaki,true,false,https://kanjialive.com/214-traditional-kanji-radicals/,あしへん; kiri
+rad_var_078,rad_kx_158,158,身,,U+E727,,hen,み,mi,tubuh,false,false,https://kanjialive.com/214-traditional-kanji-radicals/,みへん; kiri
+rad_var_079,rad_kx_159,159,車,,U+E724,,hen,くるま,kuruma,kendaraan; roda; mobil,false,false,https://kanjialive.com/214-traditional-kanji-radicals/,くるまへん; kiri
+rad_var_080,rad_kx_162,162,辵,辶,U+8FB6,CJK UNIFIED IDEOGRAPH-8FB6,nyou,しんにょう,shinnyou,berjalan; maju,true,true,https://kanjialive.com/214-traditional-kanji-radicals/,しんにょう; wrap bawah/kiri
+rad_var_081,rad_kx_162,162,辵,⻌,U+2ECC,CJK RADICAL SIMPLIFIED WALK,nyou,しんにょう,shinnyou,berjalan; maju,false,false,https://kanjialive.com/214-traditional-kanji-radicals/,varian shinnyou
+rad_var_082,rad_kx_163,163,邑,阝,U+961D,CJK UNIFIED IDEOGRAPH-961D,tsukuri,むら,mura,desa; kota; komunitas,true,false,https://kanjialive.com/214-traditional-kanji-radicals/,おおざと; kanan
+rad_var_083,rad_kx_164,164,酉,,U+E743,,hen,ひよみのとり,hiyominotori,guci sake; burung,false,false,https://kanjialive.com/214-traditional-kanji-radicals/,とりへん; kiri
+rad_var_084,rad_kx_165,165,釆,,U+E730,,hen,のごめ,nogome,membedakan; memisahkan,false,false,https://kanjialive.com/214-traditional-kanji-radicals/,のごめへん; kiri
+rad_var_085,rad_kx_166,166,里,,U+E735,,hen,さと,sato,desa; satuan ri,false,false,https://kanjialive.com/214-traditional-kanji-radicals/,さとへん; kiri
+rad_var_086,rad_kx_167,167,金,釒,U+91D2,CJK UNIFIED IDEOGRAPH-91D2,hen,かね,kane,logam; emas; mineral,false,false,https://kanjialive.com/214-traditional-kanji-radicals/,かねへん; kiri
+rad_var_087,rad_kx_167,167,金,,U+E717,,hen,かね,kane,logam; emas; mineral,false,false,https://kanjialive.com/214-traditional-kanji-radicals/,varian logam kiri
+rad_var_088,rad_kx_173,173,雨,⻗,U+2ED7,CJK RADICAL RAIN,kanmuri,あめ,ame,hujan,true,false,https://kanjialive.com/214-traditional-kanji-radicals/,あめかんむり; atas
+rad_var_089,rad_kx_174,174,青,靑,U+9751,CJK UNIFIED IDEOGRAPH-9751,traditional,あお,ao,biru; hijau,false,false,https://kanjialive.com/214-traditional-kanji-radicals/,bentuk tradisional 青
+rad_var_090,rad_kx_174,174,青,⻘,U+2ED8,CJK RADICAL BLUE,variant,あお,ao,biru; hijau,false,false,https://kanjialive.com/214-traditional-kanji-radicals/,varian 青
+rad_var_091,rad_kx_184,184,食,飠,U+98E0,CJK UNIFIED IDEOGRAPH-98E0,hen,しょく,shoku,makanan; makan,true,false,https://kanjialive.com/214-traditional-kanji-radicals/,しょくへん; kiri
+rad_var_092,rad_kx_184,184,食,⻟,U+2EDF,CJK RADICAL EAT THREE,hen,しょく,shoku,makanan; makan,false,false,https://kanjialive.com/214-traditional-kanji-radicals/,varian food kiri
+rad_var_093,rad_kx_187,187,馬,,U+E746,,hen,うま,uma,kuda,false,false,https://kanjialive.com/214-traditional-kanji-radicals/,うまへん; kiri
+rad_var_094,rad_kx_188,188,骨,,U+E711,,hen,ほね,hone,tulang,false,false,https://kanjialive.com/214-traditional-kanji-radicals/,ほねへん; kiri
+rad_var_095,rad_kx_195,195,魚,,U+E747,,hen,うお,uo,ikan,false,false,https://kanjialive.com/214-traditional-kanji-radicals/,うおへん; kiri
+rad_var_096,rad_kx_199,199,麦,麥,U+9EA5,CJK UNIFIED IDEOGRAPH-9EA5,traditional,むぎ,mugi,gandum,false,false,https://kanjialive.com/214-traditional-kanji-radicals/,bentuk tradisional 麦
+rad_var_097,rad_kx_199,199,麦,⻨,U+2EE8,CJK RADICAL SIMPLIFIED WHEAT,variant,むぎ,mugi,gandum,false,false,https://kanjialive.com/214-traditional-kanji-radicals/,varian gandum
+rad_var_098,rad_kx_201,201,黄,黃,U+9EC3,CJK UNIFIED IDEOGRAPH-9EC3,traditional,き,ki,kuning,false,false,https://kanjialive.com/214-traditional-kanji-radicals/,bentuk tradisional 黄
+rad_var_099,rad_kx_201,201,黄,⻩,U+2EE9,CJK RADICAL SIMPLIFIED YELLOW,variant,き,ki,kuning,false,false,https://kanjialive.com/214-traditional-kanji-radicals/,varian kuning
+rad_var_100,rad_kx_203,203,黒,黑,U+9ED1,CJK UNIFIED IDEOGRAPH-9ED1,traditional,くろ,kuro,hitam,false,false,https://kanjialive.com/214-traditional-kanji-radicals/,bentuk tradisional 黒
+rad_var_101,rad_kx_210,210,斉,齊,U+9F4A,CJK UNIFIED IDEOGRAPH-9F4A,traditional,せい,sei,serupa; rata,false,false,https://kanjialive.com/214-traditional-kanji-radicals/,bentuk tradisional 斉
+rad_var_102,rad_kx_210,210,斉,⻫,U+2EEB,CJK RADICAL J-SIMPLIFIED EVEN,variant,せい,sei,serupa; rata,false,false,https://kanjialive.com/214-traditional-kanji-radicals/,varian 斉
+rad_var_103,rad_kx_211,211,歯,齒,U+9F52,CJK UNIFIED IDEOGRAPH-9F52,traditional,は,ha,gigi,false,false,https://kanjialive.com/214-traditional-kanji-radicals/,bentuk tradisional 歯
+rad_var_104,rad_kx_211,211,歯,⻭,U+2EED,CJK RADICAL J-SIMPLIFIED TOOTH,variant,は,ha,gigi,false,false,https://kanjialive.com/214-traditional-kanji-radicals/,varian gigi
+rad_var_105,rad_kx_213,213,亀,龜,U+9F9C,CJK UNIFIED IDEOGRAPH-9F9C,traditional,かめ,kame,kura-kura,false,false,https://kanjialive.com/214-traditional-kanji-radicals/,bentuk tradisional 亀
+rad_var_106,rad_kx_213,213,亀,⻲,U+2EF2,CJK RADICAL J-SIMPLIFIED TURTLE,variant,かめ,kame,kura-kura,false,false,https://kanjialive.com/214-traditional-kanji-radicals/,varian kura-kura
