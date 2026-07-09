@@ -16,8 +16,7 @@ import {
   Layers,
   FileText,
   Zap,
-  Clock,
-  Star,
+  Play,
 } from "lucide-react";
 import { getCurrentUser, getUserProfile } from "@/lib/auth";
 import { getOrCreateUserProgress, getStreakInfo, getWeeklyStats } from "@/lib/db/progress";
@@ -100,15 +99,23 @@ export default async function DashboardPage() {
 
   return (
     <div className="space-y-6">
-      {/* Header */}
+      {/* Header with greeting merged */}
       <FadeIn>
-        <div className="flex flex-col gap-1">
-          <h1 className="text-2xl font-semibold tracking-tight text-foreground">
-            Selamat Datang Kembali
-          </h1>
-          <p className="text-sm text-muted-foreground">
-            Lanjutkan perjalanan belajar bahasa Jepang Anda
-          </p>
+        <div className="flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between">
+          <div>
+            <h1 className="text-2xl font-semibold tracking-tight text-foreground">
+              {getGreeting()}, {displayName}
+            </h1>
+            <p className="text-sm text-muted-foreground">
+              {getGreetingMessage()}
+            </p>
+          </div>
+          {streakDays > 0 && (
+            <div className="flex items-center gap-2 text-sm">
+              <Flame className="h-5 w-5 text-primary" />
+              <span className="font-medium text-primary">{streakDays} hari streak</span>
+            </div>
+          )}
         </div>
       </FadeIn>
 
@@ -118,15 +125,15 @@ export default async function DashboardPage() {
         <div className="space-y-6 lg:col-span-2">
           {/* Stats Row */}
           <FadeIn delay={0.05}>
-            <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+            <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
               <StatsCard
-                title="Streak Saat Ini"
-                value={`${streakDays} hari`}
+                title="Streak"
+                value={`${streakDays}`}
                 description={streakLabel}
                 icon={<Flame className="h-5 w-5 text-primary" />}
               />
               <StatsCard
-                title="Kartu Ditinjau"
+                title="Ditinjau"
                 value={String(weeklyStats.total_lessons || todayStats.total_due)}
                 trend={{ value: weeklyStats.days_active ?? 0, label: "hari aktif" }}
                 icon={<Layers className="h-5 w-5 text-primary" />}
@@ -158,8 +165,8 @@ export default async function DashboardPage() {
                   <CardTitle className="text-sm font-medium">Target Harian</CardTitle>
                 </CardHeader>
                 <CardContent className="flex items-center gap-6">
-                  <ProgressRing value={dailyGoalProgress} size={88} strokeWidth={7} />
-                  <div className="space-y-1">
+                  <ProgressRing value={dailyGoalProgress} size={80} strokeWidth={6} />
+                  <div className="flex-1 space-y-1">
                     <p className="text-2xl font-semibold">
                       {cardsReviewedToday}/{DAILY_GOAL}
                     </p>
@@ -223,41 +230,36 @@ export default async function DashboardPage() {
           {/* Continue Learning */}
           <FadeIn delay={0.15}>
             <SectionHeader title="Lanjutkan Belajar" description="Pilih dari mana Anda berhenti" />
-            <div className="mt-4 grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
+            <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
               {[
                 {
-                  title: "Hiragana Dasar",
+                  title: "Hiragana",
                   desc: "Huruf dasar bahasa Jepang",
                   href: "/hiragana",
-                  progress: 0,
                   icon: FileText,
                 },
                 {
                   title: "Katakana",
                   desc: "Karakter untuk kata asing",
                   href: "/katakana",
-                  progress: 0,
                   icon: FileText,
                 },
                 {
                   title: "Kosakata",
                   desc: "Kosa kata JLPT N5",
                   href: "/vocabulary",
-                  progress: 0,
                   icon: Layers,
                 },
                 {
                   title: "Tata Bahasa",
                   desc: "Pola kalimat dasar",
                   href: "/grammar",
-                  progress: 0,
                   icon: BrainCircuit,
                 },
                 {
                   title: "Kanji N5",
                   desc: "Aksara kanji dasar",
                   href: "/kanji",
-                  progress: 0,
                   icon: BookOpen,
                 },
                 {
@@ -276,23 +278,26 @@ export default async function DashboardPage() {
                   >
                     <Link href={item.href}>
                       <CardContent className="p-4">
-                        <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10">
-                          <Icon className="h-5 w-5 text-primary" />
-                        </div>
-                        <h3 className="mt-3 font-medium">{item.title}</h3>
-                        <p className="mt-0.5 text-sm text-muted-foreground">{item.desc}</p>
-                        {item.isAction ? (
-                          <Button className="mt-3 w-full" size="sm" variant="outline">
-                            Mulai Kuis
-                          </Button>
-                        ) : (
-                          <div className="mt-3">
-                            <ProgressBar value={item.progress} showValue={false} size="sm" />
-                            <p className="mt-1 text-xs text-muted-foreground">
-                              {item.progress}% selesai
-                            </p>
+                        <div className="flex items-start gap-3">
+                          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10">
+                            <Icon className="h-5 w-5 text-primary" />
                           </div>
-                        )}
+                          <div className="min-w-0 flex-1">
+                            <h3 className="font-medium">{item.title}</h3>
+                            <p className="mt-0.5 text-sm text-muted-foreground">{item.desc}</p>
+                            {item.isAction ? (
+                              <Button className="mt-3 w-full" size="sm" variant="outline">
+                                <Play className="mr-1.5 h-3.5 w-3.5" />
+                                Mulai
+                              </Button>
+                            ) : (
+                              <Button className="mt-3 w-full" size="sm" variant="ghost">
+                                <Play className="mr-1.5 h-3.5 w-3.5" />
+                                Mulai
+                              </Button>
+                            )}
+                          </div>
+                        </div>
                       </CardContent>
                     </Link>
                   </Card>
@@ -302,108 +307,73 @@ export default async function DashboardPage() {
           </FadeIn>
         </div>
 
-        {/* Right Column - Sidebar (1/3 width) */}
+        {/* Right Column - Sidebar (1/3 width) - Consolidated */}
         <div className="space-y-4">
           {/* Kana Progress */}
           <FadeIn delay={0.08}>
             <KanaProgressCard />
           </FadeIn>
 
-          {/* Quick Actions */}
+          {/* Quick Actions - Consolidated with Daily Challenge */}
           <FadeIn delay={0.12}>
             <Card className="border-border">
               <CardHeader className="pb-3">
-                <CardTitle className="text-sm font-medium">Aksi Cepat</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-2">
-                {[
-                  { label: "Pelajaran Baru", href: "/learn", icon: BookOpen },
-                  { label: "Kartu Flashcard", href: "/flashcards", icon: Layers },
-                  { label: "Latihan Kuis", href: "/quiz", icon: BrainCircuit },
-                  { label: "Tinjauan Harian", href: "/flashcards", icon: Target },
-                ].map((action) => {
-                  const Icon = action.icon;
-                  return (
-                    <Link key={action.label} href={action.href} className="block">
-                      <Button variant="outline" className="w-full justify-start text-sm">
-                        <Icon className="mr-2 h-4 w-4" />
-                        {action.label}
-                      </Button>
-                    </Link>
-                  );
-                })}
-              </CardContent>
-            </Card>
-          </FadeIn>
-
-          {/* Daily Challenge */}
-          <FadeIn delay={0.16}>
-            <Card className="border-border bg-muted/30">
-              <CardHeader className="pb-2">
                 <CardTitle className="flex items-center gap-2 text-sm font-medium">
                   <Zap className="h-4 w-4 text-primary" />
-                  Tantangan Harian
+                  Aksi Cepat
                 </CardTitle>
               </CardHeader>
-              <CardContent className="space-y-3">
-                <p className="text-sm text-muted-foreground">
-                  Selesaikan 10 kartu flashcard hari ini dan dapatkan bonus XP!
-                </p>
-                <div className="flex items-center justify-between text-sm">
-                  <span className="text-muted-foreground">Progress</span>
-                  <span className="font-medium">{cardsReviewedToday}/10</span>
-                </div>
-                <ProgressBar value={Math.min(cardsReviewedToday * 10, 100)} size="sm" />
+              <CardContent className="space-y-2">
                 <Link href="/flashcards" className="block">
-                  <Button size="sm" className="w-full">
-                    <Zap className="mr-1 h-4 w-4" />
-                    Mulai Tantangan
+                  <Button variant="outline" className="w-full justify-start text-sm">
+                    <Layers className="mr-2 h-4 w-4" />
+                    Kartu Flashcard
                   </Button>
                 </Link>
+                <Link href="/quiz" className="block">
+                  <Button variant="outline" className="w-full justify-start text-sm">
+                    <BrainCircuit className="mr-2 h-4 w-4" />
+                    Latihan Kuis
+                  </Button>
+                </Link>
+                <Link href="/learn" className="block">
+                  <Button variant="outline" className="w-full justify-start text-sm">
+                    <BookOpen className="mr-2 h-4 w-4" />
+                    Pelajaran Baru
+                  </Button>
+                </Link>
+                {/* Daily Challenge Progress */}
+                <div className="mt-3 rounded-lg bg-muted/50 p-3">
+                  <div className="mb-2 flex items-center justify-between text-sm">
+                    <span className="text-muted-foreground">Tantangan Harian</span>
+                    <span className="font-medium">{cardsReviewedToday}/10</span>
+                  </div>
+                  <ProgressBar value={Math.min(cardsReviewedToday * 10, 100)} size="sm" />
+                </div>
               </CardContent>
             </Card>
           </FadeIn>
 
-          {/* Streak Info */}
-          <FadeIn delay={0.2}>
+          {/* Streak & Rekor */}
+          <FadeIn delay={0.16}>
             <Card className="border-border">
               <CardContent className="p-4">
                 <div className="flex items-center gap-3">
-                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-primary/10">
-                    <Flame className="h-6 w-6 text-primary" />
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary/10">
+                    <Flame className="h-5 w-5 text-primary" />
                   </div>
-                  <div>
-                    <p className="text-2xl font-bold">{streakDays} Hari</p>
+                  <div className="min-w-0 flex-1">
+                    <p className="text-lg font-bold">{streakDays} Hari Streak</p>
                     <p className="text-sm text-muted-foreground">
                       {streakDays > 0 ? "Streak sedang aktif!" : "Mulai streak Anda hari ini!"}
                     </p>
                   </div>
                 </div>
-                {streakInfo.longest_streak > 0 && (
-                  <div className="mt-3 flex items-center gap-2 text-sm text-muted-foreground">
-                    <Star className="h-4 w-4 text-primary" />
+                {streakInfo.longest_streak > 0 && streakInfo.longest_streak > streakDays && (
+                  <div className="mt-2 text-sm text-muted-foreground">
                     Rekor terbaik: {streakInfo.longest_streak} hari
                   </div>
                 )}
-              </CardContent>
-            </Card>
-          </FadeIn>
-
-          {/* Time of Day Greeting */}
-          <FadeIn delay={0.24}>
-            <Card className="border-border">
-              <CardContent className="p-4">
-                <div className="flex items-center gap-3">
-                  <Clock className="h-5 w-5 text-primary" />
-                  <div>
-                    <p className="text-sm font-medium">
-                      {getGreeting()}, {displayName}!
-                    </p>
-                    <p className="text-xs text-muted-foreground">
-                      {getGreetingMessage()}
-                    </p>
-                  </div>
-                </div>
               </CardContent>
             </Card>
           </FadeIn>

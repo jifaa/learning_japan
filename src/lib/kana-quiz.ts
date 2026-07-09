@@ -179,7 +179,7 @@ export function calculateCategoryProgress(
 
   // Group chars by category
   for (const char of chars) {
-    const cat = categoryMap.get(char.category);
+    const cat = categoryMap.get(char.category as KanaCategoryId);
     if (cat) cat.chars.push(char);
   }
 

@@ -40,7 +40,7 @@ export function KanaChartWithLock({ categories, script }: Props) {
                 className="rounded-lg border border-border bg-muted/30 p-4"
                 aria-label={`${cat.title} terkunci`}
               >
-                <p className="text-sm text-muted-foreground">
+                <p className="mb-3 text-sm text-muted-foreground">
                   Selesaikan quiz{" "}
                   <Link
                     href={`/${script}/quiz`}
@@ -50,17 +50,18 @@ export function KanaChartWithLock({ categories, script }: Props) {
                   </Link>{" "}
                   untuk unlock.
                 </p>
-                <div className="mt-3 flex flex-wrap gap-2">
-                  {cat.groups.map((group) =>
+                {/* Grid layout for locked characters */}
+                <div className="grid grid-cols-5 gap-2 sm:grid-cols-6 md:grid-cols-8 lg:grid-cols-10 xl:grid-cols-12">
+                  {cat.groups.flatMap((group) =>
                     group.chars.map((char) => (
                       <div
                         key={char.character}
-                        className="flex flex-col items-center rounded-lg border border-border bg-muted/50 p-3 opacity-40"
+                        className="flex aspect-square w-full flex-col items-center justify-center rounded-lg border border-border bg-muted/50 p-3 opacity-40"
                       >
-                        <span className="text-2xl font-semibold text-muted-foreground">
+                        <span className="text-xl font-semibold text-muted-foreground sm:text-2xl">
                           {char.character}
                         </span>
-                        <span className="text-xs text-muted-foreground">
+                        <span className="mt-0.5 text-xs text-muted-foreground">
                           {char.romaji}
                         </span>
                       </div>
@@ -83,20 +84,21 @@ export function KanaChartWithLock({ categories, script }: Props) {
                     <p className="mb-2 text-xs text-muted-foreground uppercase tracking-wider">
                       {group.label}
                     </p>
-                    <div className="flex flex-wrap gap-2">
+                    {/* Grid layout for unlocked characters */}
+                    <div className="grid grid-cols-5 gap-2 sm:grid-cols-6 md:grid-cols-8 lg:grid-cols-10 xl:grid-cols-12">
                       {group.chars.map((char) => (
                         <Link
                           key={char.character}
                           href={char.href}
                           className={cn(
-                            "group flex flex-col items-center rounded-lg border border-border bg-background p-3 transition-all",
+                            "group flex aspect-square w-full flex-col items-center justify-center rounded-lg border border-border bg-background p-3 transition-all",
                             "hover:border-primary hover:shadow-sm"
                           )}
                         >
-                          <span className="text-2xl font-semibold">
+                          <span className="text-xl font-semibold sm:text-2xl">
                             {char.character}
                           </span>
-                          <span className="text-xs text-muted-foreground group-hover:text-primary">
+                          <span className="mt-0.5 text-xs text-muted-foreground group-hover:text-primary sm:mt-1">
                             {char.romaji}
                           </span>
                           <Volume2 className="mt-1 h-3 w-3 text-muted-foreground opacity-0 transition-opacity group-hover:opacity-100" />

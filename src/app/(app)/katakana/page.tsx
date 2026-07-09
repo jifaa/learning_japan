@@ -70,49 +70,47 @@ export default async function KatakanaPage() {
       </FadeIn>
 
       {/* 2-Column Layout */}
-      <div className="grid gap-6 lg:grid-cols-3">
+      <div className="grid gap-6 lg:grid-cols-3 items-start">
         {/* Left Column - Main Content (2/3) */}
         <div className="space-y-6 lg:col-span-2">
           {/* Progress Summary with Categories */}
           <FadeIn delay={0.05}>
-            <Card>
-              <CardHeader className="pb-4">
-                <CardTitle className="text-base font-medium">Kemajuan Belajar</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                {masteryStats.categories.map((cat) => (
-                  <div key={cat.categoryId} className="flex items-center gap-3">
-                    <div className="w-5 shrink-0">
-                      {cat.isCompleted ? (
-                        <CheckCircle2 className="h-5 w-5 text-primary" />
-                      ) : cat.isUnlocked ? (
-                        <Circle className="h-5 w-5 text-muted-foreground" />
-                      ) : (
-                        <Lock className="h-5 w-5 text-muted-foreground/50" />
-                      )}
-                    </div>
-                    <div className="flex-1 min-w-0">
-                      <div className="flex items-center justify-between mb-1.5">
-                        <span className={cn(
-                          "text-sm font-medium truncate",
-                          !cat.isUnlocked && "text-muted-foreground"
-                        )}>
-                          {cat.label}
-                        </span>
-                        <span className="text-xs text-muted-foreground ml-2 shrink-0">
-                          {cat.masteredChars}/{cat.totalChars}
-                        </span>
+            <Card className="border-border">
+              <CardContent className="p-4">
+                <div className="space-y-3">
+                  {masteryStats.categories.map((cat) => (
+                    <div key={cat.categoryId} className="flex items-center gap-3">
+                      <div className="w-5 shrink-0">
+                        {cat.isCompleted ? (
+                          <CheckCircle2 className="h-5 w-5 text-primary" />
+                        ) : cat.isUnlocked ? (
+                          <Circle className="h-5 w-5 text-muted-foreground" />
+                        ) : (
+                          <Lock className="h-5 w-5 text-muted-foreground/50" />
+                        )}
                       </div>
-                      <ProgressBar
-                        value={cat.progressPercent}
-                        className={cn(!cat.isUnlocked && "opacity-50")}
-                      />
+                      <div className="flex-1 min-w-0">
+                        <div className="mb-1 flex items-center justify-between">
+                          <span className={cn(
+                            "text-sm font-medium truncate",
+                            !cat.isUnlocked && "text-muted-foreground"
+                          )}>
+                            {cat.label}
+                          </span>
+                          <span className="ml-2 text-xs text-muted-foreground shrink-0">
+                            {cat.masteredChars}/{cat.totalChars}
+                          </span>
+                        </div>
+                        <ProgressBar
+                          value={cat.progressPercent}
+                          className={cn(!cat.isUnlocked && "opacity-50")}
+                        />
+                      </div>
                     </div>
-                  </div>
-                ))}
-
+                  ))}
+                </div>
                 {/* Action Row */}
-                <div className="pt-2 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+                <div className="mt-4 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
                   {nextCategory ? (
                     <p className="text-sm text-muted-foreground">
                       Selesaikan <span className="font-medium text-foreground">{currentCategory?.label || "Huruf Dasar"}</span> untuk unlock <span className="font-medium text-foreground">{nextCategory.label}</span>
@@ -124,13 +122,7 @@ export default async function KatakanaPage() {
                   ) : null}
                   <Link href="/katakana/quiz" className="shrink-0">
                     <Button size="sm">
-                      {currentCategory ? (
-                        <>Quiz {currentCategory.label}
-                        </>) : nextCategory ? (
-                        <>Unlock {nextCategory.label}
-                        </>) : (
-                        <>Review Semua
-                        </>)}
+                      {currentCategory ? <>Quiz {currentCategory.label}</> : nextCategory ? <>Unlock {nextCategory.label}</> : <>Review Semua</>}
                       <ArrowRight className="ml-1.5 h-4 w-4" />
                     </Button>
                   </Link>
@@ -144,24 +136,21 @@ export default async function KatakanaPage() {
             <KanaChartWithLock categories={chartData} script="katakana" />
           </FadeIn>
 
-          {/* Tips */}
+          {/* Tips - Compact inline version */}
           <FadeIn delay={0.3}>
-            <Card className="border-border">
-              <CardContent className="flex items-start gap-3 p-4">
-                <Lightbulb className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
-                <div className="text-sm">
-                  <p className="font-medium">Tips Belajar</p>
-                  <p className="mt-1 text-muted-foreground">
-                    Klik karakter untuk dengar pengucapan. Jawab 3x benar di quiz agar karakter dianggap &quot;dikuasai&quot;.
-                  </p>
-                </div>
+            <Card className="border-border bg-muted/30">
+              <CardContent className="flex items-start gap-3 p-3">
+                <Lightbulb className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
+                <p className="text-sm text-muted-foreground">
+                  Klik karakter untuk dengar pengucapan. Katakana digunakan untuk kata asing: <span className="font-mono text-xs">コーヒー</span> (kopi), <span className="font-mono text-xs">テレビ</span> (TV). Jawab 3x benar di quiz untuk kuasai.
+                </p>
               </CardContent>
             </Card>
           </FadeIn>
         </div>
 
         {/* Right Column - Sidebar (1/3) */}
-        <div className="space-y-4">
+        <div className="space-y-4 lg:sticky lg:top-6 lg:self-start">
           {/* Quick Quiz Card */}
           <FadeIn delay={0.08}>
             <Card className="border-border">
@@ -175,16 +164,16 @@ export default async function KatakanaPage() {
                 <p className="text-sm text-muted-foreground">
                   Uji kemampuan membaca Katakana dengan quiz singkat.
                 </p>
-                <div className="space-y-1.5">
-                  <div className="flex justify-between text-sm">
+                <div className="space-y-1.5 text-sm">
+                  <div className="flex justify-between">
                     <span className="text-muted-foreground">Pertanyaan</span>
                     <span className="font-medium">10 soal</span>
                   </div>
-                  <div className="flex justify-between text-sm">
+                  <div className="flex justify-between">
                     <span className="text-muted-foreground">Target</span>
                     <span className="font-medium">80% benar</span>
                   </div>
-                  <div className="flex justify-between text-sm">
+                  <div className="flex justify-between">
                     <span className="text-muted-foreground">XP Reward</span>
                     <span className="font-medium text-primary">+40 XP</span>
                   </div>
@@ -199,80 +188,59 @@ export default async function KatakanaPage() {
             </Card>
           </FadeIn>
 
-          {/* Study Resources */}
+          {/* Resources & Categories Combined */}
           <FadeIn delay={0.12}>
             <Card className="border-border">
               <CardHeader className="pb-3">
                 <CardTitle className="text-sm font-medium">Sumber Belajar</CardTitle>
               </CardHeader>
-              <CardContent className="space-y-2">
-                <Link href="/hiragana" className="block">
-                  <Button variant="outline" className="w-full justify-start text-sm">
-                    <BookOpen className="mr-2 h-4 w-4" />
-                    Belajar Hiragana
-                    <ArrowRight className="ml-auto h-4 w-4 text-muted-foreground" />
-                  </Button>
-                </Link>
-                <Link href="/vocabulary" className="block">
-                  <Button variant="outline" className="w-full justify-start text-sm">
-                    <BookOpen className="mr-2 h-4 w-4" />
-                    Kosakata Dasar
-                    <ArrowRight className="ml-auto h-4 w-4 text-muted-foreground" />
-                  </Button>
-                </Link>
-                <Link href="/grammar" className="block">
-                  <Button variant="outline" className="w-full justify-start text-sm">
-                    <BookOpen className="mr-2 h-4 w-4" />
-                    Tata Bahasa
-                    <ArrowRight className="ml-auto h-4 w-4 text-muted-foreground" />
-                  </Button>
-                </Link>
-              </CardContent>
-            </Card>
-          </FadeIn>
-
-          {/* Category Breakdown - Dynamic Data */}
-          <FadeIn delay={0.16}>
-            <Card className="border-border">
-              <CardHeader className="pb-3">
-                <CardTitle className="text-sm font-medium">Detail Kategori</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-3">
-                {masteryStats.categories.map((cat) => (
-                  <div key={cat.categoryId} className="flex items-center justify-between text-sm">
-                    <span className={cn(
-                      "flex items-center gap-2",
-                      !cat.isUnlocked && "text-muted-foreground"
-                    )}>
-                      {cat.isCompleted ? (
-                        <CheckCircle2 className="h-4 w-4 text-primary" />
-                      ) : cat.isUnlocked ? (
-                        <Circle className="h-4 w-4 text-muted-foreground" />
-                      ) : (
-                        <Lock className="h-4 w-4 text-muted-foreground/50" />
-                      )}
-                      {cat.label}
-                    </span>
-                    <span className="text-muted-foreground">{cat.totalChars} karakter</span>
-                  </div>
-                ))}
-              </CardContent>
-            </Card>
-          </FadeIn>
-
-          {/* Katakana Usage Hint */}
-          <FadeIn delay={0.2}>
-            <Card className="border-border bg-muted/30">
-              <CardContent className="p-4">
-                <div className="flex items-start gap-3">
-                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-md bg-background border border-border">
-                    <span className="text-lg font-medium">ア</span>
-                  </div>
-                  <div className="min-w-0">
-                    <p className="text-sm font-medium">Kata Asing</p>
-                    <p className="mt-0.5 text-xs text-muted-foreground">
-                      Katakana untuk kata asing: コーヒー (kōhī), テレビ (terebi), パソコン (pasokon)
-                    </p>
+              <CardContent className="space-y-4">
+                {/* Navigation Links */}
+                <div className="space-y-2">
+                  <Link href="/hiragana" className="block">
+                    <Button variant="outline" className="w-full justify-start text-sm">
+                      <BookOpen className="mr-2 h-4 w-4" />
+                      Belajar Hiragana
+                      <ArrowRight className="ml-auto h-4 w-4 text-muted-foreground" />
+                    </Button>
+                  </Link>
+                  <Link href="/vocabulary" className="block">
+                    <Button variant="outline" className="w-full justify-start text-sm">
+                      <BookOpen className="mr-2 h-4 w-4" />
+                      Kosakata Dasar
+                      <ArrowRight className="ml-auto h-4 w-4 text-muted-foreground" />
+                    </Button>
+                  </Link>
+                  <Link href="/grammar" className="block">
+                    <Button variant="outline" className="w-full justify-start text-sm">
+                      <BookOpen className="mr-2 h-4 w-4" />
+                      Tata Bahasa
+                      <ArrowRight className="ml-auto h-4 w-4 text-muted-foreground" />
+                    </Button>
+                  </Link>
+                </div>
+                {/* Category Breakdown */}
+                <div className="border-t border-border pt-3">
+                  <p className="mb-2 text-xs font-medium uppercase tracking-wider text-muted-foreground">Kategori</p>
+                  <div className="space-y-1.5">
+                    {masteryStats.categories.map((cat) => (
+                      <div key={cat.categoryId} className="flex items-center justify-between text-sm">
+                        <span className={cn(
+                          "flex items-center gap-2",
+                          !cat.isUnlocked && "text-muted-foreground"
+                        )}>
+                          {cat.isCompleted ? (
+                            <CheckCircle2 className="h-4 w-4 text-primary" />
+                          ) : cat.isUnlocked ? (
+                            <Circle className="h-4 w-4 text-muted-foreground" />
+                          ) : (
+                            <Lock className="h-4 w-4 text-muted-foreground/50" />
+                          )}
+                          {cat.label}
+                        </span>
+                        <span className="text-xs text-muted-foreground">{cat.totalChars}</span>
+                      </div>
+                    ))}
                   </div>
                 </div>
               </CardContent>
