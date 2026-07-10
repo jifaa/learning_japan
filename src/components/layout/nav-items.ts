@@ -35,11 +35,6 @@ export const mainNav: NavItem[] = [
     icon: BookOpen,
   },
   {
-    href: "/learn",
-    title: "Pelajaran",
-    icon: Layers,
-  },
-  {
     href: "/hiragana",
     title: "Hiragana",
     icon: FileText,

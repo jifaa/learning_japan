@@ -25,13 +25,8 @@ export default async function HiraganaPage() {
   const masteryStats = getKanaMasteryStats(chars, progressMap);
   const quizList = getKanaQuizList(chars, progressMap);
 
-  // Group kana characters by row for display
-  const basicChars = chars.filter((c) => c.category === "basic");
-  // Get all unique row groups from the data in correct learning order
+  // Row order for sorting row groups
   const rowOrder = ["vowel", "k", "s", "t", "n", "h", "m", "y", "r", "w", "n-final"];
-  const allRowGroups = rowOrder.filter((row) =>
-    basicChars.some((c) => c.row_group === row)
-  );
 
   const overallPercent = masteryStats.totalChars > 0
     ? Math.round((masteryStats.masteredChars / masteryStats.totalChars) * 100)
@@ -141,9 +136,14 @@ export default async function HiraganaPage() {
           <div className="space-y-4">
             {masteryStats.categories.map((cat) => {
               const catChars = chars.filter((c) => c.category === cat.categoryId);
-              const catRows = allRowGroups.filter((row) =>
-                catChars.some((c) => c.row_group === row)
-              );
+              // Get unique row groups for this category, sorted by rowOrder
+              const rowGroupsSet = new Set<string>();
+              catChars.forEach((c) => { if (c.row_group) rowGroupsSet.add(c.row_group); });
+              const catRowGroups = [...rowGroupsSet].sort((a, b) => {
+                const aIdx = rowOrder.indexOf(a);
+                const bIdx = rowOrder.indexOf(b);
+                return (aIdx === -1 ? 999 : aIdx) - (bIdx === -1 ? 999 : bIdx);
+              });
 
               return (
                 <Card key={cat.categoryId} className="overflow-hidden">
@@ -175,14 +175,14 @@ export default async function HiraganaPage() {
                     <ProgressBar value={cat.progressPercent} className="w-20 h-1.5" />
                   </div>
 
-                  {cat.isUnlocked && (
+                  {cat.isUnlocked && catChars.length > 0 && (
                     <CardContent className="p-4">
                       <div className="space-y-4">
-                        {catRows.map((row) => {
+                        {catRowGroups.map((row) => {
                           const rowChars = catChars.filter((c) => c.row_group === row);
                           const rowMastered = rowChars.filter((c) => {
                             const charId = c.id || c.kana;
-                            return (progressMap.get(charId) || 0) >= 3;
+                            return (progressMap.get(charId) || 0) >= 1;
                           }).length;
 
                           return (
