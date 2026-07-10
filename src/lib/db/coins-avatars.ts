@@ -56,9 +56,8 @@ export function getAvailableAvatars(): Avatar[] {
   return DEFAULT_AVATARS;
 }
 
-export interface UserAvatarWithDetails extends Avatar {
-  user_id?: string;
-  is_equipped?: boolean;
+export interface UserAvatarWithDetails extends UserAvatar {
+  avatar: Avatar;
 }
 
 export async function getUserAvatars(userId: string): Promise<UserAvatarWithDetails[]> {
@@ -124,4 +123,58 @@ export async function purchaseAvatar(
   }
 
   return { success: true };
+}
+
+// ============================================
+// Equip Avatar
+// ============================================
+
+export async function equipAvatar(
+  userId: string,
+  avatarId: string
+): Promise<{ success: boolean; error?: string }> {
+  // Check if user owns the avatar
+  const ownsAvatar = await userOwnsAvatar(userId, avatarId);
+  if (!ownsAvatar) {
+    return { success: false, error: "Anda belum memiliki avatar ini" };
+  }
+
+  // Unequip all avatars first
+  await supabase
+    .from("user_avatar")
+    .update({ is_equipped: false })
+    .eq("user_id", userId);
+
+  // Equip the selected avatar
+  const { error } = await supabase
+    .from("user_avatar")
+    .update({ is_equipped: true })
+    .eq("user_id", userId)
+    .eq("avatar_id", avatarId);
+
+  if (error) {
+    return { success: false, error: "Gagal mengenakkan avatar" };
+  }
+
+  return { success: true };
+}
+
+// ============================================
+// Get Current Avatar
+// ============================================
+
+export async function getCurrentAvatar(userId: string): Promise<Avatar | null> {
+  const { data } = await supabase
+    .from("user_avatar")
+    .select("avatar_id")
+    .eq("user_id", userId)
+    .eq("is_equipped", true)
+    .single();
+
+  if (!data) {
+    // Return default avatar if none equipped
+    return DEFAULT_AVATARS.find((a) => a.is_default) || DEFAULT_AVATARS[0];
+  }
+
+  return DEFAULT_AVATARS.find((a) => a.id === data.avatar_id) || null;
 }

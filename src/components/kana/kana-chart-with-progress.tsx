@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { Star } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { SectionHeader } from "@/components/ui/section-header";
 import { cn } from "@/lib/utils";
@@ -75,7 +76,7 @@ export function KanaChartWithProgress({ chars, script }: Props) {
 
   const categories = groupByCategory(chars);
 
- = (kanaId: string) => {
+  const isMastered = (kanaId: string) => {
     const p = progress[kanaId];
     return p && p.mastery_count >= 3;
   };
@@ -145,7 +146,7 @@ export function KanaChartWithProgress({ chars, script }: Props) {
                               {count}
                             </span>
                           )}
-
+                        </div>
                       );
                     })}
                   </div>
