@@ -96,7 +96,7 @@ export function AppSidebar({ collapsed = false }: { collapsed?: boolean }) {
                 Easler Japan
               </span>
               <span className="truncate text-[11px] text-muted-foreground">
-                JLPT N5
+                N5
               </span>
             </div>
           )}
