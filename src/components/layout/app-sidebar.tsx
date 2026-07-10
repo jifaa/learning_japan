@@ -93,7 +93,7 @@ export function AppSidebar({ collapsed = false }: { collapsed?: boolean }) {
           {!collapsed && (
             <div className="flex flex-col overflow-hidden">
               <span className="truncate text-sm font-semibold text-foreground">
-                Learning Japan
+                Easler Japan
               </span>
               <span className="truncate text-[11px] text-muted-foreground">
                 JLPT N5
