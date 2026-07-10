@@ -1,9 +1,9 @@
 "use client";
-import { useState, useCallback, useMemo } from "react";
+import { useState, useMemo } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { FadeIn } from "@/components/motion/fade-in";
-import { Volume2, Search, BookOpen } from "lucide-react";
+import { Search, BookOpen } from "lucide-react";
 import type { KanjiCharacter } from "@/types/content";
 
 interface KanjiClientProps {
@@ -13,14 +13,6 @@ interface KanjiClientProps {
 export function KanjiClient({ kanjiList }: KanjiClientProps) {
   const [query, setQuery] = useState("");
 
-  const speak = useCallback((text: string) => {
-    if (typeof window === "undefined" || !window.speechSynthesis) return;
-    window.speechSynthesis.cancel();
-    const utterance = new SpeechSynthesisUtterance(text);
-    utterance.lang = "ja-JP";
-    utterance.rate = 0.85;
-    window.speechSynthesis.speak(utterance);
-  }, []);
 
   const filtered = useMemo(() => {
     if (!query) return kanjiList;
@@ -57,13 +49,6 @@ export function KanjiClient({ kanjiList }: KanjiClientProps) {
                 <div className="flex items-start justify-between gap-2">
                   <div className="flex items-center gap-2">
                     <p className="text-3xl font-semibold">{k.kanji}</p>
-                    <button
-                      onClick={() => speak(k.kanji)}
-                      className="shrink-0 rounded p-1 text-muted-foreground hover:bg-surface hover:text-foreground"
-                      aria-label="Dengarkan"
-                    >
-                      <Volume2 className="h-3 w-3" />
-                    </button>
                   </div>
                   {k.stroke_count && (
                     <span className="shrink-0 text-xs text-muted-foreground">

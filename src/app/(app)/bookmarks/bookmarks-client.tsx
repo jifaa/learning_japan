@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { FadeIn } from "@/components/motion/fade-in";
-import { Bookmark, BookOpen, FileText, BrainCircuit, Trash2, Volume2 } from "lucide-react";
+import { Bookmark, BookOpen, FileText, BrainCircuit, Trash2 } from "lucide-react";
 import { removeBookmark } from "@/server/actions/bookmark.actions";
 import Link from "next/link";
 
@@ -35,15 +35,6 @@ const TYPE_CONFIG: Record<string, { label: string; icon: any; href: string }> = 
 export function BookmarksClient({ bookmarks }: BookmarksClientProps) {
   const [items, setItems] = useState(bookmarks);
   const [deleting, setDeleting] = useState<string | null>(null);
-
-  const speak = (text: string) => {
-    if (typeof window === "undefined" || !window.speechSynthesis) return;
-    window.speechSynthesis.cancel();
-    const u = new SpeechSynthesisUtterance(text);
-    u.lang = "ja-JP";
-    u.rate = 0.85;
-    window.speechSynthesis.speak(u);
-  };
 
   const handleDelete = async (id: string) => {
     setDeleting(id);
@@ -96,11 +87,6 @@ export function BookmarksClient({ bookmarks }: BookmarksClientProps) {
                     <>
                       <div className="flex items-center gap-2">
                         <p className="text-lg font-semibold">{item.expression}</p>
-                        {(item.reading || item.romaji) && (
-                          <button onClick={() => speak(item.reading || item.romaji || "")} className="text-muted-foreground hover:text-foreground" aria-label="Dengarkan">
-                            <Volume2 className="h-4 w-4" />
-                          </button>
-                        )}
                       </div>
                       {item.reading && <p className="text-sm text-muted-foreground">{item.reading}</p>}
                       <p className="text-sm text-muted-foreground">{item.meaning_id || item.meaning_en}</p>

@@ -128,7 +128,7 @@ export function KanaProgressCard({ initialStats }: Props) {
           value={currentStats.totalChars > 0
             ? (currentStats.masteredChars / currentStats.totalChars) * 100
             : 0}
-          size="sm"
+          size="sm" showValue={false}
         />
 
         {/* Category list */}
@@ -158,7 +158,7 @@ export function KanaProgressCard({ initialStats }: Props) {
                 </div>
                 <ProgressBar
                   value={cat.progressPercent}
-                  className="mt-1 h-1"
+                  className="mt-1 h-1" showValue={false}
                 />
               </div>
             </div>

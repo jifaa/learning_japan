@@ -1,10 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Link from "next/link";
 import { Card, CardContent } from "@/components/ui/card";
 import { SectionHeader } from "@/components/ui/section-header";
-import { Volume2, Star } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 interface KanaChar {
@@ -77,16 +75,7 @@ export function KanaChartWithProgress({ chars, script }: Props) {
 
   const categories = groupByCategory(chars);
 
-  const speak = (text: string) => {
-    if (typeof window === "undefined" || !window.speechSynthesis) return;
-    window.speechSynthesis.cancel();
-    const utterance = new SpeechSynthesisUtterance(text);
-    utterance.lang = "ja-JP";
-    utterance.rate = 0.85;
-    window.speechSynthesis.speak(utterance);
-  };
-
-  const isMastered = (kanaId: string) => {
+ = (kanaId: string) => {
     const p = progress[kanaId];
     return p && p.mastery_count >= 3;
   };
@@ -114,14 +103,13 @@ export function KanaChartWithProgress({ chars, script }: Props) {
                       const count = p?.mastery_count ?? 0;
 
                       return (
-                        <button
+                        <div
                           key={char.kana}
-                          onClick={() => speak(char.kana)}
                           className={cn(
                             "group relative flex flex-col items-center rounded-xl border-2 p-3 transition-all",
                             mastered
                               ? "border-amber-400 bg-amber-50 dark:bg-amber-950/30"
-                              : "border-border bg-background hover:border-primary/50"
+                              : "border-border bg-background"
                           )}
                         >
                           {/* Mastered badge */}
@@ -157,7 +145,7 @@ export function KanaChartWithProgress({ chars, script }: Props) {
                               {count}
                             </span>
                           )}
-                        </button>
+
                       );
                     })}
                   </div>

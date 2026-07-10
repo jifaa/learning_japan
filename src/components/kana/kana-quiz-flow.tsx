@@ -28,6 +28,7 @@ export function KanaQuizFlow({ questions, script, onBack }: KanaQuizFlowProps) {
   const [answered, setAnswered] = useState(false);
   const [completed, setCompleted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
   const [answersLog, setAnswersLog] = useState<{ kanaId: string; isCorrect: boolean }[]>([]);
   const [retryKey, setRetryKey] = useState(0);
   const startTimeRef = useRef(Date.now());
@@ -80,14 +81,21 @@ export function KanaQuizFlow({ questions, script, onBack }: KanaQuizFlowProps) {
       setAnswered(false);
     } else {
       setIsSubmitting(true);
+      setSubmitError(null);
       try {
-        await fetch("/api/kana/quiz/answer", {
+        const response = await fetch("/api/kana/quiz/answer", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ answers: answersLog, script }),
         });
+
+        if (!response.ok) {
+          const data = await response.json().catch(() => ({}));
+          throw new Error(data.error || `Gagal menyimpan jawaban (${response.status})`);
+        }
       } catch (error) {
         console.error("Failed to submit quiz", error);
+        setSubmitError(error instanceof Error ? error.message : "Gagal menyimpan jawaban");
       } finally {
         setIsSubmitting(false);
         setCompleted(true);
@@ -126,6 +134,11 @@ export function KanaQuizFlow({ questions, script, onBack }: KanaQuizFlowProps) {
                 {score} dari {total} benar dalam {timeSeconds} detik
               </p>
             </div>
+            {submitError && (
+              <div className="w-full rounded-lg border border-error/30 bg-error/5 px-4 py-2 text-sm text-error">
+                ⚠️ {submitError}
+              </div>
+            )}
             <div className="flex gap-3">
               <Button onClick={onBack} variant="outline">
                 Selesai

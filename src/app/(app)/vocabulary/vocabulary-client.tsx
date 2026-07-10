@@ -3,7 +3,7 @@ import { useState, useCallback, useMemo } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { Volume2, ChevronLeft, ChevronRight, Layers } from "lucide-react";
+import { ChevronLeft, ChevronRight, Layers } from "lucide-react";
 import { addToSRSContentSingleAction } from "@/server/actions/srs.actions";
 import type { Vocabulary } from "@/types/content";
 
@@ -20,14 +20,6 @@ export function VocabularyClient({ words, vocabInSRS }: VocabularyClientProps) {
   const [page, setPage] = useState(1);
   const [addingId, setAddingId] = useState<string | null>(null);
 
-  const speak = useCallback((text: string) => {
-    if (typeof window === "undefined" || !window.speechSynthesis) return;
-    window.speechSynthesis.cancel();
-    const utterance = new SpeechSynthesisUtterance(text);
-    utterance.lang = "ja-JP";
-    utterance.rate = 0.85;
-    window.speechSynthesis.speak(utterance);
-  }, []);
 
   const handleAddToSRS = useCallback(async (word: Vocabulary) => {
     if (addingId) return;
@@ -140,13 +132,6 @@ export function VocabularyClient({ words, vocabInSRS }: VocabularyClientProps) {
                   <div className="flex-1 min-w-0">
                     <div className="flex items-center gap-2">
                       <p className="text-xl font-semibold truncate">{word.expression}</p>
-                      <button
-                        onClick={() => word.reading && speak(word.reading)}
-                        className="shrink-0 rounded p-1 text-muted-foreground hover:bg-surface hover:text-foreground"
-                        aria-label="Dengarkan"
-                      >
-                        <Volume2 className="h-4 w-4" />
-                      </button>
                     </div>
                     {word.reading && (
                       <div className="flex items-center gap-2">

@@ -1,6 +1,6 @@
 /**
  * POST /api/kana/quiz/answer
- * Submit jawaban quiz
+ * Submit jawaban quiz kana dan update progress
  *
  * Body:
  * - answers: Array of { kanaId, isCorrect }
@@ -31,15 +31,27 @@ export async function POST(request: NextRequest) {
 
     const supabase = await createClient();
 
-    // Calculate stats first (needed for session insert)
+    // Calculate stats
     const correctCount = answers.filter((a: { isCorrect: boolean }) => a.isCorrect).length;
     const totalCount = answers.length;
     const xpEarned = correctCount * 2;
-    const isPerfect = correctCount === totalCount && totalCount === 10;
+    const isPerfect = correctCount === totalCount;
     const bonusXp = isPerfect ? 20 : 0;
     const totalXp = xpEarned + bonusXp;
 
-    // Insert each answer into history
+    // Store results for response
+    const result = {
+      success: true,
+      correctCount,
+      totalCount,
+      xpEarned,
+      isPerfect,
+      bonusXp,
+      totalXp,
+      masteryUpdated: false,
+    };
+
+    // ========== INSERT INTO HISTORY (per-user progress) ==========
     const historyRecords = answers.map((answer: { kanaId: string; isCorrect: boolean }) => ({
       user_id: user.id,
       script,
@@ -47,66 +59,23 @@ export async function POST(request: NextRequest) {
       is_correct: answer.isCorrect,
     }));
 
-    const { error: historyError } = await supabase
-      .from("kana_quiz_history")
-      .insert(historyRecords);
-
-    if (historyError) {
-      console.error("[kana-quiz-answer] history error:", historyError);
-      return NextResponse.json({ error: "Failed to save answers" }, { status: 500 });
-    }
-
-    // Update mastery: count correct answers from THIS quiz session only,
-    // then add to existing mastery_count
     try {
-      const kanaIds = answers.map((a: { kanaId: string }) => a.kanaId);
+      const { error: historyError } = await supabase
+        .from("kana_quiz_history")
+        .insert(historyRecords);
 
-      // Count correct answers from THIS quiz only
-      const correctInQuiz: Record<string, number> = {};
-      for (const answer of answers) {
-        if (answer.isCorrect) {
-          correctInQuiz[answer.kanaId] = (correctInQuiz[answer.kanaId] || 0) + 1;
-        }
+      if (historyError) {
+        console.error("[kana-quiz-answer] history insert failed:", historyError);
+      } else {
+        result.masteryUpdated = true;
       }
-
-      // Fetch existing mastery for these kana
-      const { data: existing } = await supabase
-        .from("user_kana_progress")
-        .select("kana_id, mastery_count")
-        .eq("user_id", user.id)
-        .in("kana_id", kanaIds);
-
-      const existingMap = new Map((existing || []).map((r: any) => [r.kana_id, r.mastery_count || 0]));
-
-      // Upsert: add correct count from THIS quiz to existing mastery
-      const upsertRecords = Object.entries(correctInQuiz).map(([kana_id, correctInSession]) => ({
-        user_id: user.id,
-        script,
-        kana_id,
-        mastery_count: (existingMap.get(kana_id) || 0) + correctInSession,
-        last_quizzed_at: new Date().toISOString(),
-      }));
-
-      if (upsertRecords.length > 0) {
-        const { error: upsertError } = await supabase
-          .from("user_kana_progress")
-          .upsert(upsertRecords, {
-            onConflict: "user_id,script,kana_id",
-          });
-
-        if (upsertError) {
-          console.error("[kana-quiz-answer] mastery upsert error:", upsertError);
-        }
-      }
-    } catch (e) {
-      // Non-fatal — mastery update failure should not break the quiz
-      console.error("[kana-quiz-answer] mastery update failed:", e);
+    } catch (historyErr) {
+      console.error("[kana-quiz-answer] history insert exception:", historyErr);
     }
 
-    // Insert session summary
-    const { error: sessionError } = await supabase
-      .from("kana_quiz_sessions")
-      .insert({
+    // ========== INSERT SESSION SUMMARY (for analytics) ==========
+    try {
+      await supabase.from("kana_quiz_sessions").insert({
         user_id: user.id,
         script,
         total_questions: totalCount,
@@ -115,32 +84,21 @@ export async function POST(request: NextRequest) {
         xp_earned: totalXp,
         is_perfect: isPerfect,
       });
-
-    if (sessionError) {
-      // Non-fatal: session insert failure should not fail the quiz save
-      console.error("[kana-quiz-answer] session error:", sessionError);
+    } catch (sessErr) {
+      console.warn("[kana-quiz-answer] session insert skipped:", sessErr);
     }
 
-    // Add XP to user progress (only if quiz was completed — totalCount === 10)
-    if (totalCount === 10 && totalXp > 0) {
+    // ========== ADD XP ==========
+    if (totalXp > 0) {
       try {
         await addXP(user.id, totalXp);
         await updateStreak(user.id);
-      } catch (xpError) {
-        // Non-fatal: XP failure should not fail the whole quiz save
-        console.error("[kana-quiz-answer] XP update failed:", xpError);
+      } catch (xpErr) {
+        console.error("[kana-quiz-answer] XP update failed:", xpErr);
       }
     }
 
-    return NextResponse.json({
-      success: true,
-      correctCount,
-      totalCount,
-      xpEarned,
-      isPerfect,
-      bonusXp,
-      totalXp,
-    });
+    return NextResponse.json(result);
   } catch (error) {
     console.error("[kana-quiz-answer] error:", error);
     return NextResponse.json({ error: "Internal server error" }, { status: 500 });

@@ -7,7 +7,7 @@ import { FadeIn } from "@/components/motion/fade-in";
 import { reviewFlashcardAction } from "@/server/actions/flashcard.actions";
 import type { SRSCard, SRSRating } from "@/types/srs";
 import type { Vocabulary, KanjiCharacter, GrammarPoint } from "@/types/content";
-import { Volume2, RotateCcw, Check } from "lucide-react";
+import { RotateCcw, Check } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 interface ReviewSessionProps {
@@ -47,26 +47,10 @@ export function ReviewSession({ cards, contentMap, onComplete }: ReviewSessionPr
     startTimeRef.current = Date.now();
   }, [currentIndex]);
 
-  const speak = useCallback((text: string) => {
-    if (typeof window === "undefined" || !window.speechSynthesis) return;
-    window.speechSynthesis.cancel();
-    const utterance = new SpeechSynthesisUtterance(text);
-    utterance.lang = "ja-JP";
-    utterance.rate = 0.85;
-    window.speechSynthesis.speak(utterance);
-  }, []);
 
   const handleFlip = useCallback(() => {
     setIsFlipped((f) => !f);
-    if (!isFlipped && content) {
-      if ("expression" in content && typeof content.expression === "string") speak(content.expression);
-      else if ("kanji" in content && typeof content.kanji === "string") {
-        // For kanji, speak using example_reading or the kanji itself
-        const reading = (content as any).example_reading || content.kanji;
-        speak(reading);
-      }
-    }
-  }, [isFlipped, content, speak]);
+  }, [isFlipped]);
 
   const handleRate = useCallback(async (rating: SRSRating) => {
     if (!currentCard || isLoading) return;
@@ -177,9 +161,6 @@ export function ReviewSession({ cards, contentMap, onComplete }: ReviewSessionPr
               {isVocabulary && (
                 <>
                   <p className="text-3xl font-semibold">{content.expression}</p>
-                  <Button size="sm" variant="ghost" onClick={(e) => { e.stopPropagation(); if (content.reading) speak(content.reading); }}>
-                    <Volume2 className="mr-1 h-4 w-4" />Dengarkan
-                  </Button>
                   <p className="text-lg">{content.meaning_id || content.meaning_en}</p>
                 </>
               )}

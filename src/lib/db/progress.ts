@@ -440,21 +440,46 @@ export async function getProgressSummary(userId: string): Promise<ProgressSummar
 
 /**
  * Get user kana progress.
+ * Returns array of { kana_id, mastery_count } for each kana character.
+ * Counts correct answers from kana_quiz_history per user.
  */
 export async function getKanaProgress(userId: string, script: "hiragana" | "katakana") {
   const supabase = await createClient();
-  const { data, error } = await supabase
-    .from("user_kana_progress")
-    .select("*")
-    .eq("user_id", userId)
-    .eq("script", script);
 
-  if (error) {
-    if (error.code === "PGRST205" || error.message?.includes("schema cache")) {
-      console.warn("[getKanaProgress] table missing from schema cache");
+  // Count correct answers from kana_quiz_history per user
+  try {
+    const { data: historyData, error: historyError } = await supabase
+      .from("kana_quiz_history")
+      .select("kana_id, is_correct")
+      .eq("user_id", userId)
+      .eq("script", script);
+
+    if (historyError) {
+      console.warn("[getKanaProgress] history query error:", historyError);
       return [];
     }
-    throw error;
+
+    if (historyData && historyData.length > 0) {
+      // Count correct answers per kana
+      const counts: Record<string, number> = {};
+      historyData.forEach((h: any) => {
+        if (h.is_correct) {
+          counts[h.kana_id] = (counts[h.kana_id] || 0) + 1;
+        }
+      });
+
+      const progress = Object.entries(counts).map(([kana_id, mastery_count]) => ({
+        kana_id,
+        mastery_count,
+      }));
+
+      console.log(`[getKanaProgress] Found ${progress.length} mastered chars from history`);
+      return progress;
+    }
+  } catch (err) {
+    console.warn("[getKanaProgress] error:", err);
   }
-  return data || [];
+
+  console.log("[getKanaProgress] No progress found, returning empty array");
+  return [];
 }
