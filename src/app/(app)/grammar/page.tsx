@@ -4,7 +4,7 @@ import { SectionHeader } from "@/components/ui/section-header";
 import { Card, CardContent } from "@/components/ui/card";
 import { FadeIn } from "@/components/motion/fade-in";
 import { getCurrentUser } from "@/lib/auth";
-import { getCoreGrammarN5 } from "@/lib/db/content";
+import { getGrammarByLevel } from "@/lib/db/content";
 
 export const metadata: Metadata = { title: "Tata Bahasa" };
 
@@ -12,7 +12,7 @@ export default async function GrammarPage() {
   const user = await getCurrentUser();
   if (!user) redirect("/login");
 
-  const grammarPoints = await getCoreGrammarN5();
+  const grammarPoints = await getGrammarByLevel("N5");
 
   return (
     <div className="space-y-8">
@@ -57,8 +57,8 @@ export default async function GrammarPage() {
                       {point.example_romaji && (
                         <p className="mt-1 text-xs text-muted-foreground italic">{point.example_romaji}</p>
                       )}
-                      {(point.example_meaning_id || point.example_meaning) && (
-                        <p className="mt-1 text-xs text-muted-foreground">{point.example_meaning_id || point.example_meaning}</p>
+                      {point.example_meaning_id && (
+                        <p className="mt-1 text-xs text-muted-foreground">{point.example_meaning_id}</p>
                       )}
                     </div>
                   )}

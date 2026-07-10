@@ -85,7 +85,6 @@ export interface GrammarPoint {
   example_jp: string | null;
   example_romaji: string | null;
   example_meaning_id: string | null;
-  example_meaning: string | null;
   is_core_n5: boolean;
   recommended_for_quiz: boolean;
 }
