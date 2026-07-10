@@ -60,7 +60,7 @@ export function getKanaQuizList(
   const calcMastery = (categoryChars: KanaCharacter[]) => {
     const mastered = categoryChars.filter((c) => {
       const charId = c.id || c.kana;
-      return (progressMap.get(charId) || 0) >= 3;
+      return (progressMap.get(charId) || 0) >= MASTERY_THRESHOLD;
     }).length;
     const percent = categoryChars.length > 0
       ? Math.round((mastered / categoryChars.length) * 100)
@@ -111,14 +111,14 @@ export function getKanaQuizList(
     href: "/hiragana/quiz?quiz=quiz_2",
   });
 
-  // Quiz 3: M + Y + R + W + N (unlocked after Quiz 2 completed)
-  const q3Chars = basicChars.filter((c) => c.row_group && ["m", "y", "r", "w", "n", "n-final"].includes(c.row_group));
+  // Quiz 3: M + Y + R + W + N-final (unlocked after Quiz 2 completed)
+  const q3Chars = basicChars.filter((c) => c.row_group && ["m", "y", "r", "w", "n-final"].includes(c.row_group));
   const q3Mastery = calcMastery(q3Chars);
   const quiz2Completed = q2Mastery.mastered === q2Chars.length && q2Chars.length > 0;
   quizzes.push({
     id: "quiz_3",
     label: "Quiz 3",
-    description: "Pelajari konsonan M, Y, R, W, N dan huruf ん",
+    description: "Pelajari konsonan M, Y, R, W dan huruf ん",
     totalChars: q3Chars.length,
     masteredChars: q3Mastery.mastered,
     isUnlocked: quiz1Completed && quiz2Completed,
@@ -255,9 +255,8 @@ export function shuffleArray<T>(array: T[]): T[] {
   return arr;
 }
 
-/**
- * Check if all characters in a row group have mastery >= 3.
- */
+  // Character is mastered after 1 correct answer (changed from 3 to 1 for faster progression)
+  const MASTERY_THRESHOLD = 1;
 function isRowMastered(
   chars: KanaCharacter[],
   rowGroup: string,
@@ -267,12 +266,12 @@ function isRowMastered(
   if (rowChars.length === 0) return true;
   return rowChars.every((char) => {
     const charId = char.id || char.kana;
-    return (progressMap.get(charId) || 0) >= 3;
+    return (progressMap.get(charId) || 0) >= MASTERY_THRESHOLD;
   });
 }
 
 /**
- * Check if all characters in a category have mastery >= 3.
+ * Check if all characters in a category have mastery >= MASTERY_THRESHOLD.
  */
 function isCategoryMastered(
   categoryChars: KanaCharacter[],
@@ -281,7 +280,7 @@ function isCategoryMastered(
   if (categoryChars.length === 0) return true;
   return categoryChars.every((char) => {
     const charId = char.id || char.kana;
-    return (progressMap.get(charId) || 0) >= 3;
+    return (progressMap.get(charId) || 0) >= MASTERY_THRESHOLD;
   });
 }
 
@@ -309,7 +308,7 @@ export function buildOptions(correct: KanaCharacter, pool: KanaCharacter[]) {
 
   // Ambil max 3 pilihan salah, pastikan romaji-nya unik antar sesama pilihan
   for (const c of shuffled) {
-    if (wrong.length >= 3) break;
+    if (wrong.length >= MASTERY_THRESHOLD) break;
     if (!wrong.some((w) => w.romaji === c.romaji)) {
       wrong.push(c);
     }
@@ -426,7 +425,7 @@ export function calculateCategoryProgress(
 
   const basicCompleted = basicChars.length > 0 && basicChars.every((c) => {
     const charId = c.id || c.kana;
-    return (progressMap.get(charId) || 0) >= 3;
+    return (progressMap.get(charId) || 0) >= MASTERY_THRESHOLD;
   });
 
   const dakuonCompleted = dakuonChars.length > 0 && isCategoryMastered(dakuonChars, progressMap);
@@ -437,7 +436,7 @@ export function calculateCategoryProgress(
   const calcMastery = (categoryChars: KanaCharacter[]) => {
     const mastered = categoryChars.filter((c) => {
       const charId = c.id || c.kana;
-      return (progressMap.get(charId) || 0) >= 3;
+      return (progressMap.get(charId) || 0) >= MASTERY_THRESHOLD;
     }).length;
     const percent = categoryChars.length > 0
       ? Math.round((mastered / categoryChars.length) * 100)

@@ -182,7 +182,7 @@ export default async function KatakanaPage() {
                           const rowChars = catChars.filter((c) => c.row_group === row);
                           const rowMastered = rowChars.filter((c) => {
                             const charId = c.id || c.kana;
-                            return (progressMap.get(charId) || 0) >= 3;
+                            return (progressMap.get(charId) || 0) >= 1;
                           }).length;
 
                           return (
@@ -198,7 +198,7 @@ export default async function KatakanaPage() {
                               <div className="grid grid-cols-[repeat(auto-fill,minmax(3.25rem,1fr))] gap-2">
                                 {rowChars.map((char) => {
                                   const charId = char.id || char.kana;
-                                  const mastered = (progressMap.get(charId) || 0) >= 3;
+                                  const mastered = (progressMap.get(charId) || 0) >= 1;
 
                                   return (
                                     <div
@@ -206,19 +206,19 @@ export default async function KatakanaPage() {
                                       className={cn(
                                         "flex aspect-square flex-col items-center justify-center rounded-lg border p-2.5",
                                         mastered
-                                          ? "border-amber-400/50 bg-amber-50 dark:bg-amber-950/30"
+                                          ? "border-green-500/50 bg-green-50 dark:bg-green-950/30"
                                           : "border-border bg-background"
                                       )}
                                     >
                                       <span className={cn(
                                         "text-xl font-semibold leading-none",
-                                        mastered ? "text-amber-600 dark:text-amber-400" : ""
+                                        mastered ? "text-green-600 dark:text-green-400" : ""
                                       )}>
                                         {char.kana}
                                       </span>
                                       <span className={cn(
                                         "text-[10px] mt-1",
-                                        mastered ? "text-amber-500" : "text-muted-foreground"
+                                        mastered ? "text-green-500" : "text-muted-foreground"
                                       )}>
                                         {char.romaji}
                                       </span>
