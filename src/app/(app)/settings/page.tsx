@@ -18,6 +18,11 @@ export default async function SettingsPage() {
 
   const profile = await getUserProfile();
 
+  // Extract preferences from JSONB
+  const preferences = (profile?.preferences as Record<string, unknown>) || {};
+  const dailyGoal = (preferences.dailyGoal as number) || 20;
+  const newCardsPerDay = (preferences.newCardsPerDay as number) || 10;
+
   return (
     <div className="space-y-8">
       <FadeIn>
@@ -37,8 +42,8 @@ export default async function SettingsPage() {
             <SettingsForm
               initialName={profile?.display_name || user.email?.split("@")[0] || "Pengguna"}
               initialEmail={user.email || ""}
-              initialDailyGoal={20}
-              initialNewCards={10}
+              initialDailyGoal={dailyGoal}
+              initialNewCards={newCardsPerDay}
             />
           </CardContent>
         </Card>

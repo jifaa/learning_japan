@@ -3,8 +3,6 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { FadeIn } from "@/components/motion/fade-in";
 import { updateUserPreferencesAction } from "@/server/actions/settings.actions";
 
 interface SettingsFormProps {
@@ -20,19 +18,40 @@ export function SettingsForm({ initialName, initialEmail, initialDailyGoal, init
   const [newCards, setNewCards] = useState(initialNewCards);
   const [isSaving, setIsSaving] = useState(false);
   const [saved, setSaved] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   const handleSave = async () => {
     setIsSaving(true);
     setSaved(false);
-    // In a real app, call updateUserPreferencesAction here
-    await new Promise(r => setTimeout(r, 500)); // Simulate save
-    setIsSaving(false);
-    setSaved(true);
-    setTimeout(() => setSaved(false), 3000);
+    setError(null);
+
+    try {
+      const result = await updateUserPreferencesAction({
+        displayName: name,
+        dailyGoal,
+        newCardsPerDay: newCards,
+      });
+
+      if (result.success) {
+        setSaved(true);
+        setTimeout(() => setSaved(false), 3000);
+      } else {
+        setError(result.error || "Gagal menyimpan");
+      }
+    } catch (e) {
+      setError("Terjadi kesalahan saat menyimpan");
+    } finally {
+      setIsSaving(false);
+    }
   };
 
   return (
     <>
+      {error && (
+        <div className="rounded-md bg-destructive/10 px-4 py-3 text-sm text-destructive">
+          {error}
+        </div>
+      )}
       <div className="grid gap-4 sm:grid-cols-2">
         <div className="space-y-2">
           <Label htmlFor="name">Nama Tampilan</Label>

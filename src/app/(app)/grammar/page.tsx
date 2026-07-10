@@ -54,8 +54,11 @@ export default async function GrammarPage() {
                   {point.example_jp && (
                     <div className="rounded-lg bg-surface p-3">
                       <p className="text-sm font-medium">{point.example_jp}</p>
-                      {point.example_meaning && (
-                        <p className="mt-1 text-xs text-muted-foreground">{point.example_meaning}</p>
+                      {point.example_romaji && (
+                        <p className="mt-1 text-xs text-muted-foreground italic">{point.example_romaji}</p>
+                      )}
+                      {(point.example_meaning_id || point.example_meaning) && (
+                        <p className="mt-1 text-xs text-muted-foreground">{point.example_meaning_id || point.example_meaning}</p>
                       )}
                     </div>
                   )}
