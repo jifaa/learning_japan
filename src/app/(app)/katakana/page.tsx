@@ -104,7 +104,7 @@ export default async function KatakanaPage() {
                           {quiz.isUnlocked ? quiz.description : "Selesaikan quiz sebelumnya"}
                         </p>
                         <div className="mt-3 flex items-center gap-2">
-                          <ProgressBar value={quiz.progressPercent} className="flex-1 h-1.5" />
+                          <ProgressBar value={quiz.progressPercent} showValue={false} className="flex-1 h-1.5" />
                           <span className="text-xs text-muted-foreground shrink-0">
                             {quiz.masteredChars}/{quiz.totalChars}
                           </span>
@@ -172,7 +172,7 @@ export default async function KatakanaPage() {
                         {cat.masteredChars}/{cat.totalChars} karakter • {cat.progressPercent}%
                       </p>
                     </div>
-                    <ProgressBar value={cat.progressPercent} className="w-20 h-1.5" />
+                    <ProgressBar value={cat.progressPercent} showValue={false} className="w-20 h-1.5" />
                   </div>
 
                   {cat.isUnlocked && (
@@ -192,7 +192,7 @@ export default async function KatakanaPage() {
                                   {row}
                                 </span>
                                 <span className="text-xs text-muted-foreground">
-                                  {rowMastered}/{rowChars.length}
+
                                 </span>
                               </div>
                               <div className="grid grid-cols-[repeat(auto-fill,minmax(3.25rem,1fr))] gap-2">

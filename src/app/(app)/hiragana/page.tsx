@@ -172,7 +172,7 @@ export default async function HiraganaPage() {
                         {cat.masteredChars}/{cat.totalChars} karakter • {cat.progressPercent}%
                       </p>
                     </div>
-                    <ProgressBar value={cat.progressPercent} className="w-20 h-1.5" />
+                    <ProgressBar value={cat.progressPercent} showValue={false} className="w-20 h-1.5" />
                   </div>
 
                   {cat.isUnlocked && catChars.length > 0 && (
