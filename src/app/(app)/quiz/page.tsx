@@ -1,9 +1,6 @@
 import type { Metadata } from "next";
 import { redirect } from "next/navigation";
-import { SectionHeader } from "@/components/ui/section-header";
-import { Card, CardContent } from "@/components/ui/card";
 import { FadeIn } from "@/components/motion/fade-in";
-import { BrainCircuit, BookOpen, FileText, Layers, ArrowRight } from "lucide-react";
 import { getCurrentUser } from "@/lib/auth";
 import { QuizClient } from "./quiz-client";
 
@@ -14,7 +11,7 @@ export default async function QuizPage() {
   if (!user) redirect("/login");
 
   return (
-    <div className="space-y-8">
+    <div className="space-y-6">
       <FadeIn>
         <div className="flex flex-col gap-1">
           <h1 className="text-2xl font-semibold tracking-tight">Kuis</h1>
@@ -24,7 +21,7 @@ export default async function QuizPage() {
         </div>
       </FadeIn>
 
-      <FadeIn delay={0.05}>
+      <FadeIn delay={0.1}>
         <QuizClient />
       </FadeIn>
     </div>

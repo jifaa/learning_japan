@@ -242,6 +242,7 @@ export interface ReadingPassage {
   passage_jp: string | null;
   passage_romaji: string | null;
   passage_id: string | null;
+  meaning_id: string | null;
   character_count: number | null;
   estimated_reading_seconds: number | null;
   question_count: number | null;

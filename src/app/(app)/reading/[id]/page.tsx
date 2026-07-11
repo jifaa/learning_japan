@@ -2,11 +2,11 @@ import type { Metadata } from "next";
 import { notFound, redirect } from "next/navigation";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
 import { FadeIn } from "@/components/motion/fade-in";
 import { ArrowLeft, Clock, Type } from "lucide-react";
 import { getCurrentUser } from "@/lib/auth";
 import { getReadingPassageById } from "@/lib/db/content";
+import { ReadingPassageClient } from "./reading-client";
 
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
   const { id } = await params;
@@ -72,28 +72,7 @@ export default async function ReadingPassagePage({ params }: { params: Promise<{
       </FadeIn>
 
       <FadeIn delay={0.1}>
-        <Card className="overflow-hidden border-border bg-card shadow-sm">
-          <CardContent className="p-6 sm:p-10">
-            {passage.passage_jp && (
-              <div className="prose prose-lg dark:prose-invert max-w-none space-y-6 text-foreground">
-                <p className="leading-relaxed text-2xl font-medium tracking-wide">
-                  {passage.passage_jp}
-                </p>
-              </div>
-            )}
-            
-            {passage.passage_romaji && (
-              <div className="mt-10 rounded-xl bg-surface p-6">
-                <h3 className="mb-3 text-sm font-semibold uppercase tracking-wider text-muted-foreground">
-                  Romaji
-                </h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  {passage.passage_romaji}
-                </p>
-              </div>
-            )}
-          </CardContent>
-        </Card>
+        <ReadingPassageClient passage={passage} />
       </FadeIn>
     </div>
   );

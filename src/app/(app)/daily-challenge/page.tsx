@@ -7,7 +7,6 @@ import { FadeIn } from "@/components/motion/fade-in";
 import { Flame, Target, BookOpen, BrainCircuit, Layers } from "lucide-react";
 import { getCurrentUser } from "@/lib/auth";
 import { getDailyWord } from "@/lib/daily-word";
-import { getDueCards } from "@/lib/db/srs";
 import Link from "next/link";
 
 export const metadata: Metadata = { title: "Tantangan Harian" };
@@ -23,13 +22,12 @@ export default async function DailyChallengePage() {
   const user = await getCurrentUser();
   if (!user) redirect("/login");
 
-  const [dailyWord, dueCards] = await Promise.all([
+  const [dailyWord] = await Promise.all([
     getDailyWord(),
-    getDueCards(user.id),
   ]);
 
   return (
-    <div className="space-y-8">
+    <div className="space-y-6">
       <FadeIn>
         <div className="flex flex-col gap-1">
           <h1 className="text-2xl font-semibold tracking-tight">Tantangan Harian</h1>
@@ -37,7 +35,7 @@ export default async function DailyChallengePage() {
         </div>
       </FadeIn>
 
-      <FadeIn delay={0.05}>
+      <FadeIn delay={0.1}>
         <Card className="border-primary/20 bg-primary/5">
           <CardContent className="flex items-center gap-4 p-5">
             <Flame className="h-10 w-10 text-primary" />
@@ -49,7 +47,7 @@ export default async function DailyChallengePage() {
         </Card>
       </FadeIn>
 
-      <FadeIn delay={0.1}>
+      <FadeIn delay={0.15}>
         <div className="space-y-3">
           {CHALLENGES.map((challenge, i) => {
             const Icon = challenge.icon;

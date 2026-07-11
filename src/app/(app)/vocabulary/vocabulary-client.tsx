@@ -4,27 +4,36 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight, Layers } from "lucide-react";
-import { addToSRSContentSingleAction } from "@/server/actions/srs.actions";
+import { addToSRSContentNewCardSingleAction } from "@/server/actions/srs.actions";
 import type { Vocabulary } from "@/types/content";
+import type { SRSRating } from "@/types/srs";
 
 const ITEMS_PER_PAGE = 20;
+
+// Rating display config
+const RATING_CONFIG: Record<SRSRating, { label: string; color: string; bg: string }> = {
+  again: { label: "Ulangi", color: "text-red-600", bg: "bg-red-50" },
+  hard: { label: "Sulit", color: "text-orange-600", bg: "bg-orange-50" },
+  good: { label: "Baik", color: "text-green-600", bg: "bg-green-50" },
+  easy: { label: "Mudah", color: "text-blue-600", bg: "bg-blue-50" },
+};
 
 interface VocabularyClientProps {
   words: Vocabulary[];
   vocabInSRS: Set<string>;
+  lastReviewPerVocab: Record<string, SRSRating>;
 }
 
-export function VocabularyClient({ words, vocabInSRS }: VocabularyClientProps) {
+export function VocabularyClient({ words, vocabInSRS, lastReviewPerVocab }: VocabularyClientProps) {
   const [query, setQuery] = useState("");
   const [filterPos, setFilterPos] = useState<string>("all");
   const [page, setPage] = useState(1);
   const [addingId, setAddingId] = useState<string | null>(null);
 
-
   const handleAddToSRS = useCallback(async (word: Vocabulary) => {
     if (addingId) return;
     setAddingId(word.id);
-    await addToSRSContentSingleAction(word.id, "vocabulary", "vocabulary");
+    await addToSRSContentNewCardSingleAction(word.id, "vocabulary", "vocabulary");
     setAddingId(null);
   }, [addingId]);
 
@@ -124,6 +133,7 @@ export function VocabularyClient({ words, vocabInSRS }: VocabularyClientProps) {
         {paginated.map((word) => {
           const isInSRS = vocabInSRS.has(word.id);
           const isAdding = addingId === word.id;
+          const lastRating = lastReviewPerVocab[word.id];
 
           return (
             <Card key={word.id} className="transition-shadow duration-150 hover:shadow-sm">
@@ -148,30 +158,38 @@ export function VocabularyClient({ words, vocabInSRS }: VocabularyClientProps) {
                       <p className="text-sm text-muted-foreground">{word.romaji}</p>
                     )}
                     <p className="mt-1 text-sm">{word.meaning_id || word.meaning_en}</p>
-                    <div className="mt-2 flex items-center gap-2">
+                    <div className="mt-2 flex flex-wrap items-center gap-2">
                       {word.part_of_speech && (
                         <span className="inline-block rounded bg-surface px-2 py-0.5 text-xs text-muted-foreground">
                           {word.part_of_speech}
                         </span>
                       )}
-                      {isInSRS && (
+                      {lastRating ? (
+                        <span className="inline-flex items-center gap-1 rounded bg-green-100 px-2 py-0.5 text-xs text-green-700 font-medium">
+                          <Layers className="h-3 w-3" /> Sudah Ditinjau
+                        </span>
+                      ) : isInSRS ? (
                         <span className="inline-flex items-center gap-1 rounded bg-primary/10 px-2 py-0.5 text-xs text-primary">
-                          <Layers className="h-3 w-3" /> Di kartu latihan
+                          <Layers className="h-3 w-3" /> Di Kartu Latihan
+                        </span>
+                      ) : null}
+                      {lastRating && (
+                        <span className={`inline-flex items-center gap-1 rounded px-2 py-0.5 text-xs font-medium ${RATING_CONFIG[lastRating].color} ${RATING_CONFIG[lastRating].bg}`}>
+                          {RATING_CONFIG[lastRating].label}
                         </span>
                       )}
                     </div>
                   </div>
-                  {!isInSRS && (
-                    <Button
-                      size="sm"
-                      variant="outline"
-                      onClick={() => handleAddToSRS(word)}
-                      disabled={isAdding}
-                      className="shrink-0"
-                    >
-                      {isAdding ? "..." : "+"}
-                    </Button>
-                  )}
+                  <Button
+                    size="sm"
+                    variant="outline"
+                    onClick={() => handleAddToSRS(word)}
+                    disabled={isAdding}
+                    className="shrink-0"
+                    title={isInSRS ? "Tambah lagi ke kartu latihan" : "Tambah ke kartu latihan"}
+                  >
+                    {isAdding ? "..." : "+"}
+                  </Button>
                 </div>
               </CardContent>
             </Card>

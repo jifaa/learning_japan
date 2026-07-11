@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { redirect } from "next/navigation";
 import Link from "next/link";
-import { SectionHeader } from "@/components/ui/section-header";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { FadeIn } from "@/components/motion/fade-in";
@@ -18,18 +17,15 @@ export default async function ReadingPage() {
   const passages = await getReadingPassages("N5" as any);
 
   return (
-    <div className="space-y-8">
+    <div className="space-y-6">
       <FadeIn>
         <div className="flex flex-col gap-1">
           <h1 className="text-2xl font-semibold tracking-tight">Bacaan</h1>
           <p className="text-sm text-muted-foreground">Latihan membaca teks bahasa Jepang</p>
         </div>
       </FadeIn>
-      <FadeIn delay={0.05}>
-        <SectionHeader title="Teks Bacaan" description="Pilih teks untuk latihan membaca" />
-      </FadeIn>
       <FadeIn delay={0.1}>
-        <div className="space-y-4">
+        <div className="space-y-3">
           {passages.length === 0 && (
             <Card>
               <CardContent className="p-8 text-center text-muted-foreground">

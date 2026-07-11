@@ -181,6 +181,37 @@ export async function createSRSCardsForContent(
 }
 
 /**
+ * Create a new SRS card entry regardless of existing cards.
+ * Allows re-adding vocabulary/kanji/grammar that was previously reviewed.
+ */
+export async function createNewSRSCard(
+  userId: string,
+  card: NewSRSCard
+): Promise<SRSCard> {
+  const supabase = await createClient();
+
+  const { data, error } = await supabase
+    .from("user_srs_cards")
+    .insert({
+      user_id: userId,
+      card_type: card.card_type,
+      content_id: card.content_id,
+      deck_key: card.deck_key,
+      state: "new",
+      due_date: new Date().toISOString(),
+      interval: 0,
+      ease_factor: DEFAULT_SRS_CONFIG.graduating_interval,
+      reviews: 0,
+      lapses: 0,
+    })
+    .select()
+    .single();
+
+  if (error) throw error;
+  return data as SRSCard;
+}
+
+/**
  * Get or create SRS card for content.
  */
 export async function getOrCreateSRSCard(
@@ -380,6 +411,53 @@ export async function getCardReviewLog(cardId: string) {
 
   if (error) throw error;
   return data as SRSReviewLog[];
+}
+
+/**
+ * Get the last review rating for each content_id for a given card type.
+ * Returns a map of content_id -> last rating.
+ */
+export async function getLastReviewPerContent(
+  userId: string,
+  cardType: CardType
+): Promise<Record<string, SRSRating>> {
+  const supabase = await createClient();
+
+  // Get the most recent review for each card of this type
+  const { data, error } = await supabase
+    .from("user_srs_cards")
+    .select(`
+      content_id,
+      srs_review_log!left (
+        rating,
+        reviewed_at
+      )
+    `)
+    .eq("user_id", userId)
+    .eq("card_type", cardType);
+
+  if (error) {
+    console.warn("[getLastReviewPerContent] failed:", error.message);
+    return {};
+  }
+
+  // Build a map of content_id -> last rating
+  // Each card may have multiple reviews; we take the most recent one
+  const result: Record<string, SRSRating> = {};
+
+  for (const card of data ?? []) {
+    const reviews = card.srs_review_log as unknown as Array<{
+      rating: SRSRating;
+      reviewed_at: string;
+    }> | null;
+
+    if (reviews && reviews.length > 0) {
+      // Already ordered by reviewed_at DESC from the query
+      result[card.content_id] = reviews[0].rating;
+    }
+  }
+
+  return result;
 }
 
 /**

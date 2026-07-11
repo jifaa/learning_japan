@@ -41,11 +41,11 @@ export default async function KatakanaPage() {
   const currentQuiz = quizList.find((q) => q.isUnlocked && !q.isCompleted);
 
   return (
-    <div className="space-y-8">
+    <div className="space-y-6">
       {/* Header */}
       <FadeIn>
         <div className="flex flex-col gap-2">
-          <h1 className="text-3xl font-semibold tracking-tight">Katakana</h1>
+          <h1 className="text-2xl font-semibold tracking-tight">Katakana</h1>
           <p className="text-sm text-muted-foreground">
             {masteryStats.masteredChars} dari {masteryStats.totalChars} karakter dikuasai ({overallPercent}%)
           </p>
@@ -56,8 +56,8 @@ export default async function KatakanaPage() {
       </FadeIn>
 
       {/* Quiz Selection - Card Grid */}
-      <FadeIn delay={0.05}>
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <FadeIn delay={0.1}>
+        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {quizList.map((quiz, index) => {
             const href = quiz.href.replace("/hiragana/", "/katakana/");
 
@@ -123,8 +123,8 @@ export default async function KatakanaPage() {
       </FadeIn>
 
       {/* Character Chart */}
-      <FadeIn delay={0.1}>
-        <div className="space-y-6">
+      <FadeIn delay={0.15}>
+        <div className="space-y-4">
           <div className="flex items-center justify-between">
             <h2 className="text-lg font-semibold">Tabel Karakter</h2>
             {currentQuiz && (

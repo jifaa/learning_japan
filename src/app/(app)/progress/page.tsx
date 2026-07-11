@@ -1,13 +1,12 @@
 import type { Metadata } from "next";
 import { redirect } from "next/navigation";
-import { SectionHeader } from "@/components/ui/section-header";
 import { Card, CardContent } from "@/components/ui/card";
 import { StatsCard } from "@/components/ui/stats-card";
 import { FadeIn } from "@/components/motion/fade-in";
 import { Flame, Trophy, Target, BookOpen } from "lucide-react";
 import { getCurrentUser } from "@/lib/auth";
 import { getOrCreateUserProgress, getStreakInfo, getWeeklyStats } from "@/lib/db/progress";
-import { getLearnedCount, getMasteredCount } from "@/lib/db/srs";
+import { getLearnedCount } from "@/lib/db/srs";
 import { getVocabularyCount, getKanjiCount } from "@/lib/db/content";
 import { ProgressChart } from "./progress-chart";
 
@@ -32,7 +31,7 @@ export default async function ProgressPage() {
   const kanjiPct = kanjiTotal > 0 ? Math.round((kanjiLearned / kanjiTotal) * 100) : 0;
 
   return (
-    <div className="space-y-8">
+    <div className="space-y-6">
       <FadeIn>
         <div className="flex flex-col gap-1">
           <h1 className="text-2xl font-semibold tracking-tight">Progres</h1>
@@ -40,7 +39,7 @@ export default async function ProgressPage() {
         </div>
       </FadeIn>
 
-      <FadeIn delay={0.05}>
+      <FadeIn delay={0.1}>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           <StatsCard
             title="Streak Saat Ini"
@@ -72,7 +71,7 @@ export default async function ProgressPage() {
       </FadeIn>
 
       <FadeIn delay={0.15}>
-        <div className="grid gap-6 lg:grid-cols-2">
+        <div className="grid gap-4 lg:grid-cols-2">
           <Card>
             <CardContent className="p-5 space-y-3">
               <h3 className="font-medium">Kosakata JLPT N5</h3>

@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { redirect } from "next/navigation";
-import { SectionHeader } from "@/components/ui/section-header";
 import { Card, CardContent } from "@/components/ui/card";
 import { FadeIn } from "@/components/motion/fade-in";
 import { getCurrentUser } from "@/lib/auth";
@@ -15,7 +14,7 @@ export default async function GrammarPage() {
   const grammarPoints = await getGrammarByLevel("N5");
 
   return (
-    <div className="space-y-8">
+    <div className="space-y-6">
       <FadeIn>
         <div className="flex flex-col gap-1">
           <h1 className="text-2xl font-semibold tracking-tight">Tata Bahasa</h1>
@@ -23,10 +22,6 @@ export default async function GrammarPage() {
             {grammarPoints.length} pola tata bahasa inti JLPT N5
           </p>
         </div>
-      </FadeIn>
-
-      <FadeIn delay={0.05}>
-        <SectionHeader title="Pola Kalimat" description="Pelajari struktur kalimat bahasa Jepang" />
       </FadeIn>
 
       <FadeIn delay={0.1}>

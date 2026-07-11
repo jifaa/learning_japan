@@ -133,19 +133,15 @@ export default async function DashboardPage() {
                 icon={<Flame className="h-5 w-5 text-primary" />}
               />
               <StatsCard
-                title="Ditinjau"
+                title="Total Tinjauan"
                 value={String(weeklyStats.total_lessons || todayStats.total_due)}
-                trend={{ value: weeklyStats.days_active ?? 0, label: "hari aktif" }}
+                description="Kartu yang sudah ditinjau"
                 icon={<Layers className="h-5 w-5 text-primary" />}
               />
               <StatsCard
                 title="Akurasi"
                 value={`${Math.round(weeklyStats.average_accuracy || 0)}%`}
-                trend={
-                  weeklyStats.average_accuracy > 0
-                    ? { value: 0, label: "rerata mingguan" }
-                    : undefined
-                }
+                description="Rata-rata minggu ini"
                 icon={<Target className="h-5 w-5 text-primary" />}
               />
               <StatsCard
@@ -157,9 +153,9 @@ export default async function DashboardPage() {
             </div>
           </FadeIn>
 
-          {/* Daily Goal & Reviews */}
+          {/* Daily Goal, Reviews & Daily Word */}
           <FadeIn delay={0.1}>
-            <div className="grid gap-4 sm:grid-cols-2">
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
               <Card className="border-border">
                 <CardHeader className="pb-2">
                   <CardTitle className="text-sm font-medium">Target Harian</CardTitle>
@@ -201,31 +197,26 @@ export default async function DashboardPage() {
                   </div>
                 </CardContent>
               </Card>
-            </div>
-          </FadeIn>
 
-          {/* Daily Word */}
-          {dailyWord && (
-            <FadeIn delay={0.12}>
-              <Card className="border-border">
-                <CardHeader className="pb-2">
-                  <CardTitle className="text-sm font-medium">Kata Hari Ini</CardTitle>
-                </CardHeader>
-                <CardContent className="flex items-center gap-6">
-                  <div className="flex-1">
-                    <p className="text-3xl font-bold text-primary">{dailyWord.expression}</p>
-                    <p className="text-sm text-muted-foreground">{dailyWord.reading}</p>
-                  </div>
-                  <div className="text-right">
-                    <p className="text-sm">{dailyWord.meaning_id || dailyWord.meaning_en}</p>
-                    <Link href="/vocabulary" className="text-xs text-primary hover:underline">
+              {dailyWord && (
+                <Card className="border-border">
+                  <CardHeader className="pb-2">
+                    <CardTitle className="text-sm font-medium">Kata Hari Ini</CardTitle>
+                  </CardHeader>
+                  <CardContent className="flex flex-col items-center text-center">
+                    <p className="text-4xl font-bold text-primary">{dailyWord.expression}</p>
+                    {dailyWord.reading && (
+                      <p className="text-sm text-muted-foreground mt-1">{dailyWord.reading}</p>
+                    )}
+                    <p className="text-sm mt-2">{dailyWord.meaning_id || dailyWord.meaning_en}</p>
+                    <Link href="/vocabulary" className="mt-2 text-xs text-primary hover:underline">
                       Lihat selengkapnya
                     </Link>
-                  </div>
-                </CardContent>
-              </Card>
-            </FadeIn>
-          )}
+                  </CardContent>
+                </Card>
+              )}
+            </div>
+          </FadeIn>
 
           {/* Continue Learning */}
           <FadeIn delay={0.15}>
@@ -285,17 +276,10 @@ export default async function DashboardPage() {
                           <div className="min-w-0 flex-1">
                             <h3 className="font-medium">{item.title}</h3>
                             <p className="mt-0.5 text-sm text-muted-foreground">{item.desc}</p>
-                            {item.isAction ? (
-                              <Button className="mt-3 w-full" size="sm" variant="outline">
-                                <Play className="mr-1.5 h-3.5 w-3.5" />
-                                Mulai
-                              </Button>
-                            ) : (
-                              <Button className="mt-3 w-full" size="sm" variant="ghost">
-                                <Play className="mr-1.5 h-3.5 w-3.5" />
-                                Mulai
-                              </Button>
-                            )}
+                            <Button className="mt-3 w-full" size="sm">
+                              <Play className="mr-1.5 h-3.5 w-3.5" />
+                              Mulai
+                            </Button>
                           </div>
                         </div>
                       </CardContent>
@@ -307,15 +291,10 @@ export default async function DashboardPage() {
           </FadeIn>
         </div>
 
-        {/* Right Column - Sidebar (1/3 width) - Consolidated */}
+        {/* Right Column - Sidebar (1/3 width) */}
         <div className="space-y-4">
-          {/* Kana Progress */}
-          <FadeIn delay={0.08}>
-            <KanaProgressCard />
-          </FadeIn>
-
-          {/* Quick Actions - Consolidated with Daily Challenge */}
-          <FadeIn delay={0.12}>
+          {/* Quick Actions */}
+          <FadeIn delay={0.1}>
             <Card className="border-border">
               <CardHeader className="pb-3">
                 <CardTitle className="flex items-center gap-2 text-sm font-medium">
@@ -336,44 +315,31 @@ export default async function DashboardPage() {
                     Latihan Kuis
                   </Button>
                 </Link>
-                <Link href="/learn" className="block">
+                <Link href="/vocabulary" className="block">
                   <Button variant="outline" className="w-full justify-start text-sm">
                     <BookOpen className="mr-2 h-4 w-4" />
-                    Pelajaran Baru
+                    Kosakata Baru
                   </Button>
                 </Link>
-                {/* Daily Challenge Progress */}
-                <div className="mt-3 rounded-lg bg-muted/50 p-3">
-                  <div className="mb-2 flex items-center justify-between text-sm">
-                    <span className="text-muted-foreground">Tantangan Harian</span>
-                    <span className="font-medium">{cardsReviewedToday}/10</span>
-                  </div>
-                  <ProgressBar value={Math.min(cardsReviewedToday * 10, 100)} size="sm" />
-                </div>
               </CardContent>
             </Card>
           </FadeIn>
 
-          {/* Streak & Rekor */}
-          <FadeIn delay={0.16}>
+          {/* Daily Challenge Progress */}
+          <FadeIn delay={0.12}>
             <Card className="border-border">
-              <CardContent className="p-4">
-                <div className="flex items-center gap-3">
-                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary/10">
-                    <Flame className="h-5 w-5 text-primary" />
-                  </div>
-                  <div className="min-w-0 flex-1">
-                    <p className="text-lg font-bold">{streakDays} Hari Streak</p>
-                    <p className="text-sm text-muted-foreground">
-                      {streakDays > 0 ? "Streak sedang aktif!" : "Mulai streak Anda hari ini!"}
-                    </p>
-                  </div>
+              <CardContent className="p-4 space-y-3">
+                <div className="flex items-center gap-2">
+                  <Flame className="h-5 w-5 text-primary" />
+                  <h3 className="font-medium text-sm">Tantangan Harian</h3>
                 </div>
-                {streakInfo.longest_streak > 0 && streakInfo.longest_streak > streakDays && (
-                  <div className="mt-2 text-sm text-muted-foreground">
-                    Rekor terbaik: {streakInfo.longest_streak} hari
+                <div className="space-y-2">
+                  <div className="flex justify-between text-xs">
+                    <span className="text-muted-foreground">Progress</span>
+                    <span className="font-medium">{cardsReviewedToday}/{DAILY_GOAL}</span>
                   </div>
-                )}
+                  <ProgressBar value={dailyGoalProgress} size="sm" />
+                </div>
               </CardContent>
             </Card>
           </FadeIn>

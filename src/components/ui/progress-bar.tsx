@@ -37,24 +37,26 @@ export function ProgressBar({
   }
 
   return (
-    <div className={cn("space-y-2", className)}>
+    <div suppressHydrationWarning className={cn("space-y-2", className)}>
       {(label || showValue) && (
-        <div className="flex items-center justify-between text-sm">
+        <div suppressHydrationWarning className="flex items-center justify-between text-sm">
           {label && <p className="font-medium text-foreground">{label}</p>}
           {showValue && (
-            <p className="text-muted-foreground">
+            <p suppressHydrationWarning className="text-muted-foreground">
               {value}/{max}
             </p>
           )}
         </div>
       )}
       <div
+        suppressHydrationWarning
         className={cn(
           "w-full overflow-hidden rounded-full bg-muted",
           sizeClasses[size]
         )}
       >
         <div
+          suppressHydrationWarning
           className={cn(
             "h-full rounded-full transition-all duration-500 ease-out",
             variantClasses[variant]
