@@ -1,6 +1,6 @@
 "use server";
 
-import { revalidatePath } from "next/cache";
+import { revalidatePath, revalidateTag } from "next/cache";
 import { createSRSCardsForContent, createNewSRSCard } from "@/lib/db/srs";
 import type { CardType } from "@/types/srs";
 
@@ -29,6 +29,8 @@ export async function addToSRSContentAction(
     }));
 
     await createSRSCardsForContent(user.id, cards);
+
+    revalidateTag(`user-${user.id}-srs`, "max");
 
     revalidatePath("/flashcards");
     revalidatePath("/vocabulary");
@@ -79,6 +81,8 @@ export async function addToSRSContentNewCardAction(
         deck_key: deckKey,
       });
     }
+
+    revalidateTag(`user-${user.id}-srs`, "max");
 
     revalidatePath("/flashcards");
     revalidatePath("/vocabulary");

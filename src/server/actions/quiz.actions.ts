@@ -1,6 +1,6 @@
 "use server";
 
-import { revalidatePath } from "next/cache";
+import { revalidatePath, revalidateTag } from "next/cache";
 import { saveQuizResult } from "@/lib/db/quiz";
 import { updateStreak, addXP, recordDailyActivity } from "@/lib/db/progress";
 import { XP_REWARDS } from "@/types/progress";
@@ -54,6 +54,9 @@ export async function completeQuizAction(
       timeMinutes: Math.round(timeSpentSeconds / 60),
       accuracy: score,
     });
+
+    revalidateTag(`user-${user.id}-progress`, "max");
+    revalidateTag(`user-${user.id}-kana`, "max");
 
     revalidatePath("/quiz");
     revalidatePath("/dashboard");

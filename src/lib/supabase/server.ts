@@ -1,5 +1,34 @@
 import { createServerClient } from "@supabase/ssr";
+import { createClient as createSupabaseClient } from "@supabase/supabase-js";
 import { cookies } from "next/headers";
+
+/**
+ * Create a static Supabase client for cached data operations (unstable_cache).
+ * Does NOT access cookies() so it will not throw dynamic route errors in cache scopes.
+ */
+export function createStaticClient() {
+  return createSupabaseClient(
+    process.env.NEXT_PUBLIC_SUPABASE_URL!,
+    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
+  );
+}
+
+/**
+ * Create a static Supabase admin client for cached server-side user queries (unstable_cache).
+ * Does NOT access cookies() so it will not throw dynamic route errors in cache scopes.
+ */
+export function createStaticAdminClient() {
+  return createSupabaseClient(
+    process.env.NEXT_PUBLIC_SUPABASE_URL!,
+    process.env.SUPABASE_SERVICE_ROLE_KEY!,
+    {
+      auth: {
+        autoRefreshToken: false,
+        persistSession: false,
+      },
+    }
+  );
+}
 
 /**
  * Create a Supabase client for use in Server Components and API Routes.

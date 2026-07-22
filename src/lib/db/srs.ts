@@ -3,7 +3,8 @@
  * All functions scope data by authenticated user.
  */
 
-import { createClient } from "@/lib/supabase/server";
+import { unstable_cache } from "next/cache";
+import { createClient, createStaticAdminClient } from "@/lib/supabase/server";
 import type {
   SRSCard,
   SRSRating,
@@ -61,39 +62,51 @@ export async function getUserCardByContent(
 /**
  * Get all SRS cards for a user.
  */
-export async function getUserCards(userId: string) {
-  const supabase = await createClient();
+export function getUserCards(userId: string) {
+  return unstable_cache(
+    async () => {
+      const supabase = createStaticAdminClient();
 
-  const { data, error } = await supabase
-    .from("user_srs_cards")
-    .select("*")
-    .eq("user_id", userId)
-    .order("due_date");
+      const { data, error } = await supabase
+        .from("user_srs_cards")
+        .select("*")
+        .eq("user_id", userId)
+        .order("due_date");
 
-  if (error) throw error;
-  return data as SRSCard[];
+      if (error) throw error;
+      return data as SRSCard[];
+    },
+    ["user-srs-cards", userId],
+    { revalidate: 300, tags: [`user-${userId}-srs`] }
+  )();
 }
 
 /**
  * Get due cards for review.
  */
-export async function getDueCards(userId: string) {
-  const supabase = await createClient();
-  const now = new Date().toISOString();
+export function getDueCards(userId: string) {
+  return unstable_cache(
+    async () => {
+      const supabase = createStaticAdminClient();
+      const now = new Date().toISOString();
 
-  const { data, error } = await supabase
-    .from("user_srs_cards")
-    .select("*")
-    .eq("user_id", userId)
-    .lte("due_date", now)
-    .in("state", ["new", "learning", "review", "relearning"])
-    .order("due_date");
+      const { data, error } = await supabase
+        .from("user_srs_cards")
+        .select("*")
+        .eq("user_id", userId)
+        .lte("due_date", now)
+        .in("state", ["new", "learning", "review", "relearning"])
+        .order("due_date");
 
-  if (error) {
-    console.warn("[getDueCards] failed:", error.message);
-    return [] as SRSCard[];
-  }
-  return (data || []) as SRSCard[];
+      if (error) {
+        console.warn("[getDueCards] failed:", error.message);
+        return [] as SRSCard[];
+      }
+      return (data || []) as SRSCard[];
+    },
+    ["user-due-cards", userId],
+    { revalidate: 60, tags: [`user-${userId}-srs`] }
+  )();
 }
 
 /**
@@ -356,50 +369,52 @@ export function calculateNextReview(
 // ponytail: removed getCardReviewLog — never imported outside srs.ts
 
 /**
- * Get the last review rating for each content_id for a given card type.
+ * Get last review rating for each content item.
  * Returns a map of content_id -> last rating.
  */
-export async function getLastReviewPerContent(
+export function getLastReviewPerContent(
   userId: string,
   cardType: CardType
 ): Promise<Record<string, SRSRating>> {
-  const supabase = await createClient();
+  return unstable_cache(
+    async () => {
+      const supabase = createStaticAdminClient();
 
-  // Get the most recent review for each card of this type
-  const { data, error } = await supabase
-    .from("user_srs_cards")
-    .select(`
-      content_id,
-      srs_review_log!left (
-        rating,
-        reviewed_at
-      )
-    `)
-    .eq("user_id", userId)
-    .eq("card_type", cardType);
+      const { data, error } = await supabase
+        .from("user_srs_cards")
+        .select(`
+          content_id,
+          srs_review_log!left (
+            rating,
+            reviewed_at
+          )
+        `)
+        .eq("user_id", userId)
+        .eq("card_type", cardType);
 
-  if (error) {
-    console.warn("[getLastReviewPerContent] failed:", error.message);
-    return {};
-  }
+      if (error) {
+        console.warn("[getLastReviewPerContent] failed:", error.message);
+        return {};
+      }
 
-  // Build a map of content_id -> last rating
-  // Each card may have multiple reviews; we take the most recent one
-  const result: Record<string, SRSRating> = {};
+      const result: Record<string, SRSRating> = {};
 
-  for (const card of data ?? []) {
-    const reviews = card.srs_review_log as unknown as Array<{
-      rating: SRSRating;
-      reviewed_at: string;
-    }> | null;
+      for (const card of data ?? []) {
+        const reviews = card.srs_review_log as unknown as Array<{
+          rating: SRSRating;
+          reviewed_at: string;
+        }> | null;
 
-    if (reviews && reviews.length > 0) {
-      // Already ordered by reviewed_at DESC from the query
-      result[card.content_id] = reviews[0].rating;
-    }
-  }
+        if (reviews && reviews.length > 0) {
+          result[card.content_id] = reviews[0].rating;
+        }
+      }
 
-  return result;
+      return result;
+    },
+    ["last-review-per-content", userId, cardType],
+    { revalidate: 300, tags: [`user-${userId}-srs`] }
+  )();
 }
 
 /**

@@ -3,7 +3,8 @@
  * All functions require authentication context.
  */
 
-import { createClient } from "@/lib/supabase/server";
+import { unstable_cache } from "next/cache";
+import { createClient, createStaticClient } from "@/lib/supabase/server";
 import type { Vocabulary, GrammarPoint, KanjiCharacter, KanaCharacter, Particle, ReadingPassage } from "@/types/content";
 import type { JLPTLevel } from "@/types/common";
 
@@ -215,33 +216,43 @@ export async function searchAll(query: string, limit = 10) {
 /**
  * Get vocabulary by JLPT level.
  */
-export async function getVocabularyByLevel(level: JLPTLevel) {
-  const supabase = await createClient();
+export function getVocabularyByLevel(level: JLPTLevel) {
+  return unstable_cache(
+    async () => {
+      const supabase = createStaticClient();
+      const { data, error } = await supabase
+        .from("vocabulary")
+        .select("*")
+        .eq("jlpt_level", level)
+        .order("display_order");
 
-  const { data, error } = await supabase
-    .from("vocabulary")
-    .select("*")
-    .eq("jlpt_level", level)
-    .order("display_order");
-
-  if (error) throw error;
-  return data as Vocabulary[];
+      if (error) throw error;
+      return data as Vocabulary[];
+    },
+    ["vocabulary-by-level", level],
+    { revalidate: 86400, tags: ["content", "vocabulary", `vocab-${level}`] }
+  )();
 }
 
 /**
  * Get vocabulary by ID.
  */
-export async function getVocabularyById(id: string) {
-  const supabase = await createClient();
+export function getVocabularyById(id: string) {
+  return unstable_cache(
+    async () => {
+      const supabase = createStaticClient();
+      const { data, error } = await supabase
+        .from("vocabulary")
+        .select("*")
+        .eq("id", id)
+        .single();
 
-  const { data, error } = await supabase
-    .from("vocabulary")
-    .select("*")
-    .eq("id", id)
-    .single();
-
-  if (error) throw error;
-  return data as Vocabulary;
+      if (error) throw error;
+      return data as Vocabulary;
+    },
+    ["vocabulary-by-id", id],
+    { revalidate: 86400, tags: ["content", "vocabulary"] }
+  )();
 }
 
 /**
@@ -263,19 +274,24 @@ export async function searchVocabulary(query: string, limit = 20) {
 /**
  * Get vocabulary count by level.
  */
-export async function getVocabularyCount(level?: JLPTLevel) {
-  const supabase = await createClient();
+export function getVocabularyCount(level?: JLPTLevel) {
+  return unstable_cache(
+    async () => {
+      const supabase = createStaticClient();
+      let query = supabase.from("vocabulary").select("id", { count: "exact", head: true });
 
-  let query = supabase.from("vocabulary").select("id", { count: "exact", head: true });
+      if (level) {
+        query = query.eq("jlpt_level", level);
+      }
 
-  if (level) {
-    query = query.eq("jlpt_level", level);
-  }
+      const { count, error } = await query;
 
-  const { count, error } = await query;
-
-  if (error) throw error;
-  return count ?? 0;
+      if (error) throw error;
+      return count ?? 0;
+    },
+    ["vocabulary-count", level || "all"],
+    { revalidate: 86400, tags: ["content", "vocabulary"] }
+  )();
 }
 
 // ============================================
@@ -285,51 +301,64 @@ export async function getVocabularyCount(level?: JLPTLevel) {
 /**
  * Get grammar points by JLPT level.
  */
-export async function getGrammarByLevel(level: JLPTLevel) {
-  const supabase = await createClient();
+export function getGrammarByLevel(level: JLPTLevel) {
+  return unstable_cache(
+    async () => {
+      const supabase = createStaticClient();
+      const { data, error } = await supabase
+        .from("grammar_points")
+        .select("*")
+        .eq("jlpt_level", level)
+        .order("display_order");
 
-  const { data, error } = await supabase
-    .from("grammar_points")
-    .select("*")
-    .eq("jlpt_level", level)
-    .order("display_order");
-
-  if (error) throw error;
-  return data as GrammarPoint[];
+      if (error) throw error;
+      return data as GrammarPoint[];
+    },
+    ["grammar-by-level", level],
+    { revalidate: 86400, tags: ["content", "grammar", `grammar-${level}`] }
+  )();
 }
 
 /**
  * Get grammar point by ID.
  */
-export async function getGrammarById(id: string) {
-  const supabase = await createClient();
+export function getGrammarById(id: string) {
+  return unstable_cache(
+    async () => {
+      const supabase = createStaticClient();
+      const { data, error } = await supabase
+        .from("grammar_points")
+        .select("*")
+        .eq("id", id)
+        .single();
 
-  const { data, error } = await supabase
-    .from("grammar_points")
-    .select("*")
-    .eq("id", id)
-    .single();
-
-  if (error) throw error;
-  return data as GrammarPoint;
+      if (error) throw error;
+      return data as GrammarPoint;
+    },
+    ["grammar-by-id", id],
+    { revalidate: 86400, tags: ["content", "grammar"] }
+  )();
 }
 
 /**
  * Get core N5 grammar points.
  */
-export async function getCoreGrammarN5() {
-  const supabase = await createClient();
+export const getCoreGrammarN5 = unstable_cache(
+  async () => {
+    const supabase = createStaticClient();
+    const { data, error } = await supabase
+      .from("grammar_points")
+      .select("*")
+      .eq("jlpt_level", "N5")
+      .eq("is_core_n5", true)
+      .order("display_order");
 
-  const { data, error } = await supabase
-    .from("grammar_points")
-    .select("*")
-    .eq("jlpt_level", "N5")
-    .eq("is_core_n5", true)
-    .order("display_order");
-
-  if (error) throw error;
-  return data as GrammarPoint[];
-}
+    if (error) throw error;
+    return data as GrammarPoint[];
+  },
+  ["core-grammar-n5"],
+  { revalidate: 86400, tags: ["content", "grammar"] }
+);
 
 // ============================================
 // Kanji
@@ -338,51 +367,66 @@ export async function getCoreGrammarN5() {
 /**
  * Get kanji by JLPT level.
  */
-export async function getKanjiByLevel(level: JLPTLevel) {
-  const supabase = await createClient();
+export function getKanjiByLevel(level: JLPTLevel) {
+  return unstable_cache(
+    async () => {
+      const supabase = createStaticClient();
+      const { data, error } = await supabase
+        .from("kanji")
+        .select("*")
+        .eq("jlpt_level", level)
+        .order("stroke_count");
 
-  const { data, error } = await supabase
-    .from("kanji")
-    .select("*")
-    .eq("jlpt_level", level)
-    .order("stroke_count");
-
-  if (error) throw error;
-  return data as KanjiCharacter[];
+      if (error) throw error;
+      return data as KanjiCharacter[];
+    },
+    ["kanji-by-level", level],
+    { revalidate: 86400, tags: ["content", "kanji", `kanji-${level}`] }
+  )();
 }
 
 /**
  * Get kanji by character.
  */
-export async function getKanjiByCharacter(character: string) {
-  const supabase = await createClient();
+export function getKanjiByCharacter(character: string) {
+  return unstable_cache(
+    async () => {
+      const supabase = createStaticClient();
+      const { data, error } = await supabase
+        .from("kanji")
+        .select("*")
+        .eq("kanji", character)
+        .single();
 
-  const { data, error } = await supabase
-    .from("kanji")
-    .select("*")
-    .eq("kanji", character)
-    .single();
-
-  if (error) throw error;
-  return data as KanjiCharacter;
+      if (error) throw error;
+      return data as KanjiCharacter;
+    },
+    ["kanji-by-char", character],
+    { revalidate: 86400, tags: ["content", "kanji"] }
+  )();
 }
 
 /**
  * Get kanji count by level.
  */
-export async function getKanjiCount(level?: JLPTLevel) {
-  const supabase = await createClient();
+export function getKanjiCount(level?: JLPTLevel) {
+  return unstable_cache(
+    async () => {
+      const supabase = createStaticClient();
+      let query = supabase.from("kanji").select("id", { count: "exact", head: true });
 
-  let query = supabase.from("kanji").select("id", { count: "exact", head: true });
+      if (level) {
+        query = query.eq("jlpt_level", level);
+      }
 
-  if (level) {
-    query = query.eq("jlpt_level", level);
-  }
+      const { count, error } = await query;
 
-  const { count, error } = await query;
-
-  if (error) throw error;
-  return count ?? 0;
+      if (error) throw error;
+      return count ?? 0;
+    },
+    ["kanji-count", level || "all"],
+    { revalidate: 86400, tags: ["content", "kanji"] }
+  )();
 }
 
 // ============================================
@@ -392,34 +436,40 @@ export async function getKanjiCount(level?: JLPTLevel) {
 /**
  * Get all hiragana.
  */
-export async function getHiragana() {
-  const supabase = await createClient();
+export const getHiragana = unstable_cache(
+  async () => {
+    const supabase = createStaticClient();
+    const { data, error } = await supabase
+      .from("kana_characters")
+      .select("*")
+      .eq("script", "hiragana")
+      .order("display_order");
 
-  const { data, error } = await supabase
-    .from("kana_characters")
-    .select("*")
-    .eq("script", "hiragana")
-    .order("display_order");
-
-  if (error) throw error;
-  return data as KanaCharacter[];
-}
+    if (error) throw error;
+    return data as KanaCharacter[];
+  },
+  ["hiragana-characters"],
+  { revalidate: 86400, tags: ["content", "kana", "hiragana"] }
+);
 
 /**
  * Get all katakana.
  */
-export async function getKatakana() {
-  const supabase = await createClient();
+export const getKatakana = unstable_cache(
+  async () => {
+    const supabase = createStaticClient();
+    const { data, error } = await supabase
+      .from("kana_characters")
+      .select("*")
+      .eq("script", "katakana")
+      .order("display_order");
 
-  const { data, error } = await supabase
-    .from("kana_characters")
-    .select("*")
-    .eq("script", "katakana")
-    .order("display_order");
-
-  if (error) throw error;
-  return data as KanaCharacter[];
-}
+    if (error) throw error;
+    return data as KanaCharacter[];
+  },
+  ["katakana-characters"],
+  { revalidate: 86400, tags: ["content", "kana", "katakana"] }
+);
 
 /**
  * Get kana chart (hiragana + katakana).
@@ -440,17 +490,22 @@ export async function getKanaChart() {
 /**
  * Get particles by JLPT level.
  */
-export async function getParticlesByLevel(level: JLPTLevel) {
-  const supabase = await createClient();
+export function getParticlesByLevel(level: JLPTLevel) {
+  return unstable_cache(
+    async () => {
+      const supabase = createStaticClient();
+      const { data, error } = await supabase
+        .from("particles")
+        .select("*")
+        .eq("jlpt_level", level)
+        .order("particle");
 
-  const { data, error } = await supabase
-    .from("particles")
-    .select("*")
-    .eq("jlpt_level", level)
-    .order("particle");
-
-  if (error) throw error;
-  return data as Particle[];
+      if (error) throw error;
+      return data as Particle[];
+    },
+    ["particles-by-level", level],
+    { revalidate: 86400, tags: ["content", "particles"] }
+  )();
 }
 
 // ============================================
@@ -460,33 +515,43 @@ export async function getParticlesByLevel(level: JLPTLevel) {
 /**
  * Get reading passages by JLPT level.
  */
-export async function getReadingPassages(level: JLPTLevel) {
-  const supabase = await createClient();
+export function getReadingPassages(level: JLPTLevel) {
+  return unstable_cache(
+    async () => {
+      const supabase = createStaticClient();
+      const { data, error } = await supabase
+        .from("reading_passages")
+        .select("*")
+        .eq("jlpt_level", level)
+        .order("display_order");
 
-  const { data, error } = await supabase
-    .from("reading_passages")
-    .select("*")
-    .eq("jlpt_level", level)
-    .order("display_order");
-
-  if (error) throw error;
-  return data as ReadingPassage[];
+      if (error) throw error;
+      return data as ReadingPassage[];
+    },
+    ["reading-passages-by-level", level],
+    { revalidate: 86400, tags: ["content", "reading"] }
+  )();
 }
 
 /**
  * Get reading passage by ID.
  */
-export async function getReadingPassageById(id: string) {
-  const supabase = await createClient();
+export function getReadingPassageById(id: string) {
+  return unstable_cache(
+    async () => {
+      const supabase = createStaticClient();
+      const { data, error } = await supabase
+        .from("reading_passages")
+        .select("*")
+        .eq("id", id)
+        .single();
 
-  const { data, error } = await supabase
-    .from("reading_passages")
-    .select("*")
-    .eq("id", id)
-    .single();
-
-  if (error) throw error;
-  return data as ReadingPassage;
+      if (error) throw error;
+      return data as ReadingPassage;
+    },
+    ["reading-passage-by-id", id],
+    { revalidate: 86400, tags: ["content", "reading"] }
+  )();
 }
 
 // ============================================

@@ -3,7 +3,8 @@
  * All functions scope data by authenticated user.
  */
 
-import { createClient } from "@/lib/supabase/server";
+import { unstable_cache } from "next/cache";
+import { createClient, createStaticAdminClient } from "@/lib/supabase/server";
 import type { UserProgress, DailyStats, LessonProgress, StreakInfo, ProgressSummary } from "@/types/progress";
 import { calculateLevel, LEVEL_CONFIG } from "@/types/progress";
 import type { JLPTLevel } from "@/types/common";
@@ -267,50 +268,56 @@ export async function recordDailyActivity(
 /**
  * Get weekly stats.
  */
-export async function getWeeklyStats(userId: string) {
-  const supabase = await createClient();
+export function getWeeklyStats(userId: string) {
+  return unstable_cache(
+    async () => {
+      const supabase = createStaticAdminClient();
 
-  const today = new Date();
-  const weekAgo = new Date(today);
-  weekAgo.setDate(weekAgo.getDate() - 7);
+      const today = new Date();
+      const weekAgo = new Date(today);
+      weekAgo.setDate(weekAgo.getDate() - 7);
 
-  const { data, error } = await supabase
-    .from("daily_stats")
-    .select("*")
-    .eq("user_id", userId)
-    .gte("date", weekAgo.toISOString().split("T")[0])
-    .lte("date", today.toISOString().split("T")[0])
-    .order("date");
+      const { data, error } = await supabase
+        .from("daily_stats")
+        .select("*")
+        .eq("user_id", userId)
+        .gte("date", weekAgo.toISOString().split("T")[0])
+        .lte("date", today.toISOString().split("T")[0])
+        .order("date");
 
-  // Gracefully handle missing table or RLS issues
-  if (error) {
-    console.warn("[getWeeklyStats] failed:", error.message);
-    return {
-      week_start: weekAgo.toISOString().split("T")[0],
-      week_end: today.toISOString().split("T")[0],
-      total_xp: 0,
-      total_lessons: 0,
-      total_time_minutes: 0,
-      average_accuracy: 0,
-      days_active: 0,
-      daily_stats: [],
-    };
-  }
+      // Gracefully handle missing table or RLS issues
+      if (error) {
+        console.warn("[getWeeklyStats] failed:", error.message);
+        return {
+          week_start: weekAgo.toISOString().split("T")[0],
+          week_end: today.toISOString().split("T")[0],
+          total_xp: 0,
+          total_lessons: 0,
+          total_time_minutes: 0,
+          average_accuracy: 0,
+          days_active: 0,
+          daily_stats: [],
+        };
+      }
 
-  const stats = (data || []) as DailyStats[];
+      const stats = (data || []) as DailyStats[];
 
-  return {
-    week_start: weekAgo.toISOString().split("T")[0],
-    week_end: today.toISOString().split("T")[0],
-    total_xp: stats.reduce((sum, s) => sum + (s.xp_earned ?? 0), 0),
-    total_lessons: stats.reduce((sum, s) => sum + (s.lessons_completed ?? 0), 0),
-    total_time_minutes: stats.reduce((sum, s) => sum + (s.time_spent_minutes ?? 0), 0),
-    average_accuracy: stats.length > 0
-      ? stats.reduce((sum, s) => sum + (s.accuracy ?? 0), 0) / stats.length
-      : 0,
-    days_active: stats.length,
-    daily_stats: stats,
-  };
+      return {
+        week_start: weekAgo.toISOString().split("T")[0],
+        week_end: today.toISOString().split("T")[0],
+        total_xp: stats.reduce((sum, s) => sum + (s.xp_earned ?? 0), 0),
+        total_lessons: stats.reduce((sum, s) => sum + (s.lessons_completed ?? 0), 0),
+        total_time_minutes: stats.reduce((sum, s) => sum + (s.time_spent_minutes ?? 0), 0),
+        average_accuracy: stats.length > 0
+          ? stats.reduce((sum, s) => sum + (s.accuracy ?? 0), 0) / stats.length
+          : 0,
+        days_active: stats.length,
+        daily_stats: stats,
+      };
+    },
+    ["weekly-stats", userId],
+    { revalidate: 300, tags: [`user-${userId}-progress`] }
+  )();
 }
 
 // ============================================
@@ -443,43 +450,45 @@ export async function getProgressSummary(userId: string): Promise<ProgressSummar
  * Returns array of { kana_id, mastery_count } for each kana character.
  * Counts correct answers from kana_quiz_history per user.
  */
-export async function getKanaProgress(userId: string, script: "hiragana" | "katakana") {
-  const supabase = await createClient();
+export function getKanaProgress(userId: string, script: "hiragana" | "katakana") {
+  return unstable_cache(
+    async () => {
+      const supabase = createStaticAdminClient();
 
-  // Count correct answers from kana_quiz_history per user
-  try {
-    const { data: historyData, error: historyError } = await supabase
-      .from("kana_quiz_history")
-      .select("kana_id, is_correct")
-      .eq("user_id", userId)
-      .eq("script", script);
+      try {
+        const { data: historyData, error: historyError } = await supabase
+          .from("kana_quiz_history")
+          .select("kana_id, is_correct")
+          .eq("user_id", userId)
+          .eq("script", script);
 
-    if (historyError) {
-      console.warn("[getKanaProgress] history query error:", historyError);
-      return [];
-    }
-
-    if (historyData && historyData.length > 0) {
-      // Count correct answers per kana
-      const counts: Record<string, number> = {};
-      historyData.forEach((h: any) => {
-        if (h.is_correct) {
-          counts[h.kana_id] = (counts[h.kana_id] || 0) + 1;
+        if (historyError) {
+          console.warn("[getKanaProgress] history query error:", historyError);
+          return [];
         }
-      });
 
-      const progress = Object.entries(counts).map(([kana_id, mastery_count]) => ({
-        kana_id,
-        mastery_count,
-      }));
+        if (historyData && historyData.length > 0) {
+          const counts: Record<string, number> = {};
+          historyData.forEach((h: any) => {
+            if (h.is_correct) {
+              counts[h.kana_id] = (counts[h.kana_id] || 0) + 1;
+            }
+          });
 
-      console.log(`[getKanaProgress] Found ${progress.length} mastered chars from history`);
-      return progress;
-    }
-  } catch (err) {
-    console.warn("[getKanaProgress] error:", err);
-  }
+          const progress = Object.entries(counts).map(([kana_id, mastery_count]) => ({
+            kana_id,
+            mastery_count,
+          }));
 
-  console.log("[getKanaProgress] No progress found, returning empty array");
-  return [];
+          return progress;
+        }
+      } catch (err) {
+        console.warn("[getKanaProgress] error:", err);
+      }
+
+      return [];
+    },
+    ["kana-progress", userId, script],
+    { revalidate: 300, tags: [`user-${userId}-progress`, `user-${userId}-kana`] }
+  )();
 }

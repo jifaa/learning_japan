@@ -1,3 +1,4 @@
+import { cache } from "react";
 import { redirect } from "next/navigation";
 import { createClient } from "@/lib/supabase/server";
 
@@ -5,7 +6,7 @@ import { createClient } from "@/lib/supabase/server";
  * Get the current authenticated user.
  * Returns null if not authenticated.
  */
-export async function getCurrentUser() {
+export const getCurrentUser = cache(async () => {
   const supabase = await createClient();
 
   const {
@@ -18,7 +19,7 @@ export async function getCurrentUser() {
   }
 
   return user;
-}
+});
 
 /**
  * Require authentication.
@@ -136,7 +137,7 @@ export async function updatePassword(newPassword: string) {
 /**
  * Get user profile data from profiles table.
  */
-export async function getUserProfile() {
+export const getUserProfile = cache(async () => {
   const supabase = await createClient();
   const user = await getCurrentUser();
 
@@ -155,7 +156,7 @@ export async function getUserProfile() {
   }
 
   return data;
-}
+});
 
 /**
  * Auth error messages mapping.
