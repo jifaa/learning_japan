@@ -69,7 +69,7 @@ export async function updateSession(request: NextRequest) {
   );
 
   // Auth routes that should redirect if already logged in
-  const authPaths = ["/login", "/register"];
+  const authPaths = ["/login", "/register", "/forgot-password", "/reset-password"];
   const isAuthPath = authPaths.some(
     (path) =>
       request.nextUrl.pathname === path ||
