@@ -22,7 +22,7 @@ export default async function HomePage() {
       {/* Header */}
       <header className="border-b border-border">
         <div className="max-w-4xl mx-auto px-4 h-16 flex items-center justify-between">
-          <span className="font-semibold text-foreground">Learning Japan</span>
+          <span className="font-semibold text-foreground">Easlern Japan</span>
           <div className="flex items-center gap-4">
             <Link href="/login">
               <Button variant="ghost" size="sm">
@@ -62,7 +62,7 @@ export default async function HomePage() {
       {/* Footer */}
       <footer className="border-t border-border py-6">
         <div className="max-w-4xl mx-auto px-4 text-center text-sm text-muted-foreground">
-          Perjalanan Anda menuju kecekapan bahasa Jepang dimulai di sini.
+          Perjalanan Anda menuju kecakapan bahasa Jepang dimulai di sini.
         </div>
       </footer>
     </div>
