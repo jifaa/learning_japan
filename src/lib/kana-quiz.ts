@@ -68,11 +68,6 @@ export function getKanaQuizList(
     return { mastered, percent };
   };
 
-  // Check if a set of rows are all mastered
-  const areRowsMastered = (rows: readonly string[]) => {
-    return rows.every((row) => isRowMastered(basicChars, row, progressMap));
-  };
-
   // Check if all chars in category are mastered
   const isCharsMastered = (categoryChars: KanaCharacter[]) =>
     categoryChars.length > 0 && isCategoryMastered(categoryChars, progressMap);
@@ -308,7 +303,7 @@ export function buildOptions(correct: KanaCharacter, pool: KanaCharacter[]) {
 
   // Ambil max 3 pilihan salah, pastikan romaji-nya unik antar sesama pilihan
   for (const c of shuffled) {
-    if (wrong.length >= MASTERY_THRESHOLD) break;
+    if (wrong.length >= 3) break;
     if (!wrong.some((w) => w.romaji === c.romaji)) {
       wrong.push(c);
     }

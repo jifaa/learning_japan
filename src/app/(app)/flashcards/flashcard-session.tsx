@@ -36,30 +36,30 @@ export function ReviewSession({ cards, contentMap, onComplete }: ReviewSessionPr
   const [isLoading, setIsLoading] = useState(false);
   const [reviewed, setReviewed] = useState(0);
   const [isComplete, setIsComplete] = useState(false);
-  const startTimeRef = useRef(Date.now());
+  const startTimeRef = useRef(0);
 
   const currentCard = cards[currentIndex];
   const content = currentCard ? contentMap[currentCard.content_id] : null;
   const totalCards = cards.length;
 
   useEffect(() => {
-    setIsFlipped(false);
     startTimeRef.current = Date.now();
   }, [currentIndex]);
 
-
   const handleFlip = useCallback(() => {
     setIsFlipped((f) => !f);
-  }, [isFlipped]);
+  }, []);
 
   const handleRate = useCallback(async (rating: SRSRating) => {
     if (!currentCard || isLoading) return;
     setIsLoading(true);
-    const timeTakenMs = Date.now() - startTimeRef.current;
+    const startTime = startTimeRef.current || Date.now();
+    const timeTakenMs = Date.now() - startTime;
     const result = await reviewFlashcardAction(currentCard.id, rating, timeTakenMs);
     if (result.success) {
       setReviewed((r) => r + 1);
       if (currentIndex < totalCards - 1) {
+        setIsFlipped(false);
         setCurrentIndex((i) => i + 1);
       } else {
         setIsComplete(true);

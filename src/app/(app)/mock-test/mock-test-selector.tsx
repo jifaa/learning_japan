@@ -92,7 +92,7 @@ export function MockTestSelector() {
             <div>
               <h2 className="text-lg font-semibold">Peringatan Penting</h2>
               <p className="text-sm text-muted-foreground">
-                sekali dimulai, timer tidak dapat dijeda. Pastikan Anda memiliki waktu yang cukup sebelum memulai.
+                Sekali dimulai, timer tidak dapat dijeda. Pastikan Anda memiliki waktu yang cukup sebelum memulai.
               </p>
             </div>
           </CardContent>

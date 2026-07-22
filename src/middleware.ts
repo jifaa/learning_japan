@@ -60,15 +60,20 @@ export async function updateSession(request: NextRequest) {
     "/listening",
     "/achievements",
     "/settings",
+    "/avatars",
   ];
-  const isProtectedPath = protectedPaths.some((path) =>
-    request.nextUrl.pathname.startsWith(path)
+  const isProtectedPath = protectedPaths.some(
+    (path) =>
+      request.nextUrl.pathname === path ||
+      request.nextUrl.pathname.startsWith(path + "/")
   );
 
   // Auth routes that should redirect if already logged in
   const authPaths = ["/login", "/register"];
-  const isAuthPath = authPaths.some((path) =>
-    request.nextUrl.pathname.startsWith(path)
+  const isAuthPath = authPaths.some(
+    (path) =>
+      request.nextUrl.pathname === path ||
+      request.nextUrl.pathname.startsWith(path + "/")
   );
 
   // Redirect to login if accessing protected route without auth
@@ -81,9 +86,16 @@ export async function updateSession(request: NextRequest) {
 
   // Redirect to dashboard if accessing auth pages while logged in
   if (isAuthPath && user) {
-    const redirectUrl = request.nextUrl.searchParams.get("redirect");
+    const rawRedirect = request.nextUrl.searchParams.get("redirect");
+    const safeRedirect =
+      rawRedirect &&
+      rawRedirect.startsWith("/") &&
+      !rawRedirect.startsWith("//") &&
+      !rawRedirect.startsWith("/\\")
+        ? rawRedirect
+        : "/dashboard";
     const url = request.nextUrl.clone();
-    url.pathname = redirectUrl || "/dashboard";
+    url.pathname = safeRedirect;
     url.searchParams.delete("redirect");
     return NextResponse.redirect(url);
   }

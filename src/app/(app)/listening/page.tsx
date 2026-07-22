@@ -19,7 +19,7 @@ export default async function ListeningPage() {
         <div className="flex flex-col gap-1">
           <h1 className="text-2xl font-semibold tracking-tight">Pendengaran</h1>
           <p className="text-sm text-muted-foreground">
-            Latihan pemahaman听力 dengan audio bahasa Jepang
+            Latihan pemahaman pendengaran (Choukai) dengan audio bahasa Jepang
           </p>
         </div>
       </FadeIn>
@@ -42,9 +42,9 @@ export default async function ListeningPage() {
         <SectionHeader title="Latihan Pendengaran" description="Dengarkan dan pilih jawaban yang benar" />
         <div className="mt-4 space-y-4">
           {[
-            { level: "N5", title: "Kalimat Dasar", desc: "Dengarkan kalimat sederhana sehari-hari", questions: 10, minutes: 5 },
-            { level: "N5", title: "Dialog Pendek", desc: "Percakapan singkat di toko dan restoran", questions: 10, minutes: 5 },
-            { level: "N5", title: "Angka dan Waktu", desc: "Dengarkan angka, tanggal, dan jam", questions: 10, minutes: 5 },
+            { level: "N5", title: "Kalimat Dasar", desc: "Dengarkan kalimat sederhana sehari-hari", sample: "こんにちは、お元気ですか？今日も一緒に勉強しましょう。", questions: 10, minutes: 5 },
+            { level: "N5", title: "Dialog Pendek", desc: "Percakapan singkat di toko dan restoran", sample: "すみません、これはいくらですか？五百円です。", questions: 10, minutes: 5 },
+            { level: "N5", title: "Angka dan Waktu", desc: "Dengarkan angka, tanggal, dan jam", sample: "いま何時ですか？午後三時三十分です。", questions: 10, minutes: 5 },
           ].map((exercise, i) => (
             <FadeIn key={i} delay={0.1 + i * 0.05}>
               <Card className="transition-shadow duration-150 hover:shadow-md">
@@ -60,7 +60,7 @@ export default async function ListeningPage() {
                     <p className="text-sm text-muted-foreground">{exercise.desc}</p>
                     <p className="text-xs text-muted-foreground">{exercise.questions} pertanyaan - {exercise.minutes} menit</p>
                   </div>
-                  <PlayButton />
+                  <PlayButton text={exercise.sample} />
                 </CardContent>
               </Card>
             </FadeIn>

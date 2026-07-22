@@ -4,7 +4,7 @@
  */
 
 import { createBrowserClient } from "@supabase/ssr";
-import type { CoinTransactionType, Avatar, UserAvatar } from "@/types/coins-avatars";
+import type { Avatar, UserAvatar } from "@/types/coins-avatars";
 import { DEFAULT_AVATARS } from "@/types/coins-avatars";
 
 // Browser-safe Supabase client
@@ -13,7 +13,6 @@ const supabase = createBrowserClient(
   process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
 );
 
-export type { CoinTransactionType, Avatar, UserAvatar };
 export { DEFAULT_AVATARS };
 
 // ============================================
@@ -30,23 +29,7 @@ export async function getCoinBalance(userId: string): Promise<number> {
   return data?.coin_balance ?? 0;
 }
 
-// ============================================
-// Coin Transaction
-// ============================================
-
-export async function recordCoinTransaction(
-  userId: string,
-  amount: number,
-  type: CoinTransactionType,
-  description: string
-): Promise<void> {
-  await supabase.from("coin_transactions").insert({
-    user_id: userId,
-    amount,
-    type,
-    description,
-  });
-}
+// ponytail: removed recordCoinTransaction — never imported
 
 // ============================================
 // Avatars
@@ -71,7 +54,7 @@ export async function getUserAvatars(userId: string): Promise<UserAvatarWithDeta
   return data
     .map((ua) => {
       const avatar = DEFAULT_AVATARS.find((a) => a.id === ua.avatar_id);
-      return avatar ? { ...avatar, ...ua } : null;
+      return avatar ? { ...ua, avatar } : null;
     })
     .filter(Boolean) as UserAvatarWithDetails[];
 }

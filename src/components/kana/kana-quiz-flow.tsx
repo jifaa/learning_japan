@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef, useCallback } from "react";
+import { useState, useRef, useCallback, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { ProgressBar } from "@/components/ui/progress-bar";
@@ -31,7 +31,8 @@ export function KanaQuizFlow({ questions, script, onBack }: KanaQuizFlowProps) {
   const [submitError, setSubmitError] = useState<string | null>(null);
   const [answersLog, setAnswersLog] = useState<{ kanaId: string; isCorrect: boolean }[]>([]);
   const [retryKey, setRetryKey] = useState(0);
-  const startTimeRef = useRef(Date.now());
+  const [elapsedSeconds, setElapsedSeconds] = useState(0);
+  const startTimeRef = useRef(0);
 
   const total = questions.length;
   const q = questions[current];
@@ -39,32 +40,26 @@ export function KanaQuizFlow({ questions, script, onBack }: KanaQuizFlowProps) {
   // Stable onBack — forwarded from parent which already wraps in useCallback
   const handleBack = onBack;
 
+  // Initialize start time
+  useEffect(() => {
+    startTimeRef.current = Date.now();
+  }, [retryKey]);
+
   // Reset all quiz state for "Try Again"
   const resetQuiz = useCallback(() => {
-    startTimeRef.current = Date.now();
     setCurrent(0);
     setSelected(null);
     setAnswered(false);
     setScore(0);
     setCompleted(false);
+    setElapsedSeconds(0);
     setAnswersLog([]);
     setRetryKey((k) => k + 1);
   }, []);
 
-  if (total === 0) {
-    return (
-      <Card className="mx-auto max-w-md">
-        <CardContent className="flex flex-col items-center gap-4 p-8 text-center">
-          <p>Tidak ada pertanyaan tersedia.</p>
-          <Button onClick={handleBack}>Kembali</Button>
-        </CardContent>
-      </Card>
-    );
-  }
-
   const handleSelect = useCallback(
     (idx: number) => {
-      if (answered) return;
+      if (answered || !q) return;
       const isCorrect = q.options[idx].isCorrect;
       setSelected(idx);
       setAnswered(true);
@@ -82,6 +77,9 @@ export function KanaQuizFlow({ questions, script, onBack }: KanaQuizFlowProps) {
     } else {
       setIsSubmitting(true);
       setSubmitError(null);
+      const startTime = startTimeRef.current || Date.now();
+      const duration = Math.round((Date.now() - startTime) / 1000);
+      setElapsedSeconds(duration);
       try {
         const response = await fetch("/api/kana/quiz/answer", {
           method: "POST",
@@ -103,9 +101,20 @@ export function KanaQuizFlow({ questions, script, onBack }: KanaQuizFlowProps) {
     }
   }, [current, total, answersLog, script]);
 
+  if (total === 0) {
+    return (
+      <Card className="mx-auto max-w-md">
+        <CardContent className="flex flex-col items-center gap-4 p-8 text-center">
+          <p>Tidak ada pertanyaan tersedia.</p>
+          <Button onClick={handleBack}>Kembali</Button>
+        </CardContent>
+      </Card>
+    );
+  }
+
   if (completed) {
     const pct = Math.round((score / total) * 100);
-    const timeSeconds = Math.round((Date.now() - startTimeRef.current) / 1000);
+    const timeSeconds = elapsedSeconds;
 
     return (
       <FadeIn>

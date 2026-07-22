@@ -39,10 +39,10 @@ const Q: Record<string, QuizQuestion[]> = {
   grammar: [
     { id: "g1", question: "Pola '私は~です' berarti?", options: ["Saya suka~", "Saya adalah~", "Saya pergi~", "Saya punya~"], correct: 1, explanation: "~です adalah pola konfirmasi sopan" },
     { id: "g2", question: "Partikel 'は' dalam '私は...' dibaca?", options: ["ha", "wa", "ka", "ba"], correct: 1, explanation: "は sebagai partikel dibaca 'wa'" },
-    { id: "g3", question: "Pola否定 adalah?", options: ["分", "泳", "飲", "否"], correct: 3, explanation: "否 = penolakan, negatif" },
+    { id: "g3", question: "Bentuk negatif (hitei) dalam kalimat ditandai dengan?", options: ["〜ます", "〜です", "〜ない", "〜たい"], correct: 2, explanation: "〜ない = bentuk negatif" },
     { id: "g4", question: "Pola '~ない' menunjukkan?", options: ["Lampau", "Sekarang", "Negatif", "Future"], correct: 2, explanation: "~ない = bentuk negatif" },
     { id: "g5", question: "'ます' bentuk dasar dari?", options: ["飲む", "飲め", "飲も", "飲ま"], correct: 0, explanation: "飲む (nomu = minum) + ます = 飲みます" },
-    { id: "g6", question: "Pola '~可以吗?' arti?", options: ["Tolong~", "Boleh~", "Harus~", "Jangan~"], correct: 1, explanation: "可以 = boleh/dapat" },
+    { id: "g6", question: "Pola '~てもいいですか' artinya?", options: ["Tolong~", "Boleh~", "Harus~", "Jangan~"], correct: 1, explanation: "~てもいいですか = bolehkah~ (meminta izin)" },
     { id: "g7", question: "Partikel 'を' fungsinya?", options: ["Subjek", "Objek", "Tempat", "Waktu"], correct: 1, explanation: "を menandai objek" },
     { id: "g8", question: "Pola '何ですか' artinya?", options: ["Siapa ini?", "Di mana?", "Apa ini?", "Kapan?"], correct: 2, explanation: "何 (nani) = apa" },
     { id: "g9", question: "Bentuk sopan dari '食べる' (taberu)?", options: ["食べります", "食べます", "食べるます", "食用です"], correct: 1, explanation: "taberu + ます = tabemasu" },
@@ -85,7 +85,8 @@ export function QuizSession({ quizType, onBack }: QuizSessionProps) {
   const [score, setScore] = useState(0);
   const [answered, setAnswered] = useState(false);
   const [completed, setCompleted] = useState(false);
-  const [startTime] = useState(Date.now());
+  const [startTime, setStartTime] = useState(() => Date.now());
+  const [elapsedSeconds, setElapsedSeconds] = useState(0);
 
   const questions = Q[quizType] || Q.mixed;
   const total = questions.length;
@@ -104,13 +105,15 @@ export function QuizSession({ quizType, onBack }: QuizSessionProps) {
       setSelected(null);
       setAnswered(false);
     } else {
+      const duration = Math.round((Date.now() - startTime) / 1000);
+      setElapsedSeconds(duration);
       setCompleted(true);
     }
   };
 
   if (completed) {
     const pct = Math.round((score / total) * 100);
-    const timeSeconds = Math.round((Date.now() - startTime) / 1000);
+    const timeSeconds = elapsedSeconds;
 
     // Save quiz result to database (fire and forget)
     completeQuizAction(quizType as QuizType, pct, total, score, timeSeconds);
@@ -148,6 +151,7 @@ export function QuizSession({ quizType, onBack }: QuizSessionProps) {
               </Button>
               <Button
                 onClick={() => {
+                  setStartTime(Date.now());
                   setCurrent(0);
                   setScore(0);
                   setAnswered(false);

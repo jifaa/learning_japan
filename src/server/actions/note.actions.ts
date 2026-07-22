@@ -7,6 +7,18 @@ export async function upsertNote(noteId: string, title: string, body: string) {
   const { data: { user } } = await supabase.auth.getUser();
   if (!user) return { success: false, error: "Unauthorized" };
 
+  if (noteId) {
+    const { data: existingNote } = await supabase
+      .from("user_notes")
+      .select("user_id")
+      .eq("id", noteId)
+      .maybeSingle();
+
+    if (existingNote && existingNote.user_id !== user.id) {
+      return { success: false, error: "Unauthorized" };
+    }
+  }
+
   const { error } = await supabase
     .from("user_notes")
     .upsert(

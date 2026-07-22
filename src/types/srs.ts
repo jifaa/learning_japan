@@ -3,7 +3,6 @@
  * Based on the SM-2 algorithm variant.
  */
 
-import type { JLPTLevel } from "./common";
 
 // ============================================
 // SRS States

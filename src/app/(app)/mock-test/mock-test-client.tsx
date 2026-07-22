@@ -36,8 +36,8 @@ const MOCK_TEST_QUESTIONS: MockTestQuestion[] = [
   { id: "v4", section: "Vocabulary", question: "Apa arti '競争' (kyousou)?", options: ["Kerja sama", "Persaingan", "Pertemanan", "Pertarungan"], correct: 1, explanation: "競争 = kyousou = persaingan/kompetisi" },
   { id: "v5", section: "Vocabulary", question: "Apa arti '海岸' (kaigan)?", options: ["Gunung", "Sungai", "Pantai", "Danau"], correct: 2, explanation: "海岸 = kaigan = pantai" },
   { id: "v6", section: "Vocabulary", question: "Apa arti '手術' (shujutsu)?", options: ["Operasi", "Pemeriksaan", "Pengobatan", "Suntik"], correct: 0, explanation: "手術 = shujutsu = operasi" },
-  { id: "v7", section: "Vocabulary", question: "Apa arti '海岸' (kaigan)?", options: ["Pantai", "Pelabuhan", "Sungai", "Danau"], correct: 0, explanation: "海岸 = kaigan = pantai" },
-  { id: "v8", section: "Vocabulary", question: "Apa arti '競争' (kyousou)?", options: ["Kompetisi", "Koordinasi", "Kolaborasi", "Komunikasi"], correct: 0, explanation: "競争 = kyousou = kompetisi" },
+  { id: "v7", section: "Vocabulary", question: "Apa arti '図書館' (toshokan)?", options: ["Perpustakaan", "Museum", "Taman", "Stasiun"], correct: 0, explanation: "図書館 = toshokan = perpustakaan" },
+  { id: "v8", section: "Vocabulary", question: "Apa arti '飛行機' (hikouki)?", options: ["Kapal terbang", "Kereta api", "Mobil", "Sepeda"], correct: 0, explanation: "飛行機 = hikouki = pesawat/kapal terbang" },
 
   // === SECTION 2: Grammar ===
   { id: "g1", section: "Grammar", question: "Pola '〜てよかった' digunakan untuk?", options: ["Menyesal", "Merasa lega", "Meminta izin", "Menawarkan"], correct: 1, explanation: "〜てよかった = perasaan lega/senang" },
@@ -45,14 +45,14 @@ const MOCK_TEST_QUESTIONS: MockTestQuestion[] = [
   { id: "g3", section: "Grammar", question: "'〜なければならない' artinya?", options: ["Tidak perlu", "Harus", "Boleh", "Tidak boleh"], correct: 1, explanation: "〜なければならない = harus/wajib" },
   { id: "g4", section: "Grammar", question: "Pola '〜ようです' menunjukkan?", options: ["Kepastian", "Kemungkinan", "Permintaan", "Keinginan"], correct: 1, explanation: "〜ようです = sepertinya/mungkin" },
   { id: "g5", section: "Grammar", question: "'〜ことがあります' digunakan untuk?", options: ["Kebiasaan", "Kemungkinan", "Rencana", "Permintaan"], correct: 1, explanation: "〜ことがあります = kadang-kadang/ada kalanya" },
-  { id: "g6", section: "Grammar", question: "Bentuk lampau dari '食べる' (taberu) bentuk sopan?", options: ["食べます", "食べりました", "食べたです", "食用です"], correct: 1, explanation: "食べます (bentuk sopan) → 食べました (lampau)" },
+  { id: "g6", section: "Grammar", question: "Bentuk lampau dari '食べる' (taberu) bentuk sopan?", options: ["食べます", "食べました", "食べたです", "食べましたです"], correct: 1, explanation: "食べます (bentuk sopan) → 食べました (lampau)" },
   { id: "g7", section: "Grammar", question: "'〜なければならない' bentuk singkatnya?", options: ["〜ない", "〜なきゃ", "〜なければ", "〜べき"], correct: 1, explanation: "〜なければならない → 〜なきゃ" },
   { id: "g8", section: "Grammar", question: "Pola '〜て以来' berarti?", options: ["Sebelum", "Sesudah", "Sejak", "Selama"], correct: 2, explanation: "〜て以来 = sejak (telah melakukan sesuatu)" },
 
   // === SECTION 3: Kanji ===
   { id: "k1", section: "Kanji", question: "Kanji mana yang berarti 'belajar' (manabu)?", options: ["学", "校", "教", "書"], correct: 0, explanation: "学 = gaku/manabu = belajar" },
   { id: "k2", section: "Kanji", question: "Kanji '鉄' artinya?", options: ["Emas", "Perak", "Besi", "Tembaga"], correct: 2, explanation: "鉄 = tetsu = besi" },
-  { id: "k3", section: "Kanji", question: "Kanji mana yang berarti 'suami/istri'?", options: ["夫", "父", "男", "兄"], correct: 0, explanation: "夫 = otto = suami" },
+  { id: "k3", section: "Kanji", question: "Kanji mana yang berarti 'suami' (otto)?", options: ["夫", "父", "男", "兄"], correct: 0, explanation: "夫 = otto = suami" },
   { id: "k4", section: "Kanji", question: "Kanji '駅' artinya?", options: ["Bandara", "Pelabuhan", "Stasiun", "Halte"], correct: 2, explanation: "駅 = eki = stasiun" },
   { id: "k5", section: "Kanji", question: "Kanji mana untuk 'pergi' (iku)?", options: ["来", "去", "行", "帰"], correct: 2, explanation: "行 = iku = pergi" },
   { id: "k6", section: "Kanji", question: "Kanji '泳' artinya?", options: ["Berlari", "Melompat", "Berenang", "Berjalan"], correct: 2, explanation: "泳 = oyogu = berenang" },
@@ -60,11 +60,11 @@ const MOCK_TEST_QUESTIONS: MockTestQuestion[] = [
   { id: "k8", section: "Kanji", question: "Kanji '鼻' artinya?", options: ["Mata", "Mulut", "Hidung", "Telinga"], correct: 2, explanation: "鼻 = hana = hidung" },
 
   // === SECTION 4: Reading Comprehension ===
-  { id: "r1", section: "Reading", question: "「明日は試験がありますから、今日は勉强します。」Apa yang akan dilakukan besok?", options: ["Berlibur", "Ujian", "Bekerja", "Istirahat"], correct: 1, explanation: "試験 = shiken = ujian" },
-  { id: "r2", section: "Reading", question: "「的成本は少し高いですが、质が 좋습니다。」Apa pendapat tentang produk?", options: ["Murah tapi bagus", "Mahal tapi bagus", "Murah dan jelek", "Mahal dan jelek"], correct: 1, explanation: "高い = mahal, 質 = kualitas" },
-  { id: "r3", section: "Reading", question: "「每朝、六時に起きます。」Jam berapa起床?", options: ["Jam 5", "Jam 6", "Jam 7", "Jam 8"], correct: 1, explanation: "六時 = roku-ji = jam 6" },
-  { id: "r4", section: "Reading", question: "「映画は五時に始まります。」Kapan电影 mulai?", options: ["Jam 3", "Jam 4", "Jam 5", "Jam 6"], correct: 2, explanation: "五時 = go-ji = jam 5" },
-  { id: "r5", section: "Reading", question: "「私は日本语的勉强が好きです。」Apa yang disukai?", options: ["Olahraga", "Musik", "Bahasa Jepang", "Memasak"], correct: 2, explanation: "日本語 = Nihongo = bahasa Jepang" },
+  { id: "r1", section: "Reading", question: "「明日は試験がありますから、今日は勉強します。」Apa yang akan dilakukan besok?", options: ["Berlibur", "Ujian", "Bekerja", "Istirahat"], correct: 1, explanation: "試験 = shiken = ujian" },
+  { id: "r2", section: "Reading", question: "「この商品は少し高いですが、品質が良いです。」Apa pendapat tentang produk?", options: ["Murah tapi bagus", "Mahal tapi bagus", "Murah dan jelek", "Mahal dan jelek"], correct: 1, explanation: "高い = mahal, 品質 = kualitas" },
+  { id: "r3", section: "Reading", question: "「毎朝、六時に起きます。」Jam berapa bangun tidur?", options: ["Jam 5", "Jam 6", "Jam 7", "Jam 8"], correct: 1, explanation: "六時 = roku-ji = jam 6" },
+  { id: "r4", section: "Reading", question: "「映画は五時に始まります。」Kapan film mulai?", options: ["Jam 3", "Jam 4", "Jam 5", "Jam 6"], correct: 2, explanation: "五時 = go-ji = jam 5" },
+  { id: "r5", section: "Reading", question: "「私は日本語の勉強が好きです。」Apa yang disukai?", options: ["Olahraga", "Musik", "Bahasa Jepang", "Memasak"], correct: 2, explanation: "日本語 = Nihongo = bahasa Jepang" },
   { id: "r6", section: "Reading", question: "「友達と映画を見ました。」Dengan siapa dia menonton?", options: ["Keluarga", "Teman", "Guru", "Sendiri"], correct: 1, explanation: "友達 = tomodachi = teman" },
 ];
 
@@ -79,7 +79,8 @@ export function MockTestClient({ testConfig, onBack }: MockTestClientProps) {
   const [score, setScore] = useState(0);
   const [answered, setAnswered] = useState(false);
   const [completed, setCompleted] = useState(false);
-  const [startTime] = useState(Date.now());
+  const [startTime, setStartTime] = useState(() => Date.now());
+  const [elapsedSeconds, setElapsedSeconds] = useState(0);
   const [timeLeft, setTimeLeft] = useState(testConfig.timeMinutes * 60);
   const [timeUp, setTimeUp] = useState(false);
 
@@ -122,13 +123,15 @@ export function MockTestClient({ testConfig, onBack }: MockTestClientProps) {
       setSelected(null);
       setAnswered(false);
     } else {
+      const duration = Math.round((Date.now() - startTime) / 1000);
+      setElapsedSeconds(duration);
       setCompleted(true);
     }
   };
 
   if (completed) {
     const pct = Math.round((score / total) * 100);
-    const timeSeconds = Math.round((Date.now() - startTime) / 1000);
+    const timeSeconds = elapsedSeconds;
     const minutes = Math.floor(timeSeconds / 60);
     const seconds = timeSeconds % 60;
 
@@ -178,6 +181,7 @@ export function MockTestClient({ testConfig, onBack }: MockTestClientProps) {
               </Button>
               <Button
                 onClick={() => {
+                  setStartTime(Date.now());
                   setCurrent(0);
                   setScore(0);
                   setAnswered(false);

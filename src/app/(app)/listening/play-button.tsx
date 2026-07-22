@@ -1,15 +1,39 @@
 "use client";
 
-import { Volume2 } from "lucide-react";
+import { useState } from "react";
+import { Volume2, VolumeX } from "lucide-react";
 
-export function PlayButton() {
+interface PlayButtonProps {
+  text?: string;
+}
+
+export function PlayButton({ text = "こんにちは、はじめまして。" }: PlayButtonProps) {
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  const handlePlay = () => {
+    if (typeof window === "undefined" || !("speechSynthesis" in window)) {
+      alert("Browser Anda tidak mendukung fitur pemutaran suara.");
+      return;
+    }
+
+    window.speechSynthesis.cancel();
+    const utterance = new SpeechSynthesisUtterance(text);
+    utterance.lang = "ja-JP";
+    utterance.onstart = () => setIsPlaying(true);
+    utterance.onend = () => setIsPlaying(false);
+    utterance.onerror = () => setIsPlaying(false);
+
+    window.speechSynthesis.speak(utterance);
+  };
+
   return (
     <button
-      className="shrink-0 rounded-full bg-primary p-3 text-white transition-colors cursor-not-allowed opacity-50"
-      aria-label="Audio dinonaktifkan"
-      disabled
+      onClick={handlePlay}
+      className="shrink-0 rounded-full bg-primary p-3 text-white transition-transform duration-150 hover:scale-105 active:scale-95 cursor-pointer shadow-md hover:bg-primary/90"
+      aria-label="Putar audio"
+      title="Putar audio bahasa Jepang"
     >
-      <Volume2 className="h-5 w-5" />
+      {isPlaying ? <VolumeX className="h-5 w-5 animate-pulse" /> : <Volume2 className="h-5 w-5" />}
     </button>
   );
 }

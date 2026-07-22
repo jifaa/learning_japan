@@ -68,19 +68,4 @@ export async function createAdminClient() {
   );
 }
 
-/**
- * Singleton pattern for server client.
- * Note: In Next.js, each request should get a fresh instance,
- * but we cache within the same request for efficiency.
- */
-const serverClients = new Map<string, ReturnType<typeof createServerClient>>();
-
-export function getSupabaseServerClient(requestId?: string) {
-  const key = requestId ?? "default";
-  if (!serverClients.has(key)) {
-    // This is a placeholder - actual implementation uses createClient()
-    // which is async, so use createClient() directly instead
-    return null;
-  }
-  return serverClients.get(key);
-}
+// Admin client uses service role — never expose to client.

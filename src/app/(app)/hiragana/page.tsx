@@ -54,63 +54,83 @@ export default async function HiraganaPage() {
       <FadeIn delay={0.1}>
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {quizList.map((quiz, index) => {
-            const href = quiz.href.replace("/hiragana/", "/hiragana/");
-
-            return (
-              <Link key={quiz.id} href={href} className="block">
-                <Card
-                  className={cn(
-                    "h-full transition-all duration-200",
-                    quiz.isUnlocked
-                      ? quiz.isCompleted
-                        ? "border-primary/30 bg-primary/5 hover:border-primary/50 hover:shadow-md"
-                        : "border-border hover:border-primary/50 hover:shadow-md"
-                      : "opacity-60 cursor-not-allowed"
-                  )}
-                >
-                  <CardContent className="p-4">
-                    <div className="flex items-start gap-3">
-                      <div className={cn(
+            const cardContent = (
+              <Card
+                className={cn(
+                  "h-full transition-all duration-200",
+                  quiz.isUnlocked
+                    ? quiz.isCompleted
+                      ? "border-primary/30 bg-primary/5 hover:border-primary/50 hover:shadow-md"
+                      : "border-border hover:border-primary/50 hover:shadow-md"
+                    : "opacity-60 cursor-not-allowed"
+                )}
+              >
+                <CardContent className="p-4">
+                  <div className="flex items-start gap-3">
+                    <div
+                      className={cn(
                         "flex h-10 w-10 shrink-0 items-center justify-center rounded-lg",
                         quiz.isCompleted
                           ? "bg-primary/10 text-primary"
                           : quiz.isUnlocked
                             ? "bg-muted text-muted-foreground"
                             : "bg-muted text-muted-foreground"
-                      )}>
-                        {quiz.isCompleted ? (
-                          <CheckCircle2 className="h-5 w-5" />
-                        ) : quiz.isUnlocked ? (
-                          <span className="text-sm font-semibold">{index + 1}</span>
-                        ) : (
-                          <Lock className="h-4 w-4" />
-                        )}
-                      </div>
-                      <div className="flex-1 min-w-0">
-                        <div className="flex items-center gap-2">
-                          <h3 className={cn(
-                            "font-medium",
-                            quiz.isCompleted && "text-primary"
-                          )}>
-                            {quiz.label}
-                          </h3>
-                        </div>
-                        <p className="mt-0.5 text-xs text-muted-foreground">
-                          {quiz.isUnlocked ? quiz.description : "Selesaikan quiz sebelumnya"}
-                        </p>
-                        <div className="mt-3 flex items-center gap-2">
-                          <ProgressBar value={quiz.progressPercent} showValue={false} className="flex-1 h-1.5" />
-                          <span className="text-xs text-muted-foreground shrink-0">
-                            {quiz.masteredChars}/{quiz.totalChars}
-                          </span>
-                        </div>
-                      </div>
-                      {quiz.isUnlocked && (
-                        <ChevronRight className="h-4 w-4 text-muted-foreground shrink-0 mt-1" />
+                      )}
+                    >
+                      {quiz.isCompleted ? (
+                        <CheckCircle2 className="h-5 w-5" />
+                      ) : quiz.isUnlocked ? (
+                        <span className="text-sm font-semibold">{index + 1}</span>
+                      ) : (
+                        <Lock className="h-4 w-4" />
                       )}
                     </div>
-                  </CardContent>
-                </Card>
+                    <div className="flex-1 min-w-0">
+                      <div className="flex items-center gap-2">
+                        <h3
+                          className={cn(
+                            "font-medium",
+                            quiz.isCompleted && "text-primary"
+                          )}
+                        >
+                          {quiz.label}
+                        </h3>
+                      </div>
+                      <p className="mt-0.5 text-xs text-muted-foreground">
+                        {quiz.isUnlocked
+                          ? quiz.description
+                          : "Selesaikan quiz sebelumnya"}
+                      </p>
+                      <div className="mt-3 flex items-center gap-2">
+                        <ProgressBar
+                          value={quiz.progressPercent}
+                          showValue={false}
+                          className="flex-1 h-1.5"
+                        />
+                        <span className="text-xs text-muted-foreground shrink-0">
+                          {quiz.masteredChars}/{quiz.totalChars}
+                        </span>
+                      </div>
+                    </div>
+                    {quiz.isUnlocked && (
+                      <ChevronRight className="h-4 w-4 text-muted-foreground shrink-0 mt-1" />
+                    )}
+                  </div>
+                </CardContent>
+              </Card>
+            );
+
+            if (!quiz.isUnlocked) {
+              return (
+                <div key={quiz.id} className="block cursor-not-allowed">
+                  {cardContent}
+                </div>
+              );
+            }
+
+            return (
+              <Link key={quiz.id} href={quiz.href} className="block">
+                {cardContent}
               </Link>
             );
           })}

@@ -6,7 +6,6 @@
 import { createClient } from "@/lib/supabase/server";
 import type {
   QuizResult,
-  QuizSession,
   QuizQuestion,
   QuizType,
   QuizSummary,
@@ -231,7 +230,7 @@ export function createQuizSession(
  */
 export function calculateQuizResult(
   session: ActiveQuizSession,
-  timeSpentSeconds: number
+  _timeSpentSeconds: number
 ): {
   score: number;
   total_points: number;
@@ -358,10 +357,9 @@ export async function getQuizStreak(userId: string): Promise<number> {
 
   // Count consecutive days starting from the most recent
   let streak = 0;
-  let expectedDate = new Date(sortedDates[0]);
+  const expectedDate = new Date(sortedDates[0]);
 
   for (const dateStr of sortedDates) {
-    const currentDate = new Date(dateStr);
     const expectedDateStr = expectedDate.toISOString().split("T")[0];
 
     if (dateStr === expectedDateStr) {

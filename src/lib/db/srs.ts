@@ -6,7 +6,6 @@
 import { createClient } from "@/lib/supabase/server";
 import type {
   SRSCard,
-  SRSReviewLog,
   SRSRating,
   SRSState,
   CardType,
@@ -118,32 +117,7 @@ export async function getNewCards(userId: string, limit = 20) {
   return (data || []) as SRSCard[];
 }
 
-/**
- * Create new SRS card.
- */
-export async function createSRSCard(userId: string, card: NewSRSCard) {
-  const supabase = await createClient();
-
-  const { data, error } = await supabase
-    .from("user_srs_cards")
-    .insert({
-      user_id: userId,
-      card_type: card.card_type,
-      content_id: card.content_id,
-      deck_key: card.deck_key,
-      state: "new",
-      due_date: new Date().toISOString(),
-      interval: 0,
-      ease_factor: DEFAULT_SRS_CONFIG.graduating_interval,
-      reviews: 0,
-      lapses: 0,
-    })
-    .select()
-    .single();
-
-  if (error) throw error;
-  return data as SRSCard;
-}
+// ponytail: removed createSRSCard and getOrCreateSRSCard — never imported outside srs.ts
 
 /**
  * Create SRS cards for content IDs (batch).
@@ -211,22 +185,7 @@ export async function createNewSRSCard(
   return data as SRSCard;
 }
 
-/**
- * Get or create SRS card for content.
- */
-export async function getOrCreateSRSCard(
-  userId: string,
-  card: NewSRSCard
-) {
-  const existing = await getUserCardByContent(
-    userId,
-    card.card_type,
-    card.content_id
-  );
-
-  if (existing) return existing;
-  return createSRSCard(userId, card);
-}
+// ponytail: removed getOrCreateSRSCard — never imported outside srs.ts
 
 // ============================================
 // SRS Review
@@ -298,7 +257,8 @@ export function calculateNextReview(
   config: SRSConfig = DEFAULT_SRS_CONFIG
 ) {
   const ratingValue = SRS_RATING_VALUES[rating];
-  let { state, interval, ease_factor } = card;
+  const { state, ease_factor } = card;
+  let { interval } = card;
 
   let new_state: SRSState = state;
   let should_lapse = false;
@@ -393,25 +353,7 @@ export function calculateNextReview(
   };
 }
 
-// ============================================
-// Review Log
-// ============================================
-
-/**
- * Get review log for a card.
- */
-export async function getCardReviewLog(cardId: string) {
-  const supabase = await createClient();
-
-  const { data, error } = await supabase
-    .from("srs_review_log")
-    .select("*")
-    .eq("card_id", cardId)
-    .order("reviewed_at", { ascending: false });
-
-  if (error) throw error;
-  return data as SRSReviewLog[];
-}
+// ponytail: removed getCardReviewLog — never imported outside srs.ts
 
 /**
  * Get the last review rating for each content_id for a given card type.
@@ -540,28 +482,7 @@ export async function getLearnedCount(userId: string, cardType?: CardType) {
   return count ?? 0;
 }
 
-/**
- * Count user's mastered cards (graduated with interval > 21 days).
- */
-export async function getMasteredCount(userId: string, cardType?: CardType) {
-  const supabase = await createClient();
-
-  let query = supabase
-    .from("user_srs_cards")
-    .select("id", { count: "exact", head: true })
-    .eq("user_id", userId)
-    .eq("state", "graduated")
-    .gte("interval", 21);
-
-  if (cardType) {
-    query = query.eq("card_type", cardType);
-  }
-
-  const { count, error } = await query;
-
-  if (error) throw error;
-  return count ?? 0;
-}
+// ponytail: removed getMasteredCount — never imported outside srs.ts
 
 /**
  * Get today's review count from the review log.

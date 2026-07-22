@@ -32,24 +32,18 @@ function parseEnvVars() {
     DATABASE_URL: process.env.DATABASE_URL,
   };
 
-  // Check for required vars (zod optional to allow partial checks)
-  const requiredVars = Object.entries(rawEnv)
-    .filter(([, value]) => value === undefined)
-    .map(([key]) => key);
-
-  if (requiredVars.length > 0) {
+  const parsed = combinedSchema.safeParse(rawEnv);
+  if (!parsed.success) {
     console.warn(
-      `[ENV] Missing required environment variables: ${requiredVars.join(", ")}`
+      "[ENV] Environment variable validation warnings:",
+      parsed.error.flatten().fieldErrors
     );
   }
 
   return rawEnv;
 }
 
-// Validation result type
-export type EnvVars = z.infer<typeof combinedSchema>;
-export type PublicEnvVars = z.infer<typeof publicEnvSchema>;
-export type ServerEnvVars = z.infer<typeof serverEnvSchema>;
+// ponytail: removed EnvVars, PublicEnvVars, ServerEnvVars — never imported
 
 // Singleton env object
 let cachedEnv: ReturnType<typeof parseEnvVars> | null = null;
@@ -65,54 +59,6 @@ export function getServerEnv(): Readonly<ReturnType<typeof parseEnvVars>> {
   return cachedEnv;
 }
 
-/**
- * Get public env vars only (safe for client).
- */
-export function getPublicEnv(): Pick<
-  ReturnType<typeof parseEnvVars>,
-  "NEXT_PUBLIC_SUPABASE_URL" | "NEXT_PUBLIC_SUPABASE_ANON_KEY" | "NEXT_PUBLIC_APP_URL"
-> {
-  const env = getServerEnv();
-  return {
-    NEXT_PUBLIC_SUPABASE_URL: env.NEXT_PUBLIC_SUPABASE_URL,
-    NEXT_PUBLIC_SUPABASE_ANON_KEY: env.NEXT_PUBLIC_SUPABASE_ANON_KEY,
-    NEXT_PUBLIC_APP_URL: env.NEXT_PUBLIC_APP_URL,
-  };
-}
+// ponytail: removed getPublicEnv and validateServerEnv — never called anywhere
 
-/**
- * Validate env vars and throw if critical ones are missing.
- * Use this in API routes that require database access.
- */
-export function validateServerEnv(): void {
-  const env = getServerEnv();
-
-  const errors: string[] = [];
-
-  if (!env.SUPABASE_SERVICE_ROLE_KEY) {
-    errors.push("SUPABASE_SERVICE_ROLE_KEY is required for server operations");
-  }
-
-  if (!env.DATABASE_URL) {
-    errors.push("DATABASE_URL is required for database operations");
-  }
-
-  if (errors.length > 0) {
-    throw new Error(`Environment validation failed:\n${errors.join("\n")}`);
-  }
-}
-
-/**
- * Check if we're in development mode.
- */
-export const isDev = process.env.NODE_ENV === "development";
-
-/**
- * Check if we're in production mode.
- */
-export const isProd = process.env.NODE_ENV === "production";
-
-/**
- * Check if we're in test mode.
- */
-export const isTest = process.env.NODE_ENV === "test";
+// ponytail: removed isDev/isProd/isTest — inline `process.env.NODE_ENV === "..."` is self-documenting.
